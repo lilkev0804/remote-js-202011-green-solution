@@ -1,10 +1,19 @@
 .footer {
   width: 100%;
-  padding: 10px;
+  padding: 20px 10px;
   background-color: #8DA199;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer-container-social-link {
@@ -27,5 +36,18 @@
 .ico-social {
   color: #2E3A59;
   font-size: 1.5rem;
+}
+
+.footer-navlink {
+  display: none;
+}
+
+@media screen and (min-width: 765px) {
+  .footer-navlink {
+    color: black;
+    text-decoration: none;
+    display: block;
+    text-transform: capitalize;
+  }
 }
 /*# sourceMappingURL=Footer.css.map */
