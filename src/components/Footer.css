@@ -1,0 +1,31 @@
+.footer {
+  width: 100%;
+  padding: 10px;
+  background-color: #8DA199;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer-container-social-link {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.footer-social-link-bg {
+  background-color: #FDE6A0;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.ico-social {
+  color: #2E3A59;
+  font-size: 1.5rem;
+}
+/*# sourceMappingURL=Footer.css.map */

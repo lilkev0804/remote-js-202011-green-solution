@@ -1,0 +1,51 @@
+@font-face {
+  font-family: Dancing spirit;
+  src: url("../DancingScript-VariableFont_wght.ttf");
+}
+
+button:focus {
+  outline: none;
+}
+
+.header {
+  width: 100%;
+  padding: 10px 10px;
+  background-color: #174416d7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-title-navbar {
+  color: white;
+  font-weight: 600;
+  font-family: Dancing spirit;
+  font-size: 2rem;
+}
+
+.btn-burger {
+  background-color: transparent;
+  border: 3px solid #FDE6A0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  padding: 7px;
+}
+
+.btn-burger .burger-icon {
+  color: #FDE6A0;
+}
+/*# sourceMappingURL=Header.css.map */

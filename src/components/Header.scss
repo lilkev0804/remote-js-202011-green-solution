@@ -1,0 +1,33 @@
+@font-face{
+    font-family: Dancing spirit;
+    src: url("../DancingScript-VariableFont_wght.ttf")
+}
+button:focus{
+    outline: none;
+}
+.header{
+    width: 100%;
+    padding: 10px 10px;
+    background-color: #174416d7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-title-navbar{
+    color: white;
+    font-weight: 600;
+    font-family: Dancing spirit;
+    font-size: 2rem;
+}
+.btn-burger{
+    background-color: transparent;
+    border: 3px solid #FDE6A0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 7px;
+    .burger-icon{
+        color: #FDE6A0;
+    }
+}
