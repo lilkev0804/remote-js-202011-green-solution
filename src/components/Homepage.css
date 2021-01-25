@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=GFS+Didot&display=swap');
+
+
+@media (max-width: 420px){
+
+
+.homepage {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+}
+.btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 4rem;
+    height: 100%;
+    color : #1B4332;
+    display: flex;
+    align-items: center;
+    margin: 10vh;
+    font-family : 'Dancing Script';
+}
+button {
+    color: #1B4332;
+    border: none;
+    border-radius: 30px;
+    background-color: #FFFFFF;
+    font-size: 30px;
+    padding: 30px;
+    margin: 20px;
+    font-family: 'Didot';
+
+}
+
+
+
+
+}
