@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @font-face {
   font-family: Dancing spirit;
   src: url("../DancingScript-VariableFont_wght.ttf");
@@ -47,5 +48,41 @@ button:focus {
 
 .btn-burger .burger-icon {
   color: #FDE6A0;
+}
+
+.header-navbar {
+  display: none;
+}
+
+@media screen and (min-width: 765px) {
+  .header {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    position: relative;
+  }
+  .btn-burger {
+    display: none;
+  }
+  .header-title-navbar {
+    -ms-grid-column-align: start;
+        justify-self: start;
+    margin-left: 2vw;
+  }
+  .header-navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    right: 10px;
+  }
+  .header-nav-link {
+    color: white;
+    list-style: none;
+    margin-right: 20px;
+    text-transform: capitalize;
+    font-family: "Roboto";
+    font-weight: 900;
+  }
 }
 /*# sourceMappingURL=Header.css.map */

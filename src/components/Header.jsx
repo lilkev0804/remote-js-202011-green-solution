@@ -7,6 +7,12 @@ const Header = () => {
         <button className="btn-burger">
         <i class="fas fa-bars burger-icon"></i>
         </button>
+        <ul className="header-navbar">
+            <li className="header-nav-link">home</li>
+            <li className="header-nav-link">calculator</li>
+            <li className="header-nav-link">simulation</li>
+            <li className="header-nav-link">about us</li>
+        </ul>
     </div>
 }
 

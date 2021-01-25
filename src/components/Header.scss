@@ -2,6 +2,7 @@
     font-family: Dancing spirit;
     src: url("../DancingScript-VariableFont_wght.ttf")
 }
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 button:focus{
     outline: none;
 }
@@ -30,4 +31,34 @@ button:focus{
     .burger-icon{
         color: #FDE6A0;
     }
+}
+.header-navbar{
+    display: none;
+}
+@media screen and (min-width: 765px){
+    .header{
+        justify-content: flex-start;
+        position: relative;
+    }
+    .btn-burger{
+        display: none;
+    }
+    .header-title-navbar{
+        justify-self: start;
+        margin-left: 2vw;
+    }
+    .header-navbar{
+        display: flex;
+        position: absolute;
+        right: 10px;
+    }
+    .header-nav-link{
+        color: white;
+        list-style: none;
+        margin-right: 20px;
+        text-transform: capitalize;
+        font-family: "Roboto";
+        font-weight: 900;
+    }
+
 }
