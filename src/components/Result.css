@@ -1,0 +1,36 @@
+.result {
+    height: 70px;
+    display:flex;
+    justify-content: center;
+    margin-left:-20%;
+    margin-bottom: 20%;
+    margin-top: 20%;
+    margin: 20%, auto, 20%, auto;
+}
+@keyframes clignote {
+    0%, 100%{box-shadow:0px 0px 10px #c91e1e;}
+    50%{box-shadow:0px 0px 0px #b82828;}
+}
+.logoResult {
+height: 50px;
+border-radius: 50%;
+margin-right: 40px;
+margin-top: 10px;
+animation-name: clignote;
+animation-duration: 1s;
+animation-iteration-count:infinite;
+}
+.resultText {
+    width: 30%;
+    color: rgb(250, 219,173) ;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    background:#2cb15f;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 0 5px #2cb15f,
+                0 0 25px#2cb15f,
+                0 0 50px#2cb15f,
+                0 0 200px #2cb15f;
+    border-radius: 5px;
+}
