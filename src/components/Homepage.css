@@ -2,43 +2,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=GFS+Didot&display=swap');
 
 
-@media (max-width: 420px){
-
-
 .homepage {
     height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    background-color: black;
+    justify-content: space-around;
+    background-size: cover;
 }
-.btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.title {
+.homepage-title {
     font-size: 4rem;
     height: 100%;
     color : #1B4332;
+    text-shadow: 2px 0 0 #FFFFFF, 2px 2px 0 #FFFFFF, 0 2px 0 #FFFFFF, -2px 2px 0 #FFFFFF, -2px 0 0 #FFFFFF, -2px -2px 0 #FFFFFF, 0 -2px 0 #FFFFFF, 2px -2px 0 #FFFFFF;
     display: flex;
     align-items: center;
-    margin: 10vh;
     font-family : 'Dancing Script';
 }
+
 button {
     color: #1B4332;
     border: none;
     border-radius: 30px;
     background-color: #FFFFFF;
+    height: 70px;
+    width: 250px;
     font-size: 30px;
-    padding: 30px;
-    margin: 20px;
+    margin-bottom: 5vh;
     font-family: 'Didot';
+}
+
+/* mobile device */
+@media (max-width: 420px){
+
+.homepage {
+    background-image : url("img-homepage/homepage-mobile-bg.jpg");
+    flex-direction: column;
+}
+
+.homepage-title {
+    margin: 10vh;
+}
+
+.homepage-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-connexion {
+    margin-bottom: 10vh;
+}
 
 }
+
+/* desktop device */
+@media (min-width: 420px) {
+
+.homepage {
+    background-color: black;
+    display: inline-flex;
+}
+
 
 
 
