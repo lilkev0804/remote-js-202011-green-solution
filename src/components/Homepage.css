@@ -4,18 +4,12 @@
 
 .homepage {
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-size: cover;
+    
 }
 .homepage-title {
     font-size: 4rem;
-    height: 100%;
     color : #1B4332;
     text-shadow: 2px 0 0 #FFFFFF, 2px 2px 0 #FFFFFF, 0 2px 0 #FFFFFF, -2px 2px 0 #FFFFFF, -2px 0 0 #FFFFFF, -2px -2px 0 #FFFFFF, 0 -2px 0 #FFFFFF, 2px -2px 0 #FFFFFF;
-    display: flex;
-    align-items: center;
     font-family : 'Dancing Script';
 }
 
@@ -36,11 +30,17 @@ button {
 
 .homepage {
     background-image : url("img-homepage/homepage-mobile-bg.jpg");
+    background-size: cover;
     flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .homepage-title {
     margin: 10vh;
+    display: flex;
+    align-items: center;
 }
 
 .homepage-btn {
@@ -59,11 +59,20 @@ button {
 @media (min-width: 420px) {
 
 .homepage {
-    background-color: black;
-    display: inline-flex;
+    background-image: url("img-homepage/homepage-desktop-bg.jpg");
+    background-size: contain;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
 }
 
+.homepage-btn {
+    display: flex;
+    justify-content: space-between;
+    
 
+}
 
 
 
