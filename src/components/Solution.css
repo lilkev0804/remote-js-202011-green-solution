@@ -1,13 +1,14 @@
-/* @media only screen and (max-width: 420px){ */
+/* bouton solution page resultat */
+
 .solution {
     align-items: center;
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
     justify-content: center; 
 
 }
 .solutionbutton {
-    font-size: 10px;
+    font-size: 8px;
     color: rgb(250, 219,173);
     font-weight: bold;
     border: none;
@@ -17,13 +18,27 @@
     margin-bottom: 20%;
     height: 60px;
     width: 50%; 
-    background:#2cb15f;
+    background:#74C69D;
     font-family: 'Roboto', sans-serif;
-    box-shadow: 0 0 5px #2cb15f,
-                0 0 25px#2cb15f,
-                0 0 50px#2cb15f,
-                0 0 200px #2cb15f;
 } 
 .imgGlobalwarming {
+    border-radius: 10px;
     width: 80%;
 }
+
+@media only screen and (min-width: 360px) {
+    .solutionbutton {
+        font-size: 10px;
+}}
+
+@media only screen and (min-width: 520px) {
+    .solutionbutton {
+        font-size: 15px;
+}}
+
+@media only screen and (min-width: 640px) {
+    .solutionbutton {
+        font-size: 20px;
+}}
+
+/* fin bouton solution page resultat */
