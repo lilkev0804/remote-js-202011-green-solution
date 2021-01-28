@@ -26,8 +26,8 @@ h2 {
     margin-left: 10px;
     width: 300px;
    height: 100px;
-   transition: 10s;
-   
+   transition: 10s;   
+   margin-bottom: 10px;
 }
 
 .Info img:hover {

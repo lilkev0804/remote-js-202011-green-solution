@@ -21,6 +21,7 @@ p {
     width: 100px;
     height: 80px;
     transition: 3s;
+    margin-right: 10px;
 }
 
 .Equipe img:hover {
