@@ -1,5 +1,5 @@
 import React from "react"
-import "./BodyResult.css";
+import "./BodyResult.css"
 
 function Body(props) {
     return (

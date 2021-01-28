@@ -1,5 +1,5 @@
 import React from "react"
-import "./Result.css";
+import "./Result.css"
 // import page calculator
 
 let resultCalc = 150 > 100

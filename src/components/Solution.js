@@ -1,5 +1,5 @@
 import React from "react"
-import "./Solution.css";
+import "./Solution.css"
 // import {link} from "react-router-dom";
 
 function Solution(props) {
