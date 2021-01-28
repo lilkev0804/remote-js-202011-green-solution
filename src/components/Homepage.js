@@ -1,7 +1,7 @@
 import React from 'react';
 import ConnexionBtn from './ConnexionBtn';
-import "./Homepage.css";
 import SimulatorBtn from './SimulatorBtn';
+import "./Homepage.css";
 
 function Homepage() {
     return (

@@ -28,7 +28,7 @@ button {
 @media (max-width: 420px){
 
 .homepage {
-    background-image : url("img-homepage/homepage-mobile-bg.jpg");
+    background-image : url("./imgHomepage/homepage-mobile-bg.jpg");
     background-size: cover;
     flex-direction: column;
     display: flex;
@@ -58,9 +58,10 @@ button {
 @media (min-width: 420px) {
 
 .homepage {
-    background-image: url("img-homepage/homepage-desktop-bg.jpg");
-
+    /* background-image: url("img-homepage/homepage-desktop-bg.jpg"); */
+    background-image: url("./imgHomepage/homepage-desktop-bg.jpg");
     background-size: cover;
+    background-position: center center;
     display: flex;
     justify-content: space-between;
     align-items: center;
