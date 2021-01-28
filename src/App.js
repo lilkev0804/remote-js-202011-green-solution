@@ -1,6 +1,7 @@
 
 import './App.css';
 import Homepage from "./components/Homepage";
+import Calculator from './Components/Calculator'
 import Body from './components/BodyResult';
 import Result from './components/Result';
 import Solution from './components/Solution';
@@ -16,6 +17,7 @@ function App() {
     <div className="App">
 
       <Homepage/>
+      <Calculator />
       <Body
         bodytext="Mon émission de CO2 pour le mois de janvier"
       />
@@ -40,8 +42,8 @@ function App() {
       <Solutions />  
       <CardsList />
       <Footer />
-    </div>
-  );
-}
 
+    </div>
+  )
+}
 export default App;
