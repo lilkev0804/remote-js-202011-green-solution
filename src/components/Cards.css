@@ -1,0 +1,58 @@
+.solutions-cards{
+    font-family: 'Roboto', sans-serif;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 250px;
+    width: 100%;
+    padding-bottom: 20px;
+}
+.solutions-vertClair{
+    background: #B7E4C7;
+}
+
+.solutions-blanc{
+    background: #D8F3DC;
+}
+
+.solutions-texte{
+    color: #1B4332;
+    padding: 1em;
+}
+
+/* CSS par image */
+.green-truck{
+    max-width: 250px;
+}
+
+.sterring-Wheel{
+    max-width: 160px;
+}
+
+.Mutualisation{
+    max-width: 250px;
+}
+
+.logo-Objectif-CO2{
+    max-width: 250px;
+}
+
+
+/* Medias Queries */
+@media (min-width: 1100px){
+    .solutions-texte{
+        height: 350px;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1100px){
+    .solutions-texte{
+        height: 450px;
+    }
+    .Mutualisation{
+        max-width: 250px;
+    }
+    .logo-Objectif-CO2{
+        max-width: 250px;
+    }
+}
