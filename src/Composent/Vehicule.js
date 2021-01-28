@@ -12,7 +12,7 @@ class Vehicule extends React.Component {
                     <option className="vehiculeList" value="Poids lourd 38T">Poids lourd 38T</option>
                 </select>
             </div>
-        </div>
+                </div>
         )
     }
 }

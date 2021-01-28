@@ -54,7 +54,7 @@
     padding: 5px;
 }
 button {
- justify-content: center;
+    justify-content: center;
 }
 .inputBoxVehicule{
     display:flex;
@@ -64,4 +64,9 @@ button {
     background-color: #B7E4C7;
     padding: 20px 0 20px 0; 
     margin: 0 20px 0 20px;
+}
+@media screen and (max-width:420px){
+    .calculatorBloc {
+        margin: 0;
+    }
 }
