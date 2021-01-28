@@ -11,7 +11,6 @@
     text-shadow: 2px 0 0 #FFFFFF, 2px 2px 0 #FFFFFF, 0 2px 0 #FFFFFF, -2px 2px 0 #FFFFFF, -2px 0 0 #FFFFFF, -2px -2px 0 #FFFFFF, 0 -2px 0 #FFFFFF, 2px -2px 0 #FFFFFF;
     font-family : 'Dancing Script';
 }
-
 button {
     color: #1B4332;
     border: none;
@@ -24,7 +23,7 @@ button {
     font-family: 'Didot';
 }
 
-/* mobile device */
+
 @media (max-width: 420px){
 
 .homepage {
@@ -35,30 +34,26 @@ button {
     align-items: center;
     justify-content: space-around;
 }
-
 .homepage-title {
     margin: 10vh;
     display: flex;
     align-items: center;
 }
-
 .homepage-btn {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .btn-connexion {
     margin-bottom: 10vh;
 }
 
 }
 
-/* desktop device */
+
 @media (min-width: 420px) {
 
 .homepage {
-    /* background-image: url("img-homepage/homepage-desktop-bg.jpg"); */
     background-image: url("./imgHomepage/homepage-desktop-bg.jpg");
     background-size: cover;
     background-position: center center;
@@ -67,7 +62,6 @@ button {
     align-items: center;
     flex-direction: column;
 }
-
 .homepage-btn {
     display: flex;
     background-color: #B5C9AB ;
@@ -76,7 +70,6 @@ button {
     align-items: center;
 
 }
-
 .simulatorBtn {
     padding-top: 30px;
     height: 100px;
