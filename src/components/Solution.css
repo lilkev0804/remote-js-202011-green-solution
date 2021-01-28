@@ -23,7 +23,7 @@
 } 
 .imgGlobalwarming {
     border-radius: 10px;
-    width: 80%;
+    width: 60%;
 }
 
 @media only screen and (min-width: 360px) {
@@ -38,7 +38,24 @@
 
 @media only screen and (min-width: 640px) {
     .solutionbutton {
-        font-size: 20px;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        font-size: 18px;
+    }
+    .imgGlobalwarming {
+        border-radius: 10px;
+        width: 50%;
+}}
+
+@media only screen and (min-width: 1000px) {
+    .solutionbutton {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        width: 30%;
+}
+.imgGlobalwarming {
+    border-radius: 10px;
+    width: 35%;
 }}
 
 /* fin bouton solution page resultat */

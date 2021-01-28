@@ -62,6 +62,11 @@ animation-iteration-count:infinite;
 }}
 
 @media only screen and (min-width: 640px) {
+    .result {
+        width: 60%;
+        margin-bottom: 10%;
+        margin-top: 10%;
+    }
     .logoResult{
         height: 45px;
     }
@@ -71,6 +76,14 @@ animation-iteration-count:infinite;
     .resultText {
         width: 260px;
         font-size: 35px;
-}}
+    }}
+
+@media only screen and (min-width: 1000px) {
+    .result {
+        width: 40%;
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }}
+
 
 /* fin resultat calculator */
