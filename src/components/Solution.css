@@ -1,0 +1,61 @@
+/* bouton solution page resultat */
+
+.solution {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+
+}
+.solutionbutton {
+    font-size: 8px;
+    color: rgb(250, 219,173);
+    font-weight: bold;
+    border: none;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    height: 60px;
+    width: 50%; 
+    background:#74C69D;
+    font-family: 'Roboto', sans-serif;
+} 
+.imgGlobalwarming {
+    border-radius: 10px;
+    width: 60%;
+}
+
+@media only screen and (min-width: 360px) {
+    .solutionbutton {
+        font-size: 10px;
+}}
+
+@media only screen and (min-width: 520px) {
+    .solutionbutton {
+        font-size: 15px;
+}}
+
+@media only screen and (min-width: 640px) {
+    .solutionbutton {
+        margin-top: 10%;
+        margin-bottom: 10%;
+        font-size: 18px;
+    }
+    .imgGlobalwarming {
+        border-radius: 10px;
+        width: 50%;
+}}
+
+@media only screen and (min-width: 1000px) {
+    .solutionbutton {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        width: 30%;
+}
+.imgGlobalwarming {
+    border-radius: 10px;
+    width: 35%;
+}}
+
+/* fin bouton solution page resultat */

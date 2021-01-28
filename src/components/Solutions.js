@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import './Solutions.css'
 
 class Solutions extends React.Component {
@@ -12,4 +12,4 @@ class Solutions extends React.Component {
     };
   }
 
-  export default Solutions
+  export default Solutions;
