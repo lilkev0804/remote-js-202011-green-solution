@@ -12,7 +12,7 @@ import './Info.css';
                   <img 
                   src="https://images.pexels.com/photos/221164/pexels-photo-221164.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                    alt="?"
-                   />
+                  />
                    <div className="Info-container-button">
                     <button className="Info-Button3">Nos coordonnées</button> 
                   </div>

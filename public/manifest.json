@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "short_name": "React App",
   "name": "Create React App Sample",
   "icons": [
@@ -18,6 +19,10 @@
       "sizes": "512x512"
     }
   ],
+=======
+  "short_name": "GreenSolution",
+  "name": "Create React App Sample",
+>>>>>>> d0712b6127cd4878741be03305e3002d38823e5c
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
