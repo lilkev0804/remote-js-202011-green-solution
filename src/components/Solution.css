@@ -1,6 +1,9 @@
 /* bouton solution page resultat */
 
 .solution {
+    padding-top: 10px;
+    margin-bottom: 10px;
+    background:#74C69D;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -15,10 +18,10 @@
     text-align: center;
     border-radius: 10px;
     margin-top: 20%;
-    margin-bottom: 20%;
+    margin-bottom: 10%;
     height: 60px;
     width: 50%; 
-    background:#74C69D;
+    background:#40916C;
     font-family: 'Roboto', sans-serif;
 } 
 .imgGlobalwarming {

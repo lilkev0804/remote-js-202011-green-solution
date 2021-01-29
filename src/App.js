@@ -1,11 +1,12 @@
 import './App.css';
-import Calculator from './components/Calculator';
-import Homepage from "./components/Homepage";
 import BodyResult from './components/BodyResult';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Solutions from './components/Solutions';
+import Calculator from './components/Calculator';
 import CardsList from './components/CardsList';
+import Footer from './components/Footer';
+import Homepage from "./components/Homepage";
+import Header from './components/Header';
+import Solutions from './components/Solutions';
+
 
 function App() {
   return (
