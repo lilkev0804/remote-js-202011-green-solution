@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=GFS+Didot&display=swap');
+
+
+.homepage {
+    height: 100vh; 
+}
+.homepage-title {
+    font-size: 4rem;
+    color : #1B4332;
+    text-shadow: 2px 0 0 #FFFFFF, 2px 2px 0 #FFFFFF, 0 2px 0 #FFFFFF, -2px 2px 0 #FFFFFF, -2px 0 0 #FFFFFF, -2px -2px 0 #FFFFFF, 0 -2px 0 #FFFFFF, 2px -2px 0 #FFFFFF;
+    font-family : 'Dancing Script';
+}
+button {
+    color: #1B4332;
+    border: none;
+    border-radius: 30px;
+    background-color: #FFFFFF;
+    height: 70px;
+    width: 250px;
+    font-size: 30px;
+    margin-bottom: 5vh;
+    font-family: 'Didot';
+}
+
+
+@media (max-width: 420px){
+
+.homepage {
+    background-image : url("./imgHomepage/homepage-mobile-bg.jpg");
+    background-size: cover;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.homepage-title {
+    margin: 10vh;
+    display: flex;
+    align-items: center;
+}
+.homepage-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btn-connexion {
+    margin-bottom: 10vh;
+}
+
+}
+
+
+@media (min-width: 420px) {
+
+.homepage {
+    background-image: url("./imgHomepage/homepage-desktop-bg.jpg");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.homepage-btn {
+    display: flex;
+    background-color: #B5C9AB ;
+    width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.simulatorBtn {
+    padding-top: 30px;
+    height: 100px;
+
+}
+.connexionBtn {
+    padding-top: 30px;
+    height: 100px;
+}
+
+
+}
