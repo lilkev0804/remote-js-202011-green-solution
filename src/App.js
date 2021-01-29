@@ -1,5 +1,6 @@
-
+import React from "react";
 import './App.css';
+import Aboutus from "./screen/Aboutus";
 import Homepage from "./components/Homepage";
 import Calculator from './Components/Calculator'
 import Body from './components/BodyResult';
@@ -11,11 +12,10 @@ import Footer from './components/Footer'
 import Solutions from './components/Solutions'
 import CardsList from './components/CardsList'
 
-
 function App() {
   return (
     <div className="App">
-
+      <Aboutus />
       <Homepage/>
       <Calculator />
       <Body
