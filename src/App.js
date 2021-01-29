@@ -1,13 +1,11 @@
 
-import './App.css'
-import Calculator from './Components/Calculator'
 import './App.css';
+import Homepage from "./components/Homepage";
+import Calculator from './Components/Calculator'
 import Body from './components/BodyResult';
 import Result from './components/Result';
 import Solution from './components/Solution';
 // import {BrowserRouter as Router, Route} from 'react-router-dom';
-
-import './App.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Solutions from './components/Solutions'
@@ -17,6 +15,8 @@ import CardsList from './components/CardsList'
 function App() {
   return (
     <div className="App">
+
+      <Homepage/>
       <Calculator />
       <Body
         bodytext="Mon émission de CO2 pour le mois de janvier"
@@ -38,7 +38,6 @@ function App() {
 
       <Solutions />  
       <CardsList />
-
       <Header />
       <Solutions />  
       <CardsList />
@@ -47,5 +46,4 @@ function App() {
     </div>
   )
 }
-export default App;
 export default App;
