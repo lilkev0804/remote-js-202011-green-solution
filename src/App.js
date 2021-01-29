@@ -1,6 +1,7 @@
 import './App.css';
 import Aboutus from "./screen/Aboutus";
 import BodyResult from './components/BodyResult';
+import BurgerMenu from './components/BurgerMenu.js';
 import Calculator from './components/Calculator';
 import CardsList from './components/CardsList';
 import Footer from './components/Footer';
@@ -12,6 +13,9 @@ import Solutions from './components/Solutions';
 function App() {
   return (
     <div className="App">
+
+      <BurgerMenu/>
+
       <Header/>
       <Homepage/>
       <Footer/>
