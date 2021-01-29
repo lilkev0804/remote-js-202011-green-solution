@@ -47,7 +47,7 @@
     display: none;
   }
 
-.menu-burger .menu-item1 {
+.menu-item1 {
     display: flex;
     color: #fff;
     text-decoration: none;
@@ -59,7 +59,7 @@
     margin-bottom: 1em;
     border-radius: 50px;
 }
-.menu-burger .menu-item2 {
+.menu-item2 {
     display: block;
     color: #fff;
     text-decoration: none;
@@ -71,7 +71,7 @@
     margin-bottom: 1em;
     border-radius: 50px;
 }
-.menu-burger .menu-item3 {
+.menu-item3 {
     display: block;
     color: #fff;
     text-decoration: none;
@@ -83,7 +83,7 @@
     margin-bottom: 1em;
     border-radius: 50px;
 }
-.menu-burger .menu-item4 {
+.menu-item4 {
     display: block;
     color: #fff;
     text-decoration: none;

@@ -3,7 +3,7 @@ import React from "react";
 import './App.css';
 import Aboutus from "./screen/Aboutus";
 import Homepage from "./components/Homepage";
-import Calculator from './Components/Calculator'
+import Calculator from './components/Calculator'
 import Body from './components/BodyResult';
 import Result from './components/Result';
 import Solution from './components/Solution';
@@ -16,6 +16,7 @@ import CardsList from './components/CardsList'
 function App() {
   return (
     <div className="App">
+      <Header />
       <BurgerMenu />
       <Aboutus />
       <Homepage/>
@@ -37,10 +38,8 @@ function App() {
       {/* <Router>
         <Route path="/Solution" exact component={"page solution"}/>
       </Router> */}
+ 
 
-      <Solutions />  
-      <CardsList />
-      <Header />
       <Solutions />  
       <CardsList />
       <Footer />
