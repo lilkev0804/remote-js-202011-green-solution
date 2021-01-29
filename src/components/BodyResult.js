@@ -5,7 +5,7 @@ import "./BodyResult.css";
 
 function BodyResult() {
     return (
-      <div className="body">
+      <div className="bodyResult">
         <h1 className="bodytext">Mon émission de CO2 pour le mois de janvier</h1>
           <Result/>
           <Solution/>
