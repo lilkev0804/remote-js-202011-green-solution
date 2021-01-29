@@ -8,10 +8,10 @@ class BurgerMenu extends React.Component {
     return (
 
       <Menu className="menu-burger" left width={ '200px' } >
-        <a className="menu-item1" href="#">Home</a>
-        <a className="menu-item2" href="#">Calculator</a>
-        <a className="menu-item3" href="#">Solutions</a>
-        <a className="menu-item4" href="#">About Us</a>
+        <h4 className="menu-item1" href="#">Home</h4>
+        <h4 className="menu-item2" href="#">Calculator</h4>
+        <h4 className="menu-item3" href="#">Solutions</h4>
+        <h4 className="menu-item4" href="#">About Us</h4>
       </Menu>
     );
   }
