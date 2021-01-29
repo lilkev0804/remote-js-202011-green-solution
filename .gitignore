@@ -5,10 +5,15 @@
 /.pnp
 .pnp.js
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 package-lock.json
 >>>>>>> d0712b6127cd4878741be03305e3002d38823e5c
 
+=======
+.eslintcache
+.package-lock.json
+>>>>>>> dev
 # testing
 /coverage
 
@@ -25,3 +30,4 @@ package-lock.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.eslintcache

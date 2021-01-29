@@ -1,0 +1,63 @@
+@font-face{
+    font-family: Dancing spirit;
+    src: url("../DancingScript-VariableFont_wght.ttf")
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+button:focus{
+    outline: none;
+}
+.header{
+    width: 100%;
+    padding: 10px 10px;
+    background-color: #174416d7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-title-navbar{
+    color: white;
+    font-weight: 600;
+    font-family: Dancing spirit;
+    font-size: 2rem;
+}
+.btn-burger{
+    background-color: transparent;
+    border: 3px solid #FDE6A0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 7px;
+    .burger-icon{
+        color: #FDE6A0;
+    }
+}
+.header-navbar{
+    display: none;
+}
+@media screen and (min-width: 765px){
+    .header{
+        justify-content: flex-start;
+        position: relative;
+    }
+    .btn-burger{
+        display: none;
+    }
+    .header-title-navbar{
+        justify-self: start;
+        margin-left: 2vw;
+    }
+    .header-navbar{
+        display: flex;
+        position: absolute;
+        right: 10px;
+    }
+    .header-nav-link{
+        color: white;
+        list-style: none;
+        margin-right: 20px;
+        text-transform: capitalize;
+        font-family: "Roboto";
+        font-weight: 900;
+    }
+}
