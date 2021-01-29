@@ -30,3 +30,9 @@ p {
 .Equipe img:hover {
     transform: rotate(300deg);
 }
+
+@media screen and (max-width:420px){
+    .Equipe {
+        margin: 0;
+    }
+}

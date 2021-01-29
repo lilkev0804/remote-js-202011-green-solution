@@ -9,7 +9,6 @@
 
 .Info {
     background-color: honeydew;
-    
 }
 
 p {
@@ -71,4 +70,11 @@ button:hover {
     width: 80px;
     height: 30px;
     font-size: 8px;
+    
+}
+
+@media screen and (max-width:420px){
+    .Info {
+        margin: 0;
+    }
 }
