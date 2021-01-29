@@ -1,11 +1,15 @@
-import React from "react"
-import "./BodyResult.css"
+import React from "react";
+import Result from './Result';
+import Solution from './Solution';
+import "./BodyResult.css";
 
-function Body(props) {
+function BodyResult() {
     return (
       <div className="body">
-        <h1 className="bodytext">{props.bodytext}</h1>
+        <h1 className="bodytext">Mon émission de CO2 pour le mois de janvier</h1>
+          <Result/>
+          <Solution/>
       </div>
     );
   }
-  export default Body;
+  export default BodyResult;
