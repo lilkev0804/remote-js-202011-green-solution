@@ -4,47 +4,38 @@ import './App.css';
 import Aboutus from "./screen/Aboutus";
 import Homepage from "./components/Homepage";
 import Calculator from './components/Calculator'
-import Body from './components/BodyResult';
 import Result from './components/Result';
 import Solution from './components/Solution';
-// import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Solutions from './components/Solutions'
-import CardsList from './components/CardsList'
+
+
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <BurgerMenu />
-      <Aboutus />
-      <Homepage/>
-      <Calculator />
-      <Body
-        bodytext="Mon émission de CO2 pour le mois de janvier"
-      />
-      <Result
-       logoResult="image-src/logoResult.png"
-       logoResult2="image-src/logoResult2.png"
-       logoName="logoResult"
-       resultText=/*recupérer nombre du calculator*/" 150 T  de  CO2"
-      />
-      <Solution 
-        imgGlobalwarming="image-src/globalwarming.svg"
-        name="globalwarming"
-        solutionbutton="Des solutions adaptées à vos besoins"
-      />
-      {/* <Router>
-        <Route path="/Solution" exact component={"page solution"}/>
-      </Router> */}
- 
-
-      <Solutions />  
-      <CardsList />
-      <Footer />
-
+      <Router>
+        <Header />
+        <BurgerMenu />
+        <Route path="./screen/Aboutus" exact component={Aboutus}/>
+        <Route path="/" exact component={Homepage}/>
+        <Route path="/Calculator" exact component={Calculator}/>
+        <Route path="/Result"  exact component={Result}
+        logoResult="image-src/logoResult.png"
+        logoResult2="image-src/logoResult2.png"
+        logoName="logoResult"
+        resultText=/*recupérer nombre du calculator*/" 150 T  de  CO2"
+        />
+        <Route path="/Solution" exact component={Solution} 
+          imgGlobalwarming="image-src/globalwarming.svg"
+          name="globalwarming"
+          solutionbutton="Des solutions adaptées à vos besoins"
+        /> 
+        <Footer />
+      </Router>
     </div>
-  )
+  );
 }
 export default App;
