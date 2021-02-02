@@ -2,6 +2,8 @@
   display: flex;
   padding-left: 10px;
   background-color: honeydew;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 #message {
@@ -12,4 +14,12 @@
 #form {
   font-size: 12px;
  
+}
+
+input {
+  background-color:  rgb(212, 247, 212);
+}
+
+textarea {
+  background-color:  rgb(212, 247, 212);
 }

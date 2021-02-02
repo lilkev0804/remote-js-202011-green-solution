@@ -3,9 +3,11 @@
     width: 100%;
     font-size: 1.2em;
     justify-content: space-between;
-    background-color: rgb(206, 248, 206);
+    background-color: rgb(212, 247, 212);
     padding-top: 10px;
     padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 h2 {
@@ -24,11 +26,11 @@ p {
 }
 
 .Objectif img {
-    width: 180px;
-   height: 100px;
+  
    margin-left: auto;
    margin-right: auto;
-   padding-bottom: 10px;
+   padding-bottom: 20px;
+   padding-left: 10px;
 }
 
 .Objectif img:hover {
@@ -41,11 +43,21 @@ button {
     border-radius: 50px;
 }
 
-.Objectif-Button {
-    text-align: center;
+@media screen and (min-width:420px){
+    .Objectif {
+        flex-direction: column;
+        
+    }
+    .Objectif img {
+        width: 250px;
+        height: 150px;
+    }
+
 }
 
-@media screen and (max-width:420px){
-    .Objectif {
-        flex-direction: column;}
-    }
+@media screen and (max-width: 420px) {
+    .Objectif img {
+        height: 150px;
+        width: 150px;
+    } 
+}

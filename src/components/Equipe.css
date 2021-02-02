@@ -6,6 +6,7 @@
     justify-content: space-between;
     background-color: honeydew;
     padding-top: 10px;
+    padding-left: 10px;
 
 }
 
@@ -19,7 +20,7 @@ p {
 }
 
 .Equipe img {
-    width: 100px;
+    width: 150px;
     height: 80px;
     transition: 3s;
     margin-right: 10px;
@@ -33,7 +34,9 @@ p {
 }
 
 @media screen and (max-width:420px){
-    .Equipe {
-        margin: 0;
+   
+    .Equipe img {
+        flex-direction: column;
     }
 }
+

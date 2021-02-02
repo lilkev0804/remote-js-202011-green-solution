@@ -2,16 +2,25 @@
     display: flex;
     padding-top: 20px;
     padding-bottom: 20px;
-    height: 140px;
-}
-@media screen and (max-width:420px) {
-    .Coordonnées {
-        flex-direction: column;
-    }
+    height: 160px;
+    padding-left: 10px;
 }
 
 .CoordonnéesButton {
     width: 80px;
     height: 20px;
     font-size: 8px;
+}
+
+@media screen and (max-width:420px) {
+    .Coordonnées {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 420px) {
+    .Coordonnées {
+        display:inline-flex
+    }
+    
 }

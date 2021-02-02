@@ -5,7 +5,10 @@ function Coordonnées() {
     return (
         <div className="Coordonnées">
           <i className="fas fa-address-card"></i>
-            <p>Siège social : GREEN SOLUTION - 55 Rue du Faubourg St Honoré - 75008 PARIS</p>
+            <p>Siège social
+            GREEN SOLUTION
+            55 Rue du Faubourg St Honoré
+            75008 PARIS</p>
           <i className="fas fa-phone-square"></i>
               <p>01.42.92.81.00</p>
           <i className="fab fa-internet-explorer"></i>
