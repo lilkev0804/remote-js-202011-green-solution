@@ -1,0 +1,15 @@
+.MailForm {
+  display: flex;
+  padding-left: 10px;
+  background-color: honeydew;
+}
+
+#message {
+  width: 300px;
+  height: 70px;
+}
+
+#form {
+  font-size: 12px;
+ 
+}

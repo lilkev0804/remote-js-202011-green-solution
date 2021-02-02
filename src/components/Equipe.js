@@ -6,7 +6,7 @@ function Equipe(props) {
             return (
               <div className="Equipe">
                 <div className="Equipe-Texte1">
-                  <h2>L'équipe</h2>
+                  <h2>L'équipe</h2><br />
                     <p className="Equipe-Texte1-Name">{props.name}</p>
                 </div>
                   <img className="Equipe-Image1"

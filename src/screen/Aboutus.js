@@ -2,9 +2,9 @@ import React from "react";
 import Coordonnées from '../components/Coordonnées';
 import Equipe from '../components/Equipe';
 import Info from '../components/Info';
+import MailForm from '../components/MailForm';
 import Objectif from '../components/Objectif';
 import Titre from '../components/Titre';
-
 import '../App.css';
 
 
@@ -18,6 +18,7 @@ const Aboutus=() => {
       <Objectif />
       <Info />
       <Coordonnées />
+      <MailForm />
     </div>
     
   );
