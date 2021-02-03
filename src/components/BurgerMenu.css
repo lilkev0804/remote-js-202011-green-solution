@@ -1,97 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@font-face {
+  font-family: Dancing spirit;
+  src: url("../DancingScript-VariableFont_wght.ttf");
+}
+
 .bm-burger-button {
-    position: fixed;
-    width: 36px;
-    height: 30px;
-    left: 36px;
-    top: 36px;
-  }
-  
+  outline: none;
+  border: none;
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 36px;
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
 .bm-burger-bars {
-    background: #50dada;
-  }
-  
+  border-radius: 200px;
+  background:#FDE6A0;
+}
 
+/* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
-    background: #57d88d;
-  }
+  background: #FDE6A0;
+}
 
-  
+.menu-burger .menu-item1 {
+  border-radius: 120px;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  background: #a58446;
+  transition: background 0.5s;
+  padding: 0.5em;
+  text-align: center;
+  margin-bottom: 1em;
+  border-radius: 50px;
+}
+.menu-burger .menu-item2 {
+border-radius: 220px;
+  display: block;
+  color: #a58446;
+  text-decoration: none;
+  font-weight: 700;
+  background: #bdae92;
+  transition: background 0.5s;
+  padding: 0.5em;
+  text-align: center;
+  margin-bottom: 1em;
+  border-radius: 50px;
+}
+.menu-burger .menu-item3 {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  background: #a58446;
+  transition: background 0.5s;
+  padding: 0.5em;
+  text-align: center;
+  margin-bottom: 1em;
+  border-radius: 50px;
+}
+.menu-burger .menu-item4 {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  background: #a58446;
+  transition: background 0.5s;
+  padding: 0.5em;
+  text-align: center;
+  margin-bottom: 1em;
+  border-radius: 50px;
+}
+
+/* A partir de ce css il ne faut au possible pas le toucher sous peine d'avoir des bugs*/
 .bm-menu-wrap {
-    position: fixed;
-    height: 100%;
-  }
-  
-.bm-menu {
-    background-color: #27f38d;
-    padding: 2.5em 1.5em 0;
-    font-size: 1.15em;
-  }
-  
-.bm-morph-shape {
-    fill: #27f38d;
-  }
-  
-.bm-item-list {
-    margin: 2rem;
-  }
-  
-.bm-item {
-    display: inline-block;
-  }
-  
-.bm-overlay {
-    background-color: rgb(255, 255, 255);
-  }
+  position: fixed;
+  height: 100%;
+}
 
+
+.bm-menu {
+  background: #ecce72;
+  padding: 2.4em 2.5em 0;
+  font-size: 1.8em;
+}
+
+
+.bm-morph-shape {
+  fill:#ecce72;
+}
+
+.bm-item-list {
+  color: #ffffff;
+  
+}
+
+.bm-item {
+  display: inline-block;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  line-height: 2;
+}
+.bm-item:focus{
+  outline: none !important;
+}
+
+@media (min-width: 765px) {
+  .bm-burger-bars {
+  display: none !important;
+  }
+}
 ::-webkit-scrollbar {
     display: none;
   }
 
-.menu-item1 {
-    display: flex;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    background: #a58446;
-    transition: background 0.5s;
-    padding: 0.5em;
-    text-align: center;
-    margin-bottom: 1em;
-    border-radius: 50px;
-}
-.menu-item2 {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    background: #a58446;
-    transition: background 0.5s;
-    padding: 0.5em;
-    text-align: center;
-    margin-bottom: 1em;
-    border-radius: 50px;
-}
-.menu-item3 {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    background: #a58446;
-    transition: background 0.5s;
-    padding: 0.5em;
-    text-align: center;
-    margin-bottom: 1em;
-    border-radius: 50px;
-}
-.menu-item4 {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    background: #a58446;
-    transition: background 0.5s;
-    padding: 0.5em;
-    text-align: center;
-    margin-bottom: 1em;
-    border-radius: 50px;
-}

@@ -4,9 +4,6 @@ const Header = () => {
     return <div className="header">
         <img alt="logo Green Solution" src='./img/logo.svg'></img>
         <p className="header-title-navbar">Green Solution</p>
-        <button className="btn-burger">
-            <i class="fas fa-bars burger-icon"></i>
-        </button>
         <ul className="header-navbar">
             <li className="header-nav-link">home</li>
             <li className="header-nav-link">calculator</li>

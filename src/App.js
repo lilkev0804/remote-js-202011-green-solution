@@ -1,4 +1,4 @@
-import BurgerMenu from './components/BurgerMenu.js'
+import BurgerMenu from './components/BurgerMenu'
 import React from "react";
 import './App.css';
 import Aboutus from "./screen/Aboutus";
