@@ -1,20 +1,17 @@
 import React from "react"
 import "./Result.css"
-import Body from './BodyResult';
+
 // import page calculator
 
-let resultCalc = 150 > 100
+let resultCalc = 150 > 100;
+const logoResult="image-src/logoResult.png";
+const logoResult2="image-src/logoResult2.png";
 
-function Result(props) {
+function Result() {
     return (
-      <div>
-        <Body
-          bodytext="Mon émission de CO2 pour le mois de janvier"
-        />
-        <div className="result">
-          <img className={resultCalc ? "logoResult" : "logoResult2"} src={resultCalc ? props.logoResult : props.logoResult2} alt={props.logoName} />
-          <input className="resultText" type="text" value={props.resultText}/>
-        </div>
+      <div className="result">
+        <img className={resultCalc ? "logoResult" : "logoResult2"} src={resultCalc ? logoResult : logoResult2} alt={"logoResult"} />
+        <input className="resultText" type="text" value={/*recupérer nombre du calculator*/" 150 T  de  CO2"}/>
       </div>
 
     );
