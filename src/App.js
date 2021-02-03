@@ -19,7 +19,7 @@ function App() {
       <Router>
         <Header />
         <BurgerMenu />
-        <Route path="./screen/Aboutus" exact component={Aboutus}/>
+        <Route path="/Aboutus" exact component={Aboutus}/>
         <Route path="/" exact component={Homepage}/>
         <Route path="/Calculator" exact component={Calculator}/>
         <Route path="/Result"  exact component={Result}
