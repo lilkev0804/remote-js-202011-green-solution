@@ -6,12 +6,12 @@ import "./Homepage.css";
 function Homepage() {
     return (
         <div className="homepage">
-        <h1 className="homepage-title">Réduisez votre empreinte carbone</h1> 
-        <div className="homepage-btn">
-            <SimulatorBtn />
-            <ConnexionBtn />
+            <h1 className="homepage-title">Réduisez votre empreinte carbone</h1> 
+            <div className="homepage-btn">
+                <SimulatorBtn />
+                <ConnexionBtn />
+            </div>
         </div>
-    </div>
     )
 }
 
