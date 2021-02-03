@@ -2,6 +2,7 @@ import React from 'react';
 import './calculator.css';
 import TableInput from './TableInput';
 import Vehicule from './Vehicule';
+import {Link} from "react-router-dom";
 
 class Calculator extends React.Component {
     render() { 
@@ -14,7 +15,9 @@ class Calculator extends React.Component {
                     <TableInput title="Poids de la marchandise" units="Kg"/>
                     <div className="validationSection">
                         <div className="validationTitle">Calculer mon empreinte carbone</div>
-                        <button className="boutonValidation">Validation</button>
+                        <Link to="/Result" style={{textDecoration:'none'}}>
+                            <button className="boutonValidation">Validation</button>
+                        </Link>
                     </div>
                 </div>
             </div>
