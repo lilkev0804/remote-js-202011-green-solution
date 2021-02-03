@@ -1,3 +1,11 @@
+.visible {
+    display: flex; 
+}
+
+.invisible {
+    display: none;
+}
+
 .Info-Texte3 {
     
     padding-left: 10px;

@@ -1,9 +1,11 @@
 .Coordonnées {
     display: flex;
+    flex-wrap: wrap;
     padding-top: 20px;
     padding-bottom: 20px;
     height: 160px;
     padding-left: 10px;
+    width: 100%;
 }
 
 .CoordonnéesButton {
