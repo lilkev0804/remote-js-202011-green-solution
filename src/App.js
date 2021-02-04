@@ -18,9 +18,9 @@ function App() {
 
       <Header/>
       <Homepage/>
-      <Footer/>
+     <Footer/>
 
-      <Header/>
+      {/*  <Header/>
       <Calculator/>
       <Footer/>
       
@@ -35,7 +35,7 @@ function App() {
 
       <Header/>
       <Aboutus />
-      <Footer/>
+      <Footer/> */}
     </div>
   )
 }

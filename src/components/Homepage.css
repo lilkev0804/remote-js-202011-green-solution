@@ -3,24 +3,39 @@
 
 
 .homepage {
-    height: 100vh; 
+    height: 100%;
+    width: 100%;
+    background-color: #B7E4C7;
+}
+.imgHomepage {
+    width: 70%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 7px solid black;
 }
 .homepage-title {
     font-size: 4rem;
-    color : #1B4332;
-    text-shadow: 2px 0 0 #FFFFFF, 2px 2px 0 #FFFFFF, 0 2px 0 #FFFFFF, -2px 2px 0 #FFFFFF, -2px 0 0 #FFFFFF, -2px -2px 0 #FFFFFF, 0 -2px 0 #FFFFFF, 2px -2px 0 #FFFFFF;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color : black;
     font-family : 'Dancing Script';
 }
 button {
     color: #1B4332;
-    border: none;
     border-radius: 30px;
+    border: 6px solid #84A98C;
     background-color: #FFFFFF;
     height: 70px;
-    width: 250px;
-    font-size: 30px;
-    margin-bottom: 5vh;
+    width: 270px;
+    font-size: 40px;
+    margin-bottom: 20px;
     font-family: 'Didot';
+}
+.textHomepage {
+    font-size: 2rem;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    align-items: center;
 }
 
 
@@ -54,9 +69,6 @@ button {
 @media (min-width: 420px) {
 
 .homepage {
-    background-image: url("./imgHomepage/homepage-desktop-bg.jpg");
-    background-size: cover;
-    background-position: center center;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,8 +76,8 @@ button {
 }
 .homepage-btn {
     display: flex;
-    background-color: #B5C9AB ;
     width: 100vw;
+    margin-bottom: 30px;
     justify-content: space-around;
     align-items: center;
 
