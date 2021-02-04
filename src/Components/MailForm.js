@@ -4,7 +4,7 @@ import './MailForm.css';
 
 function MailForm() {
     const popup=() => {
-        alert("hello");
+        alert("Merci, notre équipe vous répondra au plus vite");
     }
     return (
         <div className="MailForm">
@@ -18,9 +18,7 @@ function MailForm() {
                 <label for="message">Message :</label><br />
                 <textarea id="message" name="message"></textarea><br />
                 <input className="envoyer" type="submit" value="Envoyer" onClick={popup} />
-                
             </form>  
-
         </div> 
     
 

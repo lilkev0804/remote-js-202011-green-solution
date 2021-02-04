@@ -6,21 +6,8 @@
     display: none;
 }
 
-.Info-Texte3 {
-    
-    padding-left: 10px;
-    font-size: 1.2em;
-    justify-content: space-between;
-    padding-top: 10px;
-    
-}
-
 .Info {
-    background-color: honeydew;
-}
-
-p {
-    font-family: 'Happy Monkey', cursive;
+    background-color: #B7E4C7;
 }
 
 h2 {
@@ -33,16 +20,9 @@ h2 {
 .Info img {
     margin-left: 10px;
     width: 300px;
-   height: 100px;
-   transition: 10s;   
+   height: 100px;  
    margin-bottom: 10px;
    padding-left: 60px;
-}
-
-.Info img:hover {
-    color: black;
-    background-color: honeydew;
-    transform: rotate(360deg) scale(1.2);
 }
 
 button {
@@ -59,7 +39,7 @@ button {
 
 button:hover {
     color: black;
-    background-color: honeydew;
+    background-color: #74C69D;
 }
 
 .Info-container-button {
@@ -73,16 +53,20 @@ button:hover {
 .Info-Image3 {
     display: flex;
     align-items: center;
+    padding-top: 10px;
 }
+
 .Info-Button3 {
     width: 80px;
     height: 20px;
     font-size: 8px;
-    
 }
 
 @media screen and (max-width:420px){
     .Info {
-        margin: 0;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
     }
+
 }
