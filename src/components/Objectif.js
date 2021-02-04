@@ -4,7 +4,7 @@ import './Objectif.css';
 function Objectif(props) {
             return (
                 <div className="Objectif">
-                    <h2>Pourquoi ?</h2>
+                    <h10>Pourquoi ?</h10>
                         <p className="Objectif-Texte">{props.texte}</p>
                 </div>
     );
