@@ -1,7 +1,7 @@
 .MailForm {
   display: flex;
   padding-left: 10px;
-  background-color: honeydew;
+  background-color: #74C69D;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -13,20 +13,26 @@
 
 #form {
   font-size: 12px;
- 
 }
 
 input {
-  background-color:  rgb(212, 247, 212);
+  background-color: #FFFFFF;
+  border-radius: 5px;
 }
 
 textarea {
-  background-color:  rgb(212, 247, 212);
+  background-color: #FFFFFF;
+  border-radius: 5px;
 }
 
 .envoyer {
   border-radius: 10px;
   padding: 8px 16px;
   border:none;
+  margin-top: 10px;
+}
 
+.envoyer:hover {
+  color: black;
+  background-color: #B7E4C7;
 }

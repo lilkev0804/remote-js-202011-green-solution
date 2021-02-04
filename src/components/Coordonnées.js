@@ -11,7 +11,7 @@ class Coordonnées extends Component {
    render (){
     return (
       <div className={`Coordonnées ${this.state.toggle}`}>
-        <i className="fas fa-address-card"></i>
+        <i className="fas fa-address-card fa-50x"></i>
           <p>Siège social
           GREEN SOLUTION
           55 Rue du Faubourg St Honoré

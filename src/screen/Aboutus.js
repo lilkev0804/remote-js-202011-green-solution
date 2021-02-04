@@ -13,9 +13,14 @@ const Aboutus=() => {
     <div className="App">
       <Titre />
       <Equipe 
-        name="Raphaëlle, Rachelle, Ingrid, Alex, Aurélien, Kévin,Marc" 
+        equipeName="Raphaëlle, Rachelle, Ingrid, Alex, Aurélien, Kévin, Marc" 
       />
-      <Objectif />
+      <Objectif 
+        texte="Green Solution a été créée en 2021.
+        Cette association, à but non lucratif, est composée de 7 élèves de la Wild Code School, qui se sont associés pour un premier projet.
+        Développer une application, pour permetre aux petits transporteurs de calculer leur empreinte carbone.
+        Car chez Green Solution, nous sommes des professionnels du dev, mais nous aimons aussi le développement durable."
+      />
       <Info />
       <Coordonnées />
       <MailForm />

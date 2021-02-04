@@ -6,12 +6,11 @@ function Equipe(props) {
             return (
               <div className="Equipe">
                 <div className="Equipe-Texte1">
-                  <h2>L'équipe</h2><br />
-                    <p className="Equipe-Texte1-Name">{props.name}</p>
+                    <p className="equipeName">{props.equipeName}</p>
                 </div>
                   <img className="Equipe-Image1"
-                  src="https://cdn.pixabay.com/photo/2015/08/29/13/04/tech-913034_960_720.jpg"
-                   alt="picture of the team"
+                  src="https://tse1.mm.bing.net/th?id=OIP.1kTLSSnMGWoxOTdy9__bTAHaHa&pid=Api&P=0&w=300&h=300"
+                   alt="illustration de l'équipe"
                    />
               </div>         
     );
