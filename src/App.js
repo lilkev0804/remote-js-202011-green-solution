@@ -1,43 +1,32 @@
 import './App.css';
 import Aboutus from "./screen/Aboutus";
-import BodyResult from './components/BodyResult';
 import BurgerMenu from './components/BurgerMenu.js';
 import Calculator from './components/Calculator';
-import CardsList from './components/CardsList';
 import Footer from './components/Footer';
 import Homepage from "./components/Homepage";
-import Header from './components/Header';
 import React from "react";
-import Solutions from './components/Solutions';
+import BodyResult from './components/BodyResult';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import Header from './components/Header'
+import Solutions from './components/Solutions'
+
+
 
 function App() {
   return (
     <div className="App">
-
-      <BurgerMenu/>
-
-      <Header/>
-      <Homepage/>
-      <Footer/>
-
-      <Header/>
-      <Calculator/>
-      <Footer/>
-      
-      <Header/>
-      <BodyResult/>
-      <Footer/>
-
-      <Header/>
-      <Solutions/>  
-      <CardsList/>
-      <Footer/>
-
-      <Header/>
-      <Aboutus />
-      <Footer/>
+      <Router>
+        <Header />
+        <BurgerMenu />
+        <Route path="/Aboutus" exact component={Aboutus}/>
+        <Route path="/" exact component={Homepage}/>
+        <Route path="/Calculator" exact component={Calculator}/>
+        <Route path="/Result"  exact component={BodyResult}/>
+        <Route path="/Solutions" exact component={Solutions}/> 
+        <Footer />
+      </Router>
     </div>
-  )
+  );
 }
 export default App;
 
