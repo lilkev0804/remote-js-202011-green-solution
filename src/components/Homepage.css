@@ -60,7 +60,18 @@ button {
 .homepageBg {
     display: none;
 }
-
+.textHomepage {
+    display: none;
+}
+button {
+    border: none;
+    height: 50px;
+    width: 250px;
+    font-size: 30px;
+}
+.imgHomepage {
+    display: none;
+}
 
 }
 
