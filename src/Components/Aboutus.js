@@ -1,10 +1,10 @@
 import React from "react";
-import Coordonnées from '../components/Coordonnées';
-import Equipe from '../components/Equipe';
-import Info from '../components/Info';
-import MailForm from '../components/MailForm';
-import Objectif from '../components/Objectif';
-import Titre from '../components/Titre';
+import Coordonnées from './Coordonnées';
+import Equipe from './Equipe';
+import Info from './Info';
+import MailForm from './MailForm';
+import Objectif from './Objectif';
+import Titre from './Titre';
 import '../App.css';
 
 
@@ -22,8 +22,6 @@ const Aboutus=() => {
         Car chez Green Solution, nous sommes des professionnels du dev, mais nous aimons aussi le développement durable."
       />
       <Info />
-      <Coordonnées />
-      <MailForm />
     </div>
     
   );

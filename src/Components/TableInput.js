@@ -5,7 +5,7 @@ class TableInput extends React.Component {
         <div>
             <h2 className="titleBox">{this.props.title}</h2>
             <div className= "inputBox">
-                <input className="input"></input>
+                <input className="inputCalculator"/>
                 <p className="units">{this.props.units}</p>
             </div>
         </div>

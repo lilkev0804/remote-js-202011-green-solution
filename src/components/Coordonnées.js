@@ -1,5 +1,6 @@
 import React,{ Component } from "react";
 import './Coordonnées.css';
+import {Link} from "react-router-dom";
 
 class Coordonnées extends Component {
   constructor(props){
@@ -22,7 +23,9 @@ class Coordonnées extends Component {
             <p>https://www.greensolution.fr</p>
         <i class="far fa-envelope"></i>
             <p>
-              <button className="CoordonnéesButton">Envoyer un mail</button>
+            <Link to="/Form" style={{textDecoration:'none'}}>
+                <button className="CoordonnéesButton">Envoyer un mail</button>
+            </Link>
             </p>
       </div>
                            
