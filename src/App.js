@@ -1,11 +1,11 @@
+import BurgerMenu from './components/BurgerMenu'
+import React from "react";
 import './App.css';
 import Aboutus from "./components/Aboutus";
-import BurgerMenu from './components/BurgerMenu.js';
 import Calculator from './components/Calculator';
 import Coordonnées from './components/Coordonnées'
 import Footer from './components/Footer';
 import Homepage from "./components/Homepage";
-import React from "react";
 import BodyResult from './components/BodyResult';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Header from './components/Header'
@@ -18,7 +18,6 @@ function App() {
     <div className="App">
       <Router>
         <Header />
-        <BurgerMenu />
         <Route path="/" exact component={Homepage}/>
         <Route path="/Calculator" component={Calculator}/>
         <Route path="/Result"  component={BodyResult}/>
@@ -26,6 +25,7 @@ function App() {
         <Route path="/Aboutus" component={Aboutus}/>
         <Route path="/Form" component={MailForm}/> 
         <Route path="/Coordonnees" component={Coordonnées}/> 
+        <Route path="/BurgerMenu" component={BurgerMenu}/>
         <Footer />
       </Router>
     </div>
