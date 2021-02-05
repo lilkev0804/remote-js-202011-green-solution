@@ -12,7 +12,7 @@ class BurgerMenu extends React.Component {
   render () {
     return (
 
-      <Menu className="menu-burger" right width={ '250px' } >
+      <Menu className="menu-burger" right width={ '200px' } disableAutoFocus disableOverlay>
 
         <a className="menu-item1" href="#">Home</a>
         <a className="menu-item2" href="#">Calculator</a>
