@@ -26,10 +26,10 @@
 }
 .menu-item1 {
   display: flex;
-  color: #fff;
+  color: black;
   text-decoration: none;
   font-weight: 700;
-  background: #a58446;
+  background: #FDE6A0;
   transition: background 0.5s;
   padding: 0.5em;
   text-align: center;
@@ -38,10 +38,10 @@
 }
 .menu-item2 {
   display: block;
-  color: #fff;
+  color: black;
   text-decoration: none;
   font-weight: 700;
-  background: #a58446;
+  background: #FDE6A0;
   transition: background 0.5s;
   padding: 0.5em;
   text-align: center;
@@ -50,10 +50,10 @@
 }
 .menu-item3 {
   display: block;
-  color: #fff;
+  color: black;
   text-decoration: none;
   font-weight: 700;
-  background: #a58446;
+  background: #FDE6A0;
   transition: background 0.5s;
   padding: 0.5em;
   text-align: center;
@@ -62,10 +62,10 @@
 }
 .menu-item4 {
   display: block;
-  color: #fff;
+  color: black;
   text-decoration: none;
   font-weight: 700;
-  background: #a58446;
+  background: #FDE6A0;
   transition: background 0.5s;
   padding: 0.5em;
   text-align: center;
@@ -86,13 +86,13 @@
 
 .bm-menu {
   position: absolute!important;
-  background: #ecce72;
+  background: #D8F3DC;
   font-size: 1.8em;
 }
 
 
 .bm-morph-shape {
-  fill:#ecce72;
+  fill:#D8F3DC;
 }
 
 .bm-item-list {
