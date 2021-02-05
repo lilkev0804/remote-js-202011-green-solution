@@ -24,7 +24,7 @@
 .bm-burger-bars-hover {
   background: #FDE6A0;
 }
-.menu-burger .menu-item1 {
+.menu-item1 {
   display: flex;
   color: #fff;
   text-decoration: none;
@@ -36,7 +36,7 @@
   margin-bottom: 1em;
   border-radius: 50px;
 }
-.menu-burger .menu-item2 {
+.menu-item2 {
   display: block;
   color: #fff;
   text-decoration: none;
@@ -48,7 +48,7 @@
   margin-bottom: 1em;
   border-radius: 50px;
 }
-.menu-burger .menu-item3 {
+.menu-item3 {
   display: block;
   color: #fff;
   text-decoration: none;
@@ -60,7 +60,7 @@
   margin-bottom: 1em;
   border-radius: 50px;
 }
-.menu-burger .menu-item4 {
+.menu-item4 {
   display: block;
   color: #fff;
   text-decoration: none;
@@ -76,12 +76,16 @@
 
 /* A partir de ce css il ne faut au possible pas le toucher sous peine d'avoir des bugs*/
 .bm-menu-wrap {
-  position: fixed;
+  position: absolute;
+  top: 86px;
+  right: 0px;
   height: 100%;
 }
 
 
+
 .bm-menu {
+  position: absolute!important;
   background: #ecce72;
   font-size: 1.8em;
 }

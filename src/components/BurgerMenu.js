@@ -12,28 +12,19 @@ class BurgerMenu extends React.Component {
   render () {
     return (
 
-<<<<<<< HEAD
-      <Menu className="menu-burger" right width={ '200px' } disableAutoFocus disableOverlay>
-
-        <a className="menu-item1" href="#">Home</a>
-        <a className="menu-item2" href="#">Calculator</a>
-        <a className="menu-item3" href="#">Solutions</a>
-        <a className="menu-item4" href="#">About Us</a>
-=======
-      <Menu className="menu-burger" left width={ '200px' } >
-        <Link to="/" style={{textDecoration:'none'}}>
-          <a className="menu-item1"  href="#">Home</a>
+      <Menu className="menu-burger" right width={ '200px' } >
+        <Link className="menu-item1" to="/" style={{textDecoration:'none'}}>
+          Home
         </Link>
-        <Link to="/Calculator" style={{textDecoration:'none'}}>
-          <a className="menu-item2" href="#">Calculator</a>
+        <Link className="menu-item2" to="/Calculator" style={{textDecoration:'none'}}>
+          Calculator
         </Link>
-        <Link to="/Solutions" style={{textDecoration:'none'}}>
-          <a className="menu-item3" href="#">Solutions</a>
+        <Link className="menu-item3" to="/Solutions" style={{textDecoration:'none'}}>
+          Solutions
         </Link>
-        <Link to="/Aboutus" style={{textDecoration:'none'}}>
-          <a className="menu-item4" href="#">About Us</a>
+        <Link className="menu-item4" to="/Aboutus" style={{textDecoration:'none'}}>
+          About Us
         </Link>
->>>>>>> dev
 
       </Menu>
     );
