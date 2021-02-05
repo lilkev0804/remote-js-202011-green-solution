@@ -1,43 +1,35 @@
 import './App.css';
-import Aboutus from "./screen/Aboutus";
-import BodyResult from './components/BodyResult';
+import Aboutus from "./components/Aboutus";
 import BurgerMenu from './components/BurgerMenu.js';
 import Calculator from './components/Calculator';
-import CardsList from './components/CardsList';
+import Coordonnées from './components/Coordonnées'
 import Footer from './components/Footer';
 import Homepage from "./components/Homepage";
-import Header from './components/Header';
 import React from "react";
-import Solutions from './components/Solutions';
+import BodyResult from './components/BodyResult';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import Header from './components/Header'
+import Solutions from './components/Solutions'
+import MailForm from './components/MailForm'
+
 
 function App() {
   return (
     <div className="App">
-
-      <BurgerMenu/>
-
-      <Header/>
-      <Homepage/>
-     <Footer/>
-
-      {/*  <Header/>
-      <Calculator/>
-      <Footer/>
-      
-      <Header/>
-      <BodyResult/>
-      <Footer/>
-
-      <Header/>
-      <Solutions/>  
-      <CardsList/>
-      <Footer/>
-
-      <Header/>
-      <Aboutus />
-      <Footer/> */}
+      <Router>
+        <Header />
+        <BurgerMenu />
+        <Route path="/" exact component={Homepage}/>
+        <Route path="/Calculator" component={Calculator}/>
+        <Route path="/Result"  component={BodyResult}/>
+        <Route path="/Solutions" component={Solutions}/> 
+        <Route path="/Aboutus" component={Aboutus}/>
+        <Route path="/Form" component={MailForm}/> 
+        <Route path="/Coordonnees" component={Coordonnées}/> 
+        <Footer />
+      </Router>
     </div>
-  )
+  );
 }
 export default App;
 
