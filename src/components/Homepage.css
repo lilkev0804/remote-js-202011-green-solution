@@ -7,12 +7,7 @@
     width: 100%;
     background-color: #B7E4C7;
 }
-.imgHomepage {
-    width: 70%;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border: 7px solid black;
-}
+
 .homepage-title {
     font-size: 4rem;
     margin-top: 50px;
@@ -62,6 +57,10 @@ button {
 .btn-connexion {
     margin-bottom: 10vh;
 }
+.homepageBg {
+    display: none;
+}
+
 
 }
 
@@ -90,6 +89,12 @@ button {
 .connexionBtn {
     padding-top: 30px;
     height: 100px;
+}
+.imgHomepage {
+    width: 70%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 7px solid black;
 }
 
 
