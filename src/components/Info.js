@@ -1,20 +1,20 @@
 import React from "react";
 import './Info.css';
+import {Link} from "react-router-dom";
 
 
-          function Info() {
+          function Info(props) {
             return (
               <div className="Info">
-                <div className="Info-Texte3">
-                  <h2>Vous souhaitez en savoir encore plus ? Nous contacter ? C'est par ici...</h2>
-                </div>
                 <div className="Info-Image3">
-                  <img 
-                  src="https://images.pexels.com/photos/221164/pexels-photo-221164.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  <img className="Image3-info"
+                  src="https://tse1.mm.bing.net/th?id=OIP.4lSAsD0OmO--1glXTyF-lgHaDt&pid=Api&P=0&w=333&h=167"
                    alt="?"
                   />
                    <div className="Info-container-button">
-                    <button className="Info-Button3">Nos coordonnées</button> 
+                    <Link to="/Coordonnees" style={{textDecoration:'none'}}>
+                      <button className="Info-Button3">Nos coordonnées</button> 
+                    </Link>
                   </div>
                 </div>   
               </div>           

@@ -1,14 +1,23 @@
 import './Header.css'
+import {Link} from "react-router-dom";
 
 const Header = () => {
     return <div className="header">
         <img alt="logo Green Solution" src='./img/logo.svg'></img>
         <p className="header-title-navbar">Green Solution</p>
         <ul className="header-navbar">
-            <li className="header-nav-link">home</li>
-            <li className="header-nav-link">calculator</li>
-            <li className="header-nav-link">simulation</li>
-            <li className="header-nav-link">about us</li>
+            <Link to="/" style={{textDecoration:'none'}}>   
+                <li className="header-nav-link">home</li>
+            </Link>
+            <Link to="/Calculator" style={{textDecoration:'none'}}> 
+                <li className="header-nav-link">calculator</li>
+            </Link>
+            <Link to="/Solutions" style={{textDecoration:'none'}}> 
+                <li className="header-nav-link">solutions</li>
+            </Link>
+            <Link to="/Aboutus" style={{textDecoration:'none'}}> 
+                <li className="header-nav-link">about us</li>
+            </Link>
         </ul>
     </div>
 }
