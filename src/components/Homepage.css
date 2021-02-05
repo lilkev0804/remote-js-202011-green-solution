@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=GFS+Didot&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 
 .homepage {
@@ -27,6 +28,7 @@ button {
     font-family: 'Didot';
 }
 .textHomepage {
+    font-family: 'Roboto', sans-serif;
     font-size: 2rem;
     padding-top: 50px;
     padding-bottom: 50px;
