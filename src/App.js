@@ -20,16 +20,15 @@ function App() {
       <BurgerMenu />
       <Aboutus />
       <Homepage/>
-      <Calculator />
+      <Calculator/>
       <Body
         bodytext="Mon émission de CO2 pour le mois de janvier"
       />
-      <Result
-       logoResult="image-src/logoResult.png"
-       logoResult2="image-src/logoResult2.png"
-       logoName="logoResult"
-       resultText=/*recupérer nombre du calculator*/" 150 T  de  CO2"
-      />
+        <Result
+      logoResult="image-src/logoResult.png"
+      logoResult2="image-src/logoResult2.png"
+      logoName="logoResult"
+      /> 
       <Solution 
         imgGlobalwarming="image-src/globalwarming.svg"
         name="globalwarming"
@@ -48,3 +47,4 @@ function App() {
   )
 }
 export default App;
+

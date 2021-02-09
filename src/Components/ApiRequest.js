@@ -21,7 +21,7 @@ import axios from 'axios';
             )
         )
     ))
-    console.log(vehicules)
+    
     return vehicules
 }
 
