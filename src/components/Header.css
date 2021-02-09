@@ -7,7 +7,7 @@
 .header {
   width: 100%;
   padding: 10px 10px;
-  background-color: #174416d7;
+  background-color: #D8F3DC;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,7 +20,7 @@
 }
 
 .header-title-navbar {
-  color: white;
+  color: black;
   font-weight: 600;
   font-family: Dancing spirit;
   font-size: 2rem;
@@ -52,7 +52,7 @@
     right: 10px;
   }
   .header-nav-link {
-    color: white;
+    color: black;
     list-style: none;
     margin-right: 20px;
     text-transform: capitalize;
