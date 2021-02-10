@@ -3,14 +3,32 @@
     width: 100%;
     font-size: 1.2em;
     justify-content: space-between;
-    background-color: rgb(206, 248, 206);
+    background-color: #74C69D;
+    padding: 30px;
+    align-items: center;
+    position: relative;
+    margin-bottom: 10px;
+    
 }
 
-h2 {
+.Objectif-Texte {
+    padding: 10px;
+    font-family: Roboto, sans-serif;
+   
+}
+
+h10 {
+    align-self: center;
+    justify-self: first baseline;
     font-family: 'Roboto', sans-serif;
     text-align: center;
     color: #40916C;
     font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    /*transform: translateX(-50%);
+*/
 }
 
 p {
@@ -21,24 +39,16 @@ p {
     padding-right: 10px;
 }
 
-.Objectif img {
-    width: 180px;
-   height: 100px;
-   margin-left: auto;
-   margin-right: auto;
-   padding-top: 10px;
-}
-
-.Objectif img:hover {
-    transform:rotate(360deg) scale(1.1);
-}
-
 button {
     height: 30px;
     width: 100px;
     border-radius: 50px;
 }
 
-.Objectif-Button {
-    text-align: center;
+@media screen and (max-width:420px){
+    .Objectif {
+        flex-direction: column !important
+    }
 }
+
+

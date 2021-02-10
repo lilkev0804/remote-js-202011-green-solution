@@ -1,4 +1,5 @@
 import './Footer.css'
+import {Link} from "react-router-dom";
 
 const socialLinks = [
     {
@@ -28,7 +29,9 @@ const Footer = () => {
                         <a className="footer-social-link-bg" href={socialLink.link} target={socialLink.target}>{socialLink.icon}</a>
                     )}
                 </div>
-            <a className="footer-navlink" href="#"> contact</a>
+          <Link to="/Coordonnees" style={{textDecoration:'none'}}>
+            <a class="footer-navlink" href="#"> contact</a>
+          </Link>
        </div>
     </div>
 }

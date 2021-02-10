@@ -1,33 +1,30 @@
 import React from "react"
 import "./Result.css"
-import Calculator from './Calculator'
-
-
-// let resultCalc = 150 > 100
 
 class Result extends React.Component {
-  constructor(props) {
-      super(props);
-      this.state = {
-        total: ""
-      }
-    }
+  state = {
+    total: ''
+  }
+  catchValue = (selectEmissionFactors, distance, weight) => {
+    const vehicule = selectEmissionFactors.replace(',' , ".")
+    const inputKm = distance.replace(',' , ".")
+    const inputWeight = weight.replace(',' , ".")
+    const userResult = vehicule * inputKm * inputWeight
+    this.setState({total: userResult})
+  } 
+
+  componentDidMount() {
+    const {selectEmissionFactors, distance, weight} = this.props.location.data
+    this.catchValue(selectEmissionFactors, distance, weight)
+  }
 
   render() {
     return (
-      <div>
-      <p><Calculator total={this.state.total} /></p>
+      <div className="result">
+        {/* <img className={resultCalc ? "logoResult" : "logoResult2"} src={resultCalc ? props.logoResult : props.logoResult2} alt={props.logoName} /> */}
+        <p>{this.state.total} </p>
       </div>
-    )};
+    );
+  }
 }
-
-// function Result(props) {
-  
-//     return (
-//       <div className="result">
-//         <img className={resultCalc ? "logoResult" : "logoResult2"} src={resultCalc ? props.logoResult : props.logoResult2} alt={props.logoName} />
-//         <p> </p>
-//       </div>
-//     );
-//   }
-  export default Result;
+export default Result;

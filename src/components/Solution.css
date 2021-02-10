@@ -1,6 +1,9 @@
 /* bouton solution page resultat */
 
 .solution {
+    padding-top: 10px;
+    margin-bottom: 10px;
+    background: #B7E4C7;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -9,15 +12,18 @@
 }
 .solutionbutton {
     font-size: 8px;
-    color: rgb(250, 219,173);
+    color: #1B4332;
+    text-decoration: none;
     font-weight: bold;
     border: none;
-    text-align: center;
     border-radius: 10px;
     margin-top: 20%;
-    margin-bottom: 20%;
-    height: 60px;
+    margin-bottom: 10%;
+    height: 40px;
     width: 50%; 
+    display:flex;
+    justify-content:center;
+    align-items: center;
     background:#74C69D;
     font-family: 'Roboto', sans-serif;
 } 
@@ -29,6 +35,7 @@
 @media only screen and (min-width: 360px) {
     .solutionbutton {
         font-size: 10px;
+        height: 60px;
 }}
 
 @media only screen and (min-width: 520px) {

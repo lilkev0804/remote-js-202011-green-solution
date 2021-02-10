@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import axios from 'axios';
 import './calculator.css';
 
@@ -6,13 +7,14 @@ class Calculator extends React.Component {
 
     state = {
         emissionFactors: "",
+        selectEmissionFactors: '',
         distance: "" ,
         weight: "" ,
         camions: "",
-        total: ""
+        total: "1000"
     }
     handleClick = (event) => {
-        this.setState({emissionFactors: event.target.value})
+        this.setState({ selectEmissionFactors: event.target.value})
     }
     handleChangeInfo = (event) => {
         this.setState({[event.target.name]: event.target.value})
@@ -37,15 +39,9 @@ class Calculator extends React.Component {
             })
     }
 
-    catchValue = () => {
-        const vehicule = parseFloat(document.querySelector('#vehiculeSelect').value.replace(',' , "."))
-        const inputKm = parseInt(document.querySelector('#kmInput').value)
-        const inputWeight = parseInt(document.querySelector('#inputWeight').value)
-        const total = vehicule *  inputKm * inputWeight
-        this.setState({total: total})
-    } 
 
     render() { 
+        
         return (
             <div>
                 <h1 className="calculatorTitle">Calculons !</h1>
@@ -53,14 +49,14 @@ class Calculator extends React.Component {
                     <div>
                         <h2 className="calculator-titleBox">{this.props.title}</h2>
                         <div className= "inputBoxVehicule">
-                        <select name="vehicule" id="vehiculeSelect" className="vehiculeList" >
+                        <select name="vehicule" id="vehiculeSelect" onChange={this.handleClick} className="vehiculeList" >
                             <option className="vehiculeList" value={this.state.emissionFactors[3]} >Vehicule utilitaire 3,5T</option> 
                             <option className="vehiculeList" value={this.state.emissionFactors[0]} >Poids lourd 19T</option>
                             <option className="vehiculeList" value={this.state.emissionFactors[1]} >Poids lourd 26T</option>
                             <option className="vehiculeList" value={this.state.emissionFactors[2]} >Poids lourd 40T</option>
                         </select>
                         </div>
-                        <div method="get">
+                        <div>
                             <div>
                                 <label for="distance" className="calculator-titleBox">Distance : </label>
                                 <input name='distance' className="calculator-input" id="kmInput" value={this.state.distance} onChange={this.handleChangeInfo} required/>
@@ -73,7 +69,14 @@ class Calculator extends React.Component {
                             </div>
                             <div className="validationSection">
                                 <div className="validationTitle">Calculer mon empreinte carbone</div>
-                                <button className="calculator-bouton" onClick={(e) => this.catchValue(e)}>Valider</button>
+                                      <Link className="calculator-bouton"  to={{ pathname: `/Result`,
+                                   data: {
+                                        selectEmissionFactors: this.state.selectEmissionFactors,
+                                        distance: this.state.distance,
+                                        weight: this.state.weight,
+                                    }}}>
+                                        Valider
+                                    </Link> 
                             </div>
                         </div>
                     </div>
@@ -83,4 +86,4 @@ class Calculator extends React.Component {
     }   
 }
 
-export default Calculator
+export default Calculator;
