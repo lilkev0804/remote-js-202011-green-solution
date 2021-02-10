@@ -23,11 +23,13 @@ const socialLinks = [
 const Footer = () => {
     return <div className="footer">
        <div className="footer-container">
+       <Link to="/LegalNotice" style={{textDecoration:'none'}}>
             <a className="footer-navlink" href="#"> mentions légales</a>
-                <div className="footer-container-social-link">
+        </Link>
+            <div className="footer-container-social-link">
                 {socialLinks.map((socialLink, i) => 
-                        <a className="footer-social-link-bg" href={socialLink.link} target={socialLink.target}>{socialLink.icon}</a>
-                    )}
+                    <a className="footer-social-link-bg" href={socialLink.link} target={socialLink.target}>{socialLink.icon}</a>
+                )}
                 </div>
           <Link to="/Coordonnees" style={{textDecoration:'none'}}>
             <a class="footer-navlink" href="#"> contact</a>
