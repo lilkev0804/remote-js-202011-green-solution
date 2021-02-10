@@ -39,7 +39,6 @@ button {
 @media (max-width: 420px){
 
 .homepage {
-    background-image : url("./imgHomepage/homepage-mobile-bg.jpg");
     background-size: cover;
     flex-direction: column;
     display: flex;
@@ -74,6 +73,7 @@ button {
 .imgHomepage {
     display: none;
 }
+
 
 }
 
@@ -110,5 +110,16 @@ button {
     border: 7px solid black;
 }
 
+.imgHomepage2 {
+    visibility: hidden;
+}
+ .desktop {
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
 
 }
