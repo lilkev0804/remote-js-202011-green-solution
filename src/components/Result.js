@@ -1,19 +1,30 @@
 import React from "react"
 import "./Result.css"
 
-// import page calculator
+class Result extends React.Component {
+  state = {
+    total: ''
+  }
+  catchValue = (selectEmissionFactors, distance, weight) => {
+    const vehicule = selectEmissionFactors.replace(',' , ".")
+    const inputKm = distance.replace(',' , ".")
+    const inputWeight = weight.replace(',' , ".")
+    const userResult = vehicule * inputKm * inputWeight
+    this.setState({total: userResult})
+  } 
 
-let resultCalc = 150 > 100;
-const logoResult="image-src/logoResult.png";
-const logoResult2="image-src/logoResult2.png";
+  componentDidMount() {
+    const {selectEmissionFactors, distance, weight} = this.props.location.data
+    this.catchValue(selectEmissionFactors, distance, weight)
+  }
 
-function Result() {
+  render() {
     return (
       <div className="result">
-        <img className={resultCalc ? "logoResult" : "logoResult2"} src={resultCalc ? logoResult : logoResult2} alt={"logoResult"} />
-        <input className="resultText" type="text" value={/*recupérer nombre du calculator*/" 150 T  de  CO2"}/>
+        {/* <img className={resultCalc ? "logoResult" : "logoResult2"} src={resultCalc ? props.logoResult : props.logoResult2} alt={props.logoName} /> */}
+        <p>{this.state.total} </p>
       </div>
-
     );
   }
-  export default Result;
+}
+export default Result;
