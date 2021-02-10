@@ -11,11 +11,12 @@ class Calculator extends React.Component {
         distance: "" ,
         weight: "" ,
         camions: "",
-        total: "1000"
     }
+
     handleClick = (event) => {
         this.setState({ selectEmissionFactors: event.target.value})
     }
+    
     handleChangeInfo = (event) => {
         this.setState({[event.target.name]: event.target.value})
     }
@@ -29,7 +30,7 @@ class Calculator extends React.Component {
 
             this.state.camions.map(camion => (
                 camion.results.filter(result => (
-                    result._id.includes('RdisV3cByp8JMdcMFIHw') || result._id.includes('SdisV3cByp8JMdcMFIHw') || result._id.includes('GdisV3cByp8JMdcMFIHw') || result._id.includes('kNisV3cByp8JMdcMg7Pf') ? vehicules.push(result.Total_poste_non_décomposé) : ""
+                    result._id.includes('7GRbi3cBrUcT86V1iKtH') || result._id.includes('GGRbi3cBrUcT86V1iKxH') || result._id.includes('HGRbi3cBrUcT86V1iKxH') || result._id.includes('YmRbi3cBrUcT86V1_95F') ? vehicules.push(result.Total_poste_non_décomposé) : ""
                     )
                 )
             )
@@ -37,35 +38,39 @@ class Calculator extends React.Component {
             this.setState({
                 emissionFactors : vehicules
             })
+            // console.log(this.state.emissionFactors)
     }
 
 
     render() { 
         
         return (
-            <div>
+            <div className='ContainerCalculator'>
                 <h1 className="calculatorTitle">Calculons !</h1>
                 <div className= "calculatorBloc">
                     <div>
                         <h2 className="calculator-titleBox">{this.props.title}</h2>
                         <div className= "inputBoxVehicule">
-                        <select name="vehicule" id="vehiculeSelect" onChange={this.handleClick} className="vehiculeList" >
-                            <option className="vehiculeList" value={this.state.emissionFactors[3]} >Vehicule utilitaire 3,5T</option> 
-                            <option className="vehiculeList" value={this.state.emissionFactors[0]} >Poids lourd 19T</option>
-                            <option className="vehiculeList" value={this.state.emissionFactors[1]} >Poids lourd 26T</option>
-                            <option className="vehiculeList" value={this.state.emissionFactors[2]} >Poids lourd 40T</option>
-                        </select>
+                        <label for="vehicume" className="calculator-titleBox">Choix du véhicule : </label>
+                            <select name="vehicule" id="vehiculeSelect" onChange={this.handleClick} className="vehiculeList" >
+                                <option className="vehiculeList" value={this.state.emissionFactors[3]} >Vehicule utilitaire 3,5T</option> 
+                                <option className="vehiculeList" value={this.state.emissionFactors[0]} >Poids lourd 19T</option>
+                                <option className="vehiculeList" value={this.state.emissionFactors[1]} >Poids lourd 26T</option>
+                                <option className="vehiculeList" value={this.state.emissionFactors[2]} >Poids lourd 40T</option>
+                            </select>
                         </div>
                         <div>
-                            <div>
+                            <div className="inputUserBlock">
                                 <label for="distance" className="calculator-titleBox">Distance : </label>
-                                <input name='distance' className="calculator-input" id="kmInput" value={this.state.distance} onChange={this.handleChangeInfo} required/>
-                                <p className="calculator-units">Km</p> 
+                                <div className="inputUserkm">
+                                    <input name='distance' className="calculator-input" id="kmInput" value={this.state.distance} placeholder="Km" onChange={this.handleChangeInfo} required/>
+                                </div>
                             </div>
-                            <div>
+                            <div className="inputUserBlock">
                                 <label for="poids" className="calculator-titleBox">Poids de la marchandise : </label>
-                                <input name="weight" className="calculator-input" id="inputWeight" value={this.state.weight} onChange={this.handleChangeInfo} required/>
-                                <p className="calculator-units">Kg</p>
+                                <div className="inputUserkm">
+                                    <input name="weight" className="calculator-input" id="inputWeight" value={this.state.weight} onChange={this.handleChangeInfo} placeholder="Tonnes" required/>
+                                </div>
                             </div>
                             <div className="validationSection">
                                 <div className="validationTitle">Calculer mon empreinte carbone</div>
