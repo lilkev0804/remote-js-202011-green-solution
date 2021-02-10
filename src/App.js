@@ -9,9 +9,12 @@ import Homepage from "./components/Homepage";
 import Header from './components/Header';
 import LegalNotice from './components/LegalNotice'
 import MailForm from './components/MailForm';
+import SignIn from './components/SignIn'
 import React from "react";
 import Result from './components/Result';
+import SignUp from './components/SignUp'
 import Solutions from './components/Solutions';
+import UserPage from './components/UserPage'
 
 
 function App() {
@@ -29,6 +32,9 @@ function App() {
         <Route path="/Coordonnees" component={Coordonnées}/> 
         <Route path="/BurgerMenu" component={BurgerMenu}/>
         <Route path="/LegalNotice" component={LegalNotice}/>
+        <Route path="/signin" component={SignIn}/>
+        <Route path="/signup" component={SignUp}/>
+        <Route path="/userpage" component={UserPage}/>
         <Footer />
       </Router>
     </div>

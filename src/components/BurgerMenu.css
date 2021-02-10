@@ -123,3 +123,14 @@
     display: none;
   }
 
+.bm-burger-button  {
+  display: none;
+}
+@media screen and (max-width : 765px){
+  .bm-burger-button{
+    display: block !important;
+  }
+  #react-burger-menu-btn:focus{
+    outline: none;
+  }
+}

@@ -6,7 +6,7 @@ function SimulatorBtn() {
     return (
         <div className="simulatorBtn">
             <Link to="/Calculator" style={{textDecoration:'none'}}>
-                <button>Simulator</button>
+                <button className="Homepagebtn">Simulator</button>
             </Link>
         </div>
     )

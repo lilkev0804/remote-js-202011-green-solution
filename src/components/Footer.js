@@ -24,7 +24,7 @@ const Footer = () => {
     return <div className="footer">
        <div className="footer-container">
        <Link to="/LegalNotice" style={{textDecoration:'none'}}>
-            <a className="footer-navlink" href="#"> mentions légales</a>
+            <a className="footer-navlink" href="#"> Legal mentions</a>
         </Link>
             <div className="footer-container-social-link">
                 {socialLinks.map((socialLink, i) => 

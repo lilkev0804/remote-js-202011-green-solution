@@ -16,7 +16,7 @@
     color : black;
     font-family : 'Dancing Script';
 }
-button {
+.Homepagebtn {
     color: #1B4332;
     border-radius: 30px;
     border: 6px solid #84A98C;

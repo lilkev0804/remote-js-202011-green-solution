@@ -25,7 +25,7 @@ h2 {
    padding-left: 60px;
 }
 
-button {
+.Info-Button3 {
     
     height: 40px;
     width: 130px;
@@ -37,7 +37,7 @@ button {
     color: black;
 }
 
-button:hover {
+.Info-Button3:hover {
     color: black;
     background-color: #74C69D;
 }

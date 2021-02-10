@@ -25,6 +25,9 @@ class BurgerMenu extends React.Component {
         <Link className="menu-item4" to="/Aboutus" style={{textDecoration:'none'}}>
           About Us
         </Link>
+        <Link className="menu-item4" to="/signin" style={{textDecoration:'none'}}>
+          Connect
+        </Link>
 
       </Menu>
     );

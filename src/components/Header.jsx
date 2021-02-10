@@ -20,6 +20,9 @@ const Header = () => {
             <Link to="/Aboutus" style={{textDecoration:'none'}}> 
                 <li className="header-nav-link">about us</li>
             </Link>
+            <Link to="/signin" style={{textDecoration:'none'}}> 
+                <li className="header-nav-link">Connect</li>
+            </Link>
         </ul>
     </div>
 }
