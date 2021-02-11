@@ -11,7 +11,7 @@ import Header from './components/Header';
 import LegalNotice from './components/LegalNotice'
 import React from "react";
 import BodyResult from './components/BodyResult';
-
+import Result from './components/Result';
 import Solutions from './components/Solutions'
 
 

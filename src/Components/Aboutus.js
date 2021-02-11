@@ -11,7 +11,7 @@ const Aboutus=() => {
     <div className="App">
       <Titre />
       <Equipe 
-        equipeName="Raphaëlle, Rachele, Ingrid, Alex, Aurélien, Kévin, Marc" 
+        equipeName="Raphaëlle, Rachel, Ingrid, Alex, Aurélien, Kévin, Marc" 
       />
       <Objectif 
         texte="Green Solution a été créée en 2021.
