@@ -11,8 +11,7 @@ import Header from './components/Header';
 import LegalNotice from './components/LegalNotice'
 import React from "react";
 import BodyResult from './components/BodyResult';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
-import Header from './components/Header'
+
 import Solutions from './components/Solutions'
 
 
