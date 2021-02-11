@@ -36,7 +36,8 @@ export default function SignUp() {
             // })
             fire.database().ref('users/' + usernameInput).set({
                 username : usernameInput,
-                password: userPassword
+                password: userPassword,
+                img:''
             })
             setUsernameInput("")
             setUserPassword("")
@@ -55,7 +56,7 @@ export default function SignUp() {
             </div>
             <div className="ConnectFormContainer-Middle">
                     <div className="ConnectFormInput">
-                        <label for="username"> Email</label>
+                        <label for="username"> username</label>
                         <input name="username" value={usernameInput} onChange={ handleChangeInput} type="text"></input>
                     </div>
                     <div className="ConnectFormInput">

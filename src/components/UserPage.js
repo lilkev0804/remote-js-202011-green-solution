@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
+import fire from '../firebase/fire'
 import './UserPage.css'
 
 export default class UserPage extends Component {
     state = {
-        name : ""
+        name : "",
+        newUserName : "",
+        newPassword : ""
     }
 
     catchValue= (name) => {
@@ -13,6 +16,16 @@ export default class UserPage extends Component {
     componentDidMount(){
         const {name} = this.props.location.data
         this.catchValue(name)
+    }
+    
+ // Change information
+    handleChangePassword = (e) => {
+        this.setState({newPassword : e.target.value})
+    }
+    newValueInfo =() => {
+        fire.database().ref(`user/${this.state.name}`).update({
+            password: this.state.newPassword
+        })
     }
 
     render() {
@@ -29,7 +42,21 @@ export default class UserPage extends Component {
                 </div>
                 <div className="UserPageButton">
                     <span className="UserPageButton-btn">Account Information</span>
-                    <span className="UserPageButton-btn">My Historical</span>
+                    <span className="UserPageButton-btn">Calculator</span>
+                    <span className="UserPageButton-btn" onClick={this.checkData}>My Historical</span>
+                </div>
+                <div className="UserPageModifiedInfo">
+                    <p className="UserPageToggleTitle">Modified your information</p>
+                    <div className="UserPageToggleContainerInput">
+                        <input className="InputUserPageModified" type="password" name="new-password" placeholder="New Password" onChange={this.handleChangePassword}></input>
+                        <button onClick={this.newValueInfo}>Validate modification</button>
+                    </div>
+                </div>
+                <div className="UserPageCalculator">
+                    <p className="UserPageToggleTitle">Calculate your CO2 emission</p>
+                </div>
+                <div className="UserPageHistorical">
+                <p className="UserPageToggleTitle">Your CO2 emission Historical</p>
                 </div>
             </div>
         )
