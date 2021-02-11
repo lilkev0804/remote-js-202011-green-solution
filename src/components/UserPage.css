@@ -85,3 +85,8 @@
 .InputUserPageModified{
     margin: 10px 0px;
 }
+.UserPageCurrenntUser{
+    color: #2F3E46;
+    font-size: 1rem;
+    font-family: "Roboto";
+}

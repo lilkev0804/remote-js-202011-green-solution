@@ -6,9 +6,13 @@ import './UserPage.css'
 
 export default class UserPage extends Component {
     state = {
-        newPassword:''
+        newPassword:'',
+        visible: "invisible"
     }
-    
+
+    // toggle 
+
+
     handleChangePassword = (e) => { 
         this.setState({
             newPassword : e.target.value
@@ -33,7 +37,7 @@ export default class UserPage extends Component {
             <div className="UserPageContainer">
                 <div className="UserPageHeader">
                      <button className="Disconnect-btn" onClick={() => fire.auth().signOut()}>Disconnect</button>
-                    <p> You are connect with : {fire.auth().currentUser.email}</p>
+                    <p className="UserPageCurrenntUser"> You are connect with : {fire.auth().currentUser.email}</p>
                 </div>
                 <div className="UserPageImgProfils">
                     <div>Img Logo Company</div>
@@ -42,22 +46,22 @@ export default class UserPage extends Component {
 
                 </div>
                 <div className="UserPageButton">
-                    <span className="UserPageButton-btn">Account Information</span>
-                    <span className="UserPageButton-btn">Calculator</span>
-                    <span className="UserPageButton-btn" onClick={this.checkData}>My Historical</span>
+                    <span className="UserPageButton-btn" onClick={(e) => this.handleToggle(e)}>Account Information</span>
+                    <span className="UserPageButton-btn" onClick={(e) => this.handleToggle(e)}>Calculator</span>
+                    <span className="UserPageButton-btn" onClick={(e) => this.handleToggle(e)}>My Historical</span>
                 </div>
-                <div className="UserPageModifiedInfo">
+                <div className={`UserPageModifiedInfo ${this.state.visible}`}>
                     <p className="UserPageToggleTitle">Modified your information</p>
                     <div className="UserPageToggleContainerInput">
                         <input className="InputUserPageModified" type="password" name="new-password" placeholder="New Password" onChange={this.handleChangePassword}></input>
-                        <button onClick={this.newValueInfo}>Validate modification</button>
+                        <button className="UserPageButton-btn" onClick={this.newValueInfo}>Validate modification</button>
                     </div>
                 </div>
-                <div className="UserPageCalculator">
+                <div className={`UserPageCalculator ${this.state.visible}`}>
                     <p className="UserPageToggleTitle">Calculate your CO2 emission</p>
                 </div>
-                <div className="UserPageHistorical">
-                <p className="UserPageToggleTitle">Your CO2 emission Historical</p>
+                <div className={`UserPageHistorical ${this.state.visible}`}>
+                    <p className="UserPageToggleTitle">Your CO2 emission Historical</p>
                 </div>
                 
             </div>
