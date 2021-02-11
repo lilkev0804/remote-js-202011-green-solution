@@ -1,84 +1,50 @@
-import React, {useState} from 'react'
+import React, {useCallback, useContext} from 'react'
+import {Redirect, withRouter} from 'react-router'
 import {Link} from 'react-router-dom'
-import { withRouter } from 'react-router-dom'
+import { AuthContext } from '../Auth'
 import fire from '../firebase/fire'
-import UserProfiles from './UserProfiles'
 import './Connect.css'
+import Header from './Header'
 
-const SignIn = () => {
-    const [usernameInput , setUsernameInput] = useState('')
-    const [userPassword , setUserPassword] = useState('')
-    const [visible, setInvisible] = useState('')
-    const [adress, setAdress] = useState('')
-    
+const SignIn = ({ history}) => {
+    const handleLogin = useCallback(
+        async event => {
+        event.preventDefault()
+        const {email, password} = event.target.elements
+        try{
+            await fire
+            .auth()
+            .signInWithEmailAndPassword(email.value, password.value)
+            history.push("/userpage")
+        }catch(error){
+            alert(error)
+        }
+    },[history])
 
+    const {currentUser } = useContext(AuthContext)
 
-    const handleChangeInput = (e) => {
-        const value = e.target.value
-        setUsernameInput(value)
+    if (currentUser) {
+        return <Redirect to='/userpage'/> 
     }
-    const handleChangeInputPw = (e) => {
-        const valuePw = e.target.value
-        setUserPassword(valuePw)
-    }
-
-    // const checkData = (e) => {
-    //     if(usernameInput === UserProfiles.username && userPassword === UserProfiles.password){
-    //         setAdress('/userpage')
-            
-    //     }else{
-    //         setInvisible('visible')
-    //         e.preventDefault();
-    //     }
-        
-    // };
-
-    // const checkData = () => {
-    //     fire.auth().signInWithEmailAndPassword(usernameInput, userPassword).then(() => {
-    //         setAdress('/userpage')
-    //     }).catch(() => {
-    //         setInvisible('visible')
-    //     })
-    // } 
-
-    const checkData = () => {
-        fire.database().ref('users/' + usernameInput).on('value', (snapshot) => {
-            const data = snapshot.val()
-            const nameInput = data.username
-            const passwordInput = data.password
-            if(usernameInput === nameInput && userPassword === passwordInput){
-                setAdress('/userpage')
-            }else{
-                setInvisible('visible')
-            }
-        })
-    }
-
     return (
         <div className="ConnectContainer">
-            <form className="ConnectFormContainer" >
+            <form className="ConnectFormContainer" onSubmit={handleLogin}>
                 <div className="ConnectFormContainer-Top">
-                    <span className="ConnectFormBtn-top underlineSign">Sign In</span>
-                    <Link className="ConnectFormBtn-top" to="/signup">Sign Up</Link> 
+                    <p className="ConnectFormBtn-top underlineSign" >Sign In</p>
+                    <Link className="ConnectFormBtn-top" to='/signup'>SignUp</Link>
                 </div>
                 <div className="ConnectFormContainer-Middle">
-                    <div className="ConnectFormInput">
-                        <label for="username"> Username</label>
-                        <input name="username" value={usernameInput} onChange={ handleChangeInput} type="text"></input>
-                    </div>
-                    <div className="ConnectFormInput">
-                        <label for="password"> Password</label>
-                        <input name="password" value={userPassword} onChange={(e) => handleChangeInputPw(e)} type="password"></input>
-                    </div>
-                </div>
-                <span className={`alertSignIn invisible ${visible}`}>Username or password Incorrect</span>
-                <div className="ConnectFormContainer-Bottom">
-                    <Link className="ConnectFormBtnValidateInput" 
-                    to={{ pathname: adress,
-                    data: {
-                         name: usernameInput,
-                     }}}
-                    onClick={checkData} >Sign in</Link>
+                     <div className="ConnectFormInput">
+                         <label for="email"> Username</label>
+                         <input name="email" type="email"></input>
+                     </div>
+                     <div className="ConnectFormInput">
+                         <label for="password"> Password</label>
+                         <input name="password" type="password"></input>
+                     </div>
+                 </div>
+                 <div className="ConnectFormContainer-Bottom">
+                    <button className="ConnectFormBtnValidateInput" type="submit">Signup</button>
                 </div>
             </form>
         </div>

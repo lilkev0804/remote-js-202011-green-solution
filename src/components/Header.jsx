@@ -2,7 +2,8 @@ import './Header.css'
 import {Link} from "react-router-dom";
 import BurgerMenu from "./BurgerMenu"
 
-const Header = () => {
+
+const Header = (props) => {
     return <div className="header">
         <img alt="logo Green Solution" src='./img/logo.svg'></img>
         <p className="header-title-navbar">Green Solution</p>
@@ -20,8 +21,8 @@ const Header = () => {
             <Link to="/Aboutus" style={{textDecoration:'none'}}> 
                 <li className="header-nav-link">about us</li>
             </Link>
-            <Link to="/signin" style={{textDecoration:'none'}}> 
-                <li className="header-nav-link">Connect</li>
+            <Link to="/login" style={{textDecoration:'none'}}> 
+                <li className="header-nav-link">Your Account</li>
             </Link>
         </ul>
     </div>

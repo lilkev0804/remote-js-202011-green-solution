@@ -15,10 +15,14 @@ import Result from './components/Result';
 import SignUp from './components/SignUp'
 import Solutions from './components/Solutions';
 import UserPage from './components/UserPage'
+import {AuthProvider} from "./Auth";
+import PrivateRoute from './PrivateRoute';
 
 
 function App() {
   return (
+    <AuthProvider>
+
     <div className="App">
       <Router>
         <Header />
@@ -32,12 +36,13 @@ function App() {
         <Route path="/Coordonnees" component={Coordonnées}/> 
         <Route path="/BurgerMenu" component={BurgerMenu}/>
         <Route path="/LegalNotice" component={LegalNotice}/>
-        <Route path="/signin" component={SignIn}/>
+        <Route path="/login" component={SignIn}/>
         <Route path="/signup" component={SignUp}/>
-        <Route path="/userpage" component={UserPage}/>
+        <PrivateRoute path="/userpage" component={UserPage}/>
         <Footer />
       </Router>
     </div>
+    </AuthProvider>
   );
 }
 export default App;

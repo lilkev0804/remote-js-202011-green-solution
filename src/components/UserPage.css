@@ -10,13 +10,23 @@
 .UserPageHeader{
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding-top: 10px;
+}
+.Disconnect-btn{
+    background-color: #2F3E46;
+    border-radius: 10px;
+    padding: 8px 10px;
+    border: none;
+    color: #B7E4C7;
+    text-transform: uppercase;
+}
+.Disconnect-btn:focus , .Disconnect-btn:active{
+    outline: none;
 }
 .UserPageBody{
     width: 100%;
     height: 500px;
-    border: 1px solid red;
 }
 .UserPageImgProfils {
     margin: 30px auto 0px auto;
@@ -37,7 +47,6 @@
 }
 .UserPageInfo{
     padding: 10px;
-    border: 1px solid red;
     width: 100%;
     margin: 40px 0px;
 }

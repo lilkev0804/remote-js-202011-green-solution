@@ -2,36 +2,22 @@ import React, { Component } from 'react'
 import fire from '../firebase/fire'
 import './UserPage.css'
 
+
 export default class UserPage extends Component {
     state = {
-        name : "",
+        name : "hello",
         newUserName : "",
         newPassword : ""
     }
 
-    catchValue= (name) => {
-        const userNameInput = name
-        this.setState({name : userNameInput})
-    }
-    componentDidMount(){
-        const {name} = this.props.location.data
-        this.catchValue(name)
-    }
-    
- // Change information
-    handleChangePassword = (e) => {
-        this.setState({newPassword : e.target.value})
-    }
-    newValueInfo =() => {
-        fire.database().ref(`user/${this.state.name}`).update({
-            password: this.state.newPassword
-        })
-    }
 
     render() {
+        console.log(this.state.name)
         return (
+            
             <div className="UserPageContainer">
                 <div className="UserPageHeader">
+                     <button className="Disconnect-btn" onClick={() => fire.auth().signOut()}>Disconnect</button>
                     <p> You are connect with : {this.state.name}</p>
                 </div>
                 <div className="UserPageImgProfils">
@@ -58,6 +44,7 @@ export default class UserPage extends Component {
                 <div className="UserPageHistorical">
                 <p className="UserPageToggleTitle">Your CO2 emission Historical</p>
                 </div>
+                
             </div>
         )
     }
