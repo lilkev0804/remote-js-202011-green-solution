@@ -23,15 +23,14 @@ class Coordonnées extends Component {
             <p>https://www.greensolution.fr</p>
         <i class="far fa-envelope"></i>
             <p>
-            <Link to="/Form" style={{textDecoration:'none'}}>
-                <button className="CoordonnéesButton">Envoyer un mail</button>
+            <Link to="/Contact" style={{textDecoration:'none'}}>
+            <button className="CoordonnéesButton">Envoyer un mail</button>   
             </Link>
             </p>
       </div>
                            
 )
   }
-    
 }
 
 export default Coordonnées;
