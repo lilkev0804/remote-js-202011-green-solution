@@ -25,7 +25,7 @@ const SignUp = ({ history}) => {
                 </div>
                 <div className="ConnectFormContainer-Middle">
                      <div className="ConnectFormInput">
-                         <label for="email"> Username</label>
+                         <label for="email"> Email</label>
                          <input name="email" type="email"></input>
                      </div>
                      <div className="ConnectFormInput">

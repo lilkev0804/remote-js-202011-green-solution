@@ -1,10 +1,9 @@
-import React, {useCallback, useContext} from 'react'
+import React, {useCallback, useContext , useState} from 'react'
 import {Redirect, withRouter} from 'react-router'
 import {Link} from 'react-router-dom'
 import { AuthContext } from '../Auth'
 import fire from '../firebase/fire'
 import './Connect.css'
-import Header from './Header'
 
 const SignIn = ({ history}) => {
     const handleLogin = useCallback(
@@ -21,10 +20,29 @@ const SignIn = ({ history}) => {
         }
     },[history])
 
+
     const {currentUser } = useContext(AuthContext)
 
+    const [usernameInput , setUsernameInput] = useState('')
+    const [userPassword , setUserPassword] = useState('')
+
+    const handleChangeInput = (e) => {
+        const value = e.target.value
+        setUsernameInput(value)
+    }
+    const handleChangeInputPw = (e) => {
+        const valuePw = e.target.value
+        setUserPassword(valuePw)
+    }
+    
+
     if (currentUser) {
-        return <Redirect to='/userpage'/> 
+        return <Redirect 
+        to={{ pathname: '/userpage',
+            data: {
+                 name: usernameInput,
+             }}}
+        /> 
     }
     return (
         <div className="ConnectContainer">
@@ -35,16 +53,16 @@ const SignIn = ({ history}) => {
                 </div>
                 <div className="ConnectFormContainer-Middle">
                      <div className="ConnectFormInput">
-                         <label for="email"> Username</label>
-                         <input name="email" type="email"></input>
+                         <label for="email"> Email</label>
+                         <input name="email" type="email" value={usernameInput} onChange={ handleChangeInput}></input>
                      </div>
                      <div className="ConnectFormInput">
                          <label for="password"> Password</label>
-                         <input name="password" type="password"></input>
+                         <input name="password" type="password" value={userPassword} onChange={(e) => handleChangeInputPw(e)}></input>
                      </div>
                  </div>
                  <div className="ConnectFormContainer-Bottom">
-                    <button className="ConnectFormBtnValidateInput" type="submit">Signup</button>
+                    <button className="ConnectFormBtnValidateInput" type="submit">Login</button>
                 </div>
             </form>
         </div>

@@ -3,22 +3,37 @@ import fire from '../firebase/fire'
 import './UserPage.css'
 
 
+
 export default class UserPage extends Component {
     state = {
-        name : "hello",
-        newUserName : "",
-        newPassword : ""
+        newPassword:''
+    }
+    
+    handleChangePassword = (e) => { 
+        this.setState({
+            newPassword : e.target.value
+        })
     }
 
+    newValueInfo = () => {
+        let user = fire.auth().currentUser;
+        let newPassword = this.state.newPassword;
 
+        user.updatePassword(newPassword).then(function() {
+            alert(newPassword)
+        }).catch((error)=> {
+            alert(error)
+        });
+    }
+    
     render() {
-        console.log(this.state.name)
+        
         return (
             
             <div className="UserPageContainer">
                 <div className="UserPageHeader">
                      <button className="Disconnect-btn" onClick={() => fire.auth().signOut()}>Disconnect</button>
-                    <p> You are connect with : {this.state.name}</p>
+                    <p> You are connect with : {fire.auth().currentUser.email}</p>
                 </div>
                 <div className="UserPageImgProfils">
                     <div>Img Logo Company</div>
