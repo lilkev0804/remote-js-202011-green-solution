@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
+import fire from '../firebase/fire'
 import './Connect.css'
 
 export default function SignUp() {
@@ -25,7 +26,20 @@ export default function SignUp() {
 
     const handler = (e) => {
         if(usernameInput !== "" && userPassword === userPasswordVer){
-            
+            // let userName = fire.database().ref('profils')
+            // fire.database().ref(usernameInput).push(usernameInput)
+            // fire.database().ref(usernameInput).push(userPassword)
+            // fire.auth().createUserWithEmailAndPassword(usernameInput, userPassword).then((u) =>{
+            //         console.log(u)
+            // }).catch((err)=>{
+            //     console.log(err)
+            // })
+            fire.database().ref('users/' + usernameInput).set({
+                username : usernameInput,
+                password: userPassword
+            })
+            setUsernameInput("")
+            setUserPassword("")
         }else{
             setInvisible('visible')
             e.preventDefault();
@@ -41,7 +55,7 @@ export default function SignUp() {
             </div>
             <div className="ConnectFormContainer-Middle">
                     <div className="ConnectFormInput">
-                        <label for="username"> Username</label>
+                        <label for="username"> Email</label>
                         <input name="username" value={usernameInput} onChange={ handleChangeInput} type="text"></input>
                     </div>
                     <div className="ConnectFormInput">

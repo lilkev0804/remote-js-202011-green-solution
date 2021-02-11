@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 import { withRouter } from 'react-router-dom'
+import fire from '../firebase/fire'
 import UserProfiles from './UserProfiles'
 import './Connect.css'
 
@@ -21,19 +22,38 @@ const SignIn = () => {
         setUserPassword(valuePw)
     }
 
-
-
-    const handler = (e) => {
-        if(usernameInput === UserProfiles.username && userPassword === UserProfiles.password){
-            setAdress('/userpage')
-        }else{
-            setInvisible('visible')
-            e.preventDefault();
-        }
+    // const checkData = (e) => {
+    //     if(usernameInput === UserProfiles.username && userPassword === UserProfiles.password){
+    //         setAdress('/userpage')
+            
+    //     }else{
+    //         setInvisible('visible')
+    //         e.preventDefault();
+    //     }
         
-    };
+    // };
 
- 
+    // const checkData = () => {
+    //     fire.auth().signInWithEmailAndPassword(usernameInput, userPassword).then(() => {
+    //         setAdress('/userpage')
+    //     }).catch(() => {
+    //         setInvisible('visible')
+    //     })
+    // } 
+
+    const checkData = () => {
+        fire.database().ref('users/' + usernameInput).on('value', (snapshot) => {
+            const data = snapshot.val()
+            const nameInput = data.username
+            const passwordInput = data.password
+            if(usernameInput === nameInput && userPassword === passwordInput){
+                setAdress('/userpage')
+            }else{
+                console.log("error")
+            }
+        })
+    }
+
     return (
         <div className="ConnectContainer">
             <form className="ConnectFormContainer" >
@@ -54,11 +74,11 @@ const SignIn = () => {
                 <span className={`alertSignIn invisible ${visible}`}>Username or password Incorrect</span>
                 <div className="ConnectFormContainer-Bottom">
                     <Link className="ConnectFormBtnValidateInput" 
-                    to={{ pathname: `/userpage`,
+                    to={{ pathname: adress,
                     data: {
                          name: usernameInput,
                      }}}
-                    onClick={handler} >Sign in</Link>
+                    onClick={checkData} >Sign in</Link>
                 </div>
             </form>
         </div>
