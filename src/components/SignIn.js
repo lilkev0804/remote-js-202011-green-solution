@@ -49,7 +49,7 @@ const SignIn = () => {
             if(usernameInput === nameInput && userPassword === passwordInput){
                 setAdress('/userpage')
             }else{
-                console.log("error")
+                setInvisible('visible')
             }
         })
     }
