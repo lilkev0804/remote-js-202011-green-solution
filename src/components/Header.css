@@ -4,14 +4,10 @@
   src: url("../DancingScript-VariableFont_wght.ttf");
 }
 
-button:focus {
-  outline: none;
-}
-
 .header {
   width: 100%;
   padding: 10px 10px;
-  background-color: #174416d7;
+  background-color: #D8F3DC;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,30 +20,11 @@ button:focus {
 }
 
 .header-title-navbar {
-  color: white;
+  color: black;
   font-weight: 600;
   font-family: Dancing spirit;
   font-size: 2rem;
-}
-
-.btn-burger {
-  background-color: transparent;
-  border: 3px solid #FDE6A0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 50%;
-  padding: 7px;
-}
-
-.btn-burger .burger-icon {
-  color: #FDE6A0;
+  text-align: center;
 }
 
 .header-navbar {
@@ -61,13 +38,11 @@ button:focus {
             justify-content: flex-start;
     position: relative;
   }
-  .btn-burger {
-    display: none;
-  }
   .header-title-navbar {
     -ms-grid-column-align: start;
         justify-self: start;
     margin-left: 2vw;
+    text-align: center;
   }
   .header-navbar {
     display: -webkit-box;
@@ -77,7 +52,7 @@ button:focus {
     right: 10px;
   }
   .header-nav-link {
-    color: white;
+    color: black;
     list-style: none;
     margin-right: 20px;
     text-transform: capitalize;

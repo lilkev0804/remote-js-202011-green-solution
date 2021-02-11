@@ -1,5 +1,6 @@
 import React from "react";
 import './Info.css';
+import {Link} from "react-router-dom";
 
 
           function Info(props) {
@@ -11,7 +12,9 @@ import './Info.css';
                    alt="?"
                   />
                    <div className="Info-container-button">
-                    <button className="Info-Button3">Nos coordonnées</button> 
+                    <Link to="/Coordonnees" style={{textDecoration:'none'}}>
+                      <button className="Info-Button3">Nos coordonnées</button> 
+                    </Link>
                   </div>
                 </div>   
               </div>           
