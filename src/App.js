@@ -1,20 +1,20 @@
 import './App.css';
-import Aboutus from "./test/Aboutus";
+import Aboutus from "./components/Aboutus";
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import BurgerMenu from './test/BurgerMenu';
-import Calculator from './test/Calculator';
-import Coordonnées from './test/Coordonnées';
-import Footer from './test/Footer';
-import Homepage from "./test/Homepage";
-import Header from './test/Header';
-import LegalNotice from './test/LegalNotice'
-import MailForm from './test/MailForm';
-import SignIn from './test/SignIn'
+import BurgerMenu from './components/BurgerMenu';
+import Calculator from './components/Calculator';
+import Coordonnées from './components/Coordonnées';
+import Footer from './components/Footer';
+import Homepage from "./components/Homepage";
+import Header from './components/Header';
+import LegalNotice from './components/LegalNotice'
+import MailForm from './components/MailForm';
+import SignIn from './components/SignIn'
 import React from "react";
-import Result from './test/Result';
-import SignUp from './test/SignUp'
-import Solutions from './test/Solutions';
-import UserPage from './test/UserPage'
+import Result from './components/Result';
+import SignUp from './components/SignUp'
+import Solutions from './components/Solutions';
+import UserPage from './components/UserPage'
 import {AuthProvider} from "./Auth";
 import PrivateRoute from './PrivateRoute';
 
