@@ -17,19 +17,6 @@
    
 }
 
-h10 {
-    align-self: center;
-    justify-self: first baseline;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    color: #40916C;
-    font-size: 20px;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    /*transform: translateX(-50%);
-*/
-}
 
 p {
     font-family: 'Happy Monkey', cursive;
@@ -38,13 +25,6 @@ p {
     margin-left: 10px;
     padding-right: 10px;
 }
-
-button {
-    height: 30px;
-    width: 100px;
-    border-radius: 50px;
-}
-
 @media screen and (max-width:420px){
     .Objectif {
         flex-direction: column !important

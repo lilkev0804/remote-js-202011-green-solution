@@ -7,7 +7,6 @@ import {Link} from "react-router-dom";
 class BurgerMenu extends React.Component {
   showSettings (event) {
       event.preventDefault();
-
     }
   render () {
     return (
@@ -24,6 +23,9 @@ class BurgerMenu extends React.Component {
         </Link>
         <Link className="menu-item4" to="/Aboutus" style={{textDecoration:'none'}}>
           About Us
+        </Link>
+        <Link className="menu-item4" to="/login" style={{textDecoration:'none'}}>
+          Your Account
         </Link>
 
       </Menu>
