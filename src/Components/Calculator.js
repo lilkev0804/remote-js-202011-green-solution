@@ -11,7 +11,6 @@ class Calculator extends React.Component {
         distance: "" ,
         weight: "" ,
         camions: "",
-        id: "Identifiant_de_l'élément"
     }
 
     handleClick = (event) => {
@@ -38,7 +37,6 @@ class Calculator extends React.Component {
             this.setState({
                 emissionFactors : vehicules
             })
-         console.log(this.state.emissionFactors)
     }
 
 
