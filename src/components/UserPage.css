@@ -6,6 +6,7 @@
     justify-content: space-around;
     max-width: 1400px;
     margin: auto;
+    height: 80.5vh;
 }
 .UserPageHeader{
     width: 100%;
@@ -16,13 +17,22 @@
 .Disconnect-btn{
     background-color: #2F3E46;
     border-radius: 10px;
-    padding: 8px 10px;
+    padding: 10px 15px;
     border: none;
     color: #B7E4C7;
     text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 2px;
+    border: 1px solid #2F3E46;
+    transition: all .4s cubic-bezier(.64,.2,.91,.63);
 }
 .Disconnect-btn:focus , .Disconnect-btn:active{
     outline: none;
+}
+.Disconnect-btn:hover{
+    background-color: white;
+    border-color: #2F3E46;
+    color: #2F3E46;
 }
 .UserPageBody{
     width: 100%;
@@ -89,4 +99,11 @@
     color: #2F3E46;
     font-size: 1rem;
     font-family: "Roboto";
+}
+.ConnectContainerErrorLogin{
+    background-color: #D8F4DC;
+    width: 80%;
+    justify-content: center;
+    font-weight: 600;
+    display: none;
 }

@@ -16,7 +16,7 @@ const SignIn = ({ history}) => {
             .signInWithEmailAndPassword(email.value, password.value)
             history.push("/userpage")
         }catch(error){
-            alert(error)
+            setVisible('visible')
         }
     },[history])
 
@@ -25,6 +25,7 @@ const SignIn = ({ history}) => {
 
     const [usernameInput , setUsernameInput] = useState('')
     const [userPassword , setUserPassword] = useState('')
+    const [visible, setVisible] = useState('')
 
     const handleChangeInput = (e) => {
         const value = e.target.value
@@ -49,7 +50,7 @@ const SignIn = ({ history}) => {
             <form className="ConnectFormContainer" onSubmit={handleLogin}>
                 <div className="ConnectFormContainer-Top">
                     <p className="ConnectFormBtn-top underlineSign" >Sign In</p>
-                    <Link className="ConnectFormBtn-top" to='/signup'>SignUp</Link>
+                    <Link className="ConnectFormBtn-top" to='/signup'>Sign Up</Link>
                 </div>
                 <div className="ConnectFormContainer-Middle">
                      <div className="ConnectFormInput">
@@ -61,8 +62,9 @@ const SignIn = ({ history}) => {
                          <input name="password" type="password" value={userPassword} onChange={(e) => handleChangeInputPw(e)}></input>
                      </div>
                  </div>
+                 <span className={`ConnectContainerErrorLogin ${visible}`}>Email or password error, retry .</span>
                  <div className="ConnectFormContainer-Bottom">
-                    <button className="ConnectFormBtnValidateInput" type="submit">Login</button>
+                    <button className="ConnectFormBtnValidateInput" type="submit">Sign In</button>
                 </div>
             </form>
         </div>

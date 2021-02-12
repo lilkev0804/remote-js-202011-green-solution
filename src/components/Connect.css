@@ -41,6 +41,9 @@
     font-size: 1.4rem;
     cursor: pointer;
     text-decoration: none;
+    font-family: "Roboto";
+    padding: 0;
+    margin: 0;
 }
 .ConnectFormInput{
     display: flex;
@@ -73,9 +76,18 @@
     text-align: center;
     text-decoration: none;
     color: black;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all .4s cubic-bezier(.64,.2,.91,.63);
 }
 .ConnectFormBtnValidateInput:focus{
     outline: none;
+}
+.ConnectFormBtnValidateInput:hover{
+    background-color: white;
+    color: #2F3E46;
+    border-color: #2F3E46;
 }
 .ConnectFormInput label{
     margin: 20px 0px 10px 0px;
