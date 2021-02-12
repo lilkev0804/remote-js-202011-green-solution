@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-//import emailjs from "emailjs-com"
+import emailjs from "emailjs-com";
 import './Contact.css';
+const userID = "user_fELVRdb1kJc5SzL1ge2Br";
+const serviceID = 'default_service';
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -8,23 +10,23 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  // const emailTop = () => {
-  //   let mail = document.getElementById('not-mail');
-  //   let regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+   /*const emailTop = () => {
+     let mail = document.getElementById('not-mail');
+     let regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
 
-  //   if (email.match(regex)) {
-  //     mail.style.display = 'none';
-  //     return true;
-  //   } else {
-  //     mail.style.display = 'block';
-  //     mail.style.animation= 'dongle is';
-  //     setTimeout(() => {
-  //       mail.style.animation = 'none';
-  //     }, 1000);
-  //     return false;
-  //   }
-  //   };
+     if (email.match(regex)) {
+       mail.style.display = 'none';
+       return true;
+     } else {
+       mail.style.display = 'block';
+       mail.style.animation= 'dongle is';
+       setTimeout(() => {
+         mail.style.animation = 'none';
+       }, 1000);
+       return false;
+     }
+    };*/
   
     const failMessage =() => {
       let formMess = document.querySelector ('.form-message');
@@ -57,8 +59,11 @@ const Contact = () => {
   const handleSubmit = (ingrid) => {
     ingrid.preventDefault();
 
-    if (name && email ) {
+    if (name && email && message ) {
+      console.log(name)
+      console.log(company)
       console.log(email)
+      console.log(message)
     sendFeedback("template_29en9tb", {
       name,
       company,
@@ -72,9 +77,14 @@ const Contact = () => {
   
   };
 
-  const sendFeedback = (templateId, variables) => {
-   window.emailjs
-      .send("gmail", "template_29en9tb", variables, "user_XywVw40BZ3z065ajD5m8e" )
+  const sendFeedback = (templateId, templateParams) => {
+    console.log(serviceID)
+    console.log(templateId)
+    console.log(templateParams)
+    console.log(userID)
+
+    let res = emailjs
+      .send(serviceID, templateId,templateParams, userID)
       .then((res) => {
         successMessage();
         setName("");
@@ -85,6 +95,8 @@ const Contact = () => {
       .catch(
         failMessage()
       )
+
+      console.log(res);
   };
   return (
     <form className="contact-form">
