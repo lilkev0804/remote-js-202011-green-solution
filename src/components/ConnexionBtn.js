@@ -4,7 +4,7 @@ import "./Homepage.css";
 function ConnexionBtn() {
     return (
         <div className="connexionBtn">
-            <button className="Homepagebtn">Connexion</button>
+            <button className="buttonsHomepage">Connexion</button>
         </div>
     )
 }

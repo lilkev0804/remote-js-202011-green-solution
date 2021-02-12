@@ -1,11 +1,10 @@
 /* resultat calculator page resultat*/
 
 .result {
-    background: #40916C;
     width: 80%;
     border-radius: 10px;
     background:#74C69D;
-    height: 50px;
+    height: 40px;
     display:flex;
     justify-content: center;
     margin-left:auto;
@@ -42,6 +41,10 @@ animation-iteration-count:infinite;
     animation-iteration-count:infinite;
     }
 .resultText {
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: center;
     width: 100px;
     color: #1B4332;
     border: none;
@@ -88,3 +91,4 @@ animation-iteration-count:infinite;
 
 
 /* fin resultat calculator */
+

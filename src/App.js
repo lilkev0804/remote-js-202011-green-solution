@@ -28,7 +28,6 @@ function App() {
         <Header />
         <Route path="/" exact component={Homepage}/>
         <Route path="/Calculator" component={Calculator}/>
-        {/* <Route path="/Result" component={BodyResult}/> */}
         <Route path="/Result" component={Result}/>
         <Route path="/Solutions" component={Solutions}/> 
         <Route path="/Aboutus" component={Aboutus}/>

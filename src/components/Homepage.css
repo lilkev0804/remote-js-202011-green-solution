@@ -16,7 +16,7 @@
     color : black;
     font-family : 'Dancing Script';
 }
-.Homepagebtn {
+.buttonsHomepage {
     color: #1B4332;
     border-radius: 30px;
     border: 6px solid #84A98C;
@@ -39,8 +39,6 @@
 @media (max-width: 420px){
 
 .homepage {
-    background-image : url("./imgHomepage/homepage-mobile-bg.jpg");
-    background-size: cover;
     flex-direction: column;
     display: flex;
     align-items: center;
@@ -59,13 +57,10 @@
 .btn-connexion {
     margin-bottom: 10vh;
 }
-.homepageBg {
-    display: none;
-}
 .textHomepage {
     display: none;
 }
-button {
+.buttonsHomepage {
     border: none;
     height: 50px;
     width: 250px;
@@ -74,6 +69,7 @@ button {
 .imgHomepage {
     display: none;
 }
+
 
 }
 
@@ -104,11 +100,23 @@ button {
     height: 100px;
 }
 .imgHomepage {
-    width: 70%;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border: 7px solid black;
+    width: 80vw;
+    height: 30vw;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 5px solid black;
 }
 
+.imgHomepage2 {
+    visibility: hidden;
+}
+.desktop {
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
 
 }
