@@ -1,5 +1,7 @@
-import React from "react"
-import "./Result.css"
+import BodyResult from "./BodyResult" 
+import Solution from "./Solution";
+import React from "react";
+import "./Result.css";
 
 class Result extends React.Component {
   state = {
@@ -19,12 +21,22 @@ class Result extends React.Component {
   }
 
   render() {
+
+  const logoResult="image-src/logoResult.png";
+  const logoResult2="image-src/logoResult2.png";
+  let resultCalc= this.state.total > 150;
+
     return (
+      <div>
+      <BodyResult/>
       <div className="result">
-        {/* <img className={resultCalc ? "logoResult" : "logoResult2"} src={resultCalc ? props.logoResult : props.logoResult2} alt={props.logoName} /> */}
-        <p>{this.state.total} </p>
+        <img className={resultCalc ? "logoResult" : "logoResult2"} src={resultCalc ? logoResult : logoResult2} alt={"coloration button for result is good or bad"} />
+        <p className="resultText">{this.state.total} </p>
       </div>
-    );
-  }
-}
-export default Result;
+        <Solution/>
+      </div>
+        );
+      }
+    }
+    
+    export default Result;

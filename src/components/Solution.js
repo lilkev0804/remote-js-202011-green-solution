@@ -6,10 +6,7 @@ function Solution() {
     return (
       <div className="solution">
         <img className="imgGlobalwarming" src={"image-src/globalwarming.svg"} alt={"globalwarming"} />
-        <Link className="solutionbutton" 
-              type="text"
-              to="/Solutions"
-              >
+        <Link className="solutionbutton" type="text" to="/Solutions">
               Des solutions adaptées à vos besoins
         </Link>
       </div>
