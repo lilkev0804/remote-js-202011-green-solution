@@ -46,9 +46,9 @@ export default class UserPage extends Component {
 
                 </div>
                 <div className="UserPageButton">
-                    <span className="UserPageButton-btn" onClick={(e) => this.handleToggle(e)}>Account Information</span>
-                    <span className="UserPageButton-btn" onClick={(e) => this.handleToggle(e)}>Calculator</span>
-                    <span className="UserPageButton-btn" onClick={(e) => this.handleToggle(e)}>My Historical</span>
+                    <span className="UserPageButton-btn">Account Information</span>
+                    <span className="UserPageButton-btn">Calculator</span>
+                    <span className="UserPageButton-btn">My Historical</span>
                 </div>
                 <div className={`UserPageModifiedInfo ${this.state.visible}`}>
                     <p className="UserPageToggleTitle">Modified your information</p>
