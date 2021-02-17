@@ -66,7 +66,6 @@ export default class UserPage extends Component {
                 </div>
                 <div className="UserPageButton">
                     <span className="UserPageButton-btn" onClick={this.handleClick}>Account Information</span>
-                    <span className="UserPageButton-btn" onClick={this.handleClick}>Calculator</span>
                     <span className="UserPageButton-btn" onClick={this.handleClick}>My Historical</span>
                 </div>
                     <div id="account-info" className={`UserPageModifiedInfo ${this.state.visible}`}>
@@ -75,9 +74,6 @@ export default class UserPage extends Component {
                             <input className="InputUserPageModified" type="password" name="new-password" placeholder="New Password" onChange={this.handleChangePassword}></input>
                         <button className="UserPageButton-btn" onClick={this.newValueInfo}>Validate modification</button>
                     </div>
-                    </div>
-                    <div id="calculator" className={`UserPageCalculator ${this.state.visible}`}>
-                        <p className="UserPageToggleTitle">Calculate your CO2 emission</p>
                     </div>
                     <div id="historical" className={`UserPageHistorical ${this.state.visible}`}>
                         <p className="UserPageToggleTitle">Your CO2 emission Historical</p>
