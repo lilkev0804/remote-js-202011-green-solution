@@ -2,7 +2,9 @@ import React, {useCallback, useState} from 'react'
 import {withRouter} from 'react-router'
 import {Link} from 'react-router-dom'
 import fire from '../firebase/fire'
-
+import 'firebase/firestore'
+import 'firebase/auth';
+import firebase from 'firebase'
 
 
 
@@ -12,9 +14,13 @@ const SignUp = ({ history}) => {
         event.preventDefault()
         const {email, password , username , confirmpassword} = event.target.elements
         if(password.value === confirmpassword.value ){
-            fire.database().ref('users/' + username.value ).set({
-                email : email.value,
-                surname: username.value
+            fire
+            .firestore()
+            .collection(email.value).add( {
+                usernameValue : username.value,
+                emailValue : email.value,
+                values : [],
+                ddcreate: firebase.firestore.FieldValue.serverTimestamp()
             })
             try{
                 await fire
