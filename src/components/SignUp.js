@@ -3,12 +3,19 @@ import {withRouter} from 'react-router'
 import {Link} from 'react-router-dom'
 import fire from '../firebase/fire'
 
+
+
+
 const SignUp = ({ history}) => {
     const [visible, setVisible] = useState('')
     const handleSignUp = useCallback(async event => {
         event.preventDefault()
-        const {email, password , confirmpassword} = event.target.elements
+        const {email, password , username , confirmpassword} = event.target.elements
         if(password.value === confirmpassword.value ){
+            fire.database().ref('users/' + username.value ).set({
+                email : email.value,
+                surname: username.value
+            })
             try{
                 await fire
                 .auth()
@@ -32,6 +39,10 @@ const SignUp = ({ history}) => {
                      <div className="ConnectFormInput">
                          <label for="email"> Email</label>
                          <input name="email" type="email"></input>
+                     </div>
+                     <div className="ConnectFormInput">
+                         <label for="username"> Username</label>
+                         <input name="username" type="text"></input>
                      </div>
                      <div className="ConnectFormInput">
                          <label for="password"> Password</label>

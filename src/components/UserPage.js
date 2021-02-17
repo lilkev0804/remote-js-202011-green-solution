@@ -7,11 +7,21 @@ import './UserPage.css'
 export default class UserPage extends Component {
     state = {
         newPassword:'',
-        visible: "invisible"
+        visible: "",
+        userName: ''
     }
 
     // toggle 
-
+    handleClick =(e) => {
+        const value = e.target.innerHTML
+        if(value.includes('Account')){
+            console.log('ok')
+        }else if(value.includes('Calculator')){
+            console.log("Calculator")
+        }else{
+            console.log("historical")
+        }
+    }
 
     handleChangePassword = (e) => { 
         this.setState({
@@ -29,15 +39,24 @@ export default class UserPage extends Component {
             alert(error)
         });
     }
-    
+
+    userName = () => {
+        if(fire.auth().currentUser.email === "lemarie.kevin3@gmail.com"){
+            this.setState({username : "hello"})
+        }else{
+            return 'fatal error'
+        }
+    }
+
+
+
     render() {
-        
         return (
             
             <div className="UserPageContainer">
                 <div className="UserPageHeader">
                      <button className="Disconnect-btn" onClick={() => fire.auth().signOut()}>Disconnect</button>
-                    <p className="UserPageCurrenntUser"> You are connect with : {fire.auth().currentUser.email}</p>
+                    <p className="UserPageCurrenntUser"> You are connect with : {fire.auth().currentUser.email}{this.state.userName}</p>
                 </div>
                 <div className="UserPageImgProfils">
                     <div>Img Logo Company</div>
@@ -46,24 +65,23 @@ export default class UserPage extends Component {
 
                 </div>
                 <div className="UserPageButton">
-                    <span className="UserPageButton-btn">Account Information</span>
-                    <span className="UserPageButton-btn">Calculator</span>
-                    <span className="UserPageButton-btn">My Historical</span>
+                    <span className="UserPageButton-btn" onClick={this.handleClick}>Account Information</span>
+                    <span className="UserPageButton-btn" onClick={this.handleClick}>Calculator</span>
+                    <span className="UserPageButton-btn" onClick={this.handleClick}>My Historical</span>
                 </div>
-                <div className={`UserPageModifiedInfo ${this.state.visible}`}>
-                    <p className="UserPageToggleTitle">Modified your information</p>
-                    <div className="UserPageToggleContainerInput">
-                        <input className="InputUserPageModified" type="password" name="new-password" placeholder="New Password" onChange={this.handleChangePassword}></input>
+                    <div id="account-info" className={`UserPageModifiedInfo ${this.state.visible}`}>
+                        <p className="UserPageToggleTitle">Modified your information</p>
+                        <div className="UserPageToggleContainerInput">
+                            <input className="InputUserPageModified" type="password" name="new-password" placeholder="New Password" onChange={this.handleChangePassword}></input>
                         <button className="UserPageButton-btn" onClick={this.newValueInfo}>Validate modification</button>
                     </div>
-                </div>
-                <div className={`UserPageCalculator ${this.state.visible}`}>
-                    <p className="UserPageToggleTitle">Calculate your CO2 emission</p>
-                </div>
-                <div className={`UserPageHistorical ${this.state.visible}`}>
-                    <p className="UserPageToggleTitle">Your CO2 emission Historical</p>
-                </div>
-                
+                    </div>
+                    <div id="calculator" className={`UserPageCalculator ${this.state.visible}`}>
+                        <p className="UserPageToggleTitle">Calculate your CO2 emission</p>
+                    </div>
+                    <div id="historical" className={`UserPageHistorical ${this.state.visible}`}>
+                        <p className="UserPageToggleTitle">Your CO2 emission Historical</p>
+                    </div>
             </div>
         )
     }
