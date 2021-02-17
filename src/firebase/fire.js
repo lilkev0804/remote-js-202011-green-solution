@@ -1,6 +1,6 @@
 import firebase from 'firebase'
 
-var firebaseConfig = {
+let firebaseConfig = {
     apiKey: "AIzaSyCu15em6tL-E0SLKkJ6P_V5BuPVpnKcxmc",
     authDomain: "greensolution-fbaf1.firebaseapp.com",
     projectId: "greensolution-fbaf1",

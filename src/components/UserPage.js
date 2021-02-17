@@ -4,10 +4,11 @@ import './UserPage.css'
 
 
 
+
 export default class UserPage extends Component {
     state = {
         newPassword:'',
-        visible: "",
+        visible: "invisible",
         userName: ''
     }
 
@@ -65,6 +66,7 @@ export default class UserPage extends Component {
 
                 </div>
                 <div className="UserPageButton">
+                    <span className="UserPageButton-btn" onClick={this.handleClick}>Calculator</span>
                     <span className="UserPageButton-btn" onClick={this.handleClick}>Account Information</span>
                     <span className="UserPageButton-btn" onClick={this.handleClick}>My Historical</span>
                 </div>
@@ -73,7 +75,10 @@ export default class UserPage extends Component {
                         <div className="UserPageToggleContainerInput">
                             <input className="InputUserPageModified" type="password" name="new-password" placeholder="New Password" onChange={this.handleChangePassword}></input>
                         <button className="UserPageButton-btn" onClick={this.newValueInfo}>Validate modification</button>
+                        </div>
                     </div>
+                    <div className="calculator">
+                        
                     </div>
                     <div id="historical" className={`UserPageHistorical ${this.state.visible}`}>
                         <p className="UserPageToggleTitle">Your CO2 emission Historical</p>
