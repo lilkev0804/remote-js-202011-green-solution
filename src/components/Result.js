@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import BodyResult from "./BodyResult" 
 import Solution from "./Solution";
 
-import fire from '../firebase/fire'
+
 
 import "./Result.css";
 

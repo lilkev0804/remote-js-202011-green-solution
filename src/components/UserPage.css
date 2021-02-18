@@ -74,7 +74,6 @@
 }
 .UserPageModifiedInfo, .calculator, .UserPageHistorical{
     margin-top: 18px;
-    max-width: 600px;
     width: 100%;
     background-color: #D8F4DC;
     position: relative;
@@ -130,4 +129,7 @@
     display: flex;
     width: 100%;
     justify-content: space-evenly;
+}
+.calculator{
+    width: 100%;
 }

@@ -1,7 +1,6 @@
 import axios from 'axios'
 import React, { useState , useEffect } from 'react'
 import fire from '../firebase/fire'
-import firebase from 'firebase'
 import 'firebase/firestore'
 import 'firebase/auth';
 import './UserPage.css'
@@ -11,7 +10,7 @@ import './UserPage.css'
 
 export default function UserPage () {
     const [newPassword, setNewPassword] = useState('')
-    // const [visible, setVisible] = useState('invisible')
+    const [visible, setVisible] = useState('invisible')
     const [element, setElement] = useState([])
     const [distance, setDistance] = useState('')
     const [weight, setWeight] = useState('')
@@ -20,7 +19,7 @@ export default function UserPage () {
     const [btnMsg, setBtnMsg] = useState('Calculate')
     // const [admin, setAdmin] = useState(['1', '2'])
     const [userName, setUsername] = useState('pseudo')
-    const[name, setName] = useState('')
+    // const [name, setName] = useState('') catch username in dB
     const [values, setValues] = useState([""])
     const [dates, setDates] = useState([''])
 
@@ -32,7 +31,6 @@ export default function UserPage () {
     const newValueInfo = () => {
         let user = fire.auth().currentUser;
         let newPasswords = newPassword;
-
         user.updatePassword(newPasswords).then(function() {
             alert(newPasswords)
         }).catch((error)=> {
@@ -41,18 +39,16 @@ export default function UserPage () {
     }
 
     useEffect(() => {
-        
         async function req(){
            const request = await axios.get("https://koumoul.com/s/data-fair/api/v1/datasets/base-carbone(r)/values_agg?field=Nom_base_fran%C3%A7ais&format=json&agg_size=20&q=camion&q_mode=complete&size=20&select=&highlight=")
             await setElement(request.data.aggs)
             setUsername(fire.auth().currentUser.email)
-        
         } 
         req();
     },[myResult])
 
-    const truck = []
 
+    const truck = []
     element.map(dat => (
         dat.results.filter(result => (
                 result["Identifiant_de_l'élément"].includes("21066") || result["Identifiant_de_l'élément"].includes("21074") || result["Identifiant_de_l'élément"].includes("21052") || result["Identifiant_de_l'élément"].includes("28023") ? truck.push(result.Total_poste_non_décomposé) : ""
@@ -64,9 +60,12 @@ export default function UserPage () {
     const checkValue = (e) => {
         setSelectEmissionFactorsUser(e.target.value)
     }
-    
 
-    const date = new Date()
+    const format = () => {
+        let options = {year: 'numeric', month: 'long', day: 'numeric'}
+        return new Date().toLocaleDateString([], options);
+      } 
+
     const catchValue = () => {
         const vehicule = selectEmissionFactorsUser.replace(',' , ".")
         const inputKm = distance.replace(',' , ".")
@@ -77,7 +76,7 @@ export default function UserPage () {
         .firestore()
         .collection(userName).add({
             values : [userResult],
-            date: date.getDate()
+            date: format()
         })
         setDistance("")
         setWeight("")
@@ -92,14 +91,13 @@ export default function UserPage () {
     } 
     
         return (
-            
             <div className="UserPageContainer">
                 <div className="UserPageHeader">
                      <button className="Disconnect-btn" onClick={() => fire.auth().signOut()}>Disconnect</button>
                     <p className="UserPageCurrenntUser"> You are connect with : {userName}</p>
                 </div>
                 <div className="UserPageImgProfils">
-                    <div>{name}</div>
+                    <div>Avatar</div>
                 </div>
                 <div className="UserPageInfo">
 
@@ -109,7 +107,7 @@ export default function UserPage () {
                     <span className="UserPageButton-btn" >Account Information</span>
                     <span className="UserPageButton-btn" >My Historical</span>
                 </div>
-                    <div id="account-info" className={`UserPageModifiedInfo `}>
+                    <div id="account-info" className={`UserPageModifiedInfo ${visible}`}>
                         <p className="UserPageToggleTitle">Modified your information</p>
                         <div className="UserPageToggleContainerInput">
                             <input className="InputUserPageModified" type="password" name="new-password" placeholder="New Password" onChange={handleChangePassword}></input>
@@ -148,7 +146,7 @@ export default function UserPage () {
                        <div className="listvalute">
                         <ul className="historyList">
                             {values.map(value => (
-                                <li>Emission : {value} KGCO2</li>
+                                <li>Emission : {value} KgCO2</li>
                             ))}
                             </ul>
                             <ul className="historyList">
