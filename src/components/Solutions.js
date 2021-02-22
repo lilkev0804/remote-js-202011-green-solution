@@ -1,19 +1,18 @@
-import React from 'react'
-import './Solutions.css'
-import CardsList from './CardsList'
+import React from "react";
+import "./Solutions.css";
+import CardsList from "./CardsList";
 
 class Solutions extends React.Component {
-   
-    render() {
+  render() {
     return (
       <div>
         <div className="solutions-title">
-          <h1>Comment réduire mon empreinte ?</h1>
+          <h1>Comment réduire mon impact carbone ?</h1>
         </div>
         <CardsList />
       </div>
-    )
-    };
+    );
   }
+}
 
-  export default Solutions;
+export default Solutions;

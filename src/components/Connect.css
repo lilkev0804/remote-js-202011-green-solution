@@ -1,115 +1,113 @@
-.ConnectContainer{
-    width: 100%;
-    height: 82.2vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.ConnectContainer {
+  width: 100%;
+  height: 82.2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .ConnectContainer .invisible {
-    display: none;
+  display: none;
 }
 .ConnectContainer .visible {
-    display: flex !important;
+  display: flex !important;
 }
 .ConnectContainer .underline {
-    text-decoration: underline;
-    color: red;
+  text-decoration: underline;
+  color: red;
 }
 
-
-.ConnectFormContainer{
-    width: 500px;
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
+.ConnectFormContainer {
+  width: 500px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-[class*="ConnectFormContainer-"]{
-    width: 80%;
-    background-color:#D8F4DC;
-    padding: 20px 0px;
+[class*="ConnectFormContainer-"] {
+  width: 80%;
+  background-color: #d8f4dc;
+  padding: 20px 0px;
 }
-.ConnectFormContainer-Top{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+.ConnectFormContainer-Top {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
-.ConnectFormBtn-top{
-    color: black;
-    font-size: 1.4rem;
-    cursor: pointer;
-    text-decoration: none;
-    font-family: "Roboto";
-    padding: 0;
-    margin: 0;
+.ConnectFormBtn-top {
+  color: black;
+  font-size: 1.4rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Roboto";
+  padding: 0;
+  margin: 0;
 }
-.ConnectFormInput{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
+.ConnectFormInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
 }
-.ConnectFormContainer-Middle{
-    background-color:#D8F4DC;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.ConnectFormContainer-Middle {
+  background-color: #d8f4dc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.ConnectFormContainer-Bottom{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.ConnectFormContainer-Bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.ConnectFormBtnValidateInput{
-    padding: 10px 12px;
-    border-radius: 10px;
-    background-color:transparent;
-    border:1px solid black;
-    cursor: pointer;
-    width: 200px;
-    margin-bottom: 8px;
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: all .4s cubic-bezier(.64,.2,.91,.63);
+.ConnectFormBtnValidateInput {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid black;
+  cursor: pointer;
+  width: 200px;
+  margin-bottom: 8px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.4s cubic-bezier(0.64, 0.2, 0.91, 0.63);
 }
-.ConnectFormBtnValidateInput:focus{
-    outline: none;
+.ConnectFormBtnValidateInput:focus {
+  outline: none;
 }
-.ConnectFormBtnValidateInput:hover{
-    background-color: white;
-    color: #2F3E46;
-    border-color: #2F3E46;
+.ConnectFormBtnValidateInput:hover {
+  background-color: white;
+  color: #2f3e46;
+  border-color: #2f3e46;
 }
-.ConnectFormInput label{
-    margin: 20px 0px 10px 0px;
-    text-transform: uppercase;
-    font-weight: 700;
+.ConnectFormInput label {
+  margin: 20px 0px 10px 0px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 .ConnectFormInput input {
-    width: 200px;
-    padding: 10px 12px;
-    border-radius: 10px;
-    text-align: center;
+  width: 200px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  text-align: center;
 }
-.underlineSign{
-    text-decoration: underline !important;
+.underlineSign {
+  text-decoration: underline !important;
 }
-.alertSignIn{
-    width: 80%;
-    background-color: #D8F4DC;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: red;
-    font-weight: 600;
-    letter-spacing: 1.4px;
+.alertSignIn {
+  width: 80%;
+  background-color: #d8f4dc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: red;
+  font-weight: 600;
+  letter-spacing: 1.4px;
 }

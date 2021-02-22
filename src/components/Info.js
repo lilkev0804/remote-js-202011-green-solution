@@ -1,6 +1,6 @@
 import React from "react";
-import './Info.css';
-import {Link} from "react-router-dom";
+import "./Info.css";
+import { Link } from "react-router-dom";
 
           function Info(props) {
             return (
@@ -11,7 +11,7 @@ import {Link} from "react-router-dom";
                    alt="?"
                   />
                 <div className="Info-container-button">
-                    <Link to="/MailForm" style={{textDecoration:'none'}}>
+                    <Link to="/Form" style={{textDecoration:'none'}}>
                       <button className="Info-Button3">Envoyer un mail</button> 
                     </Link>
                   </div>

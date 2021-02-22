@@ -1,5 +1,6 @@
 import React from "react";
-import './MailForm.css';
+import "./MailForm.css";
+
 
 class MailForm extends React.Component {
   constructor(props) {
@@ -88,3 +89,4 @@ class MailForm extends React.Component {
   }}
 
   export default MailForm;
+

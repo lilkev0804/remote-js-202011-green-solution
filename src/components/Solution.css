@@ -1,68 +1,71 @@
 /* bouton solution page resultat */
 
 .solution {
-    padding-top: 10px;
-    margin-bottom: 10px;
-    background: #B7E4C7;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-
+  padding-top: 10px;
+  margin-bottom: 10px;
+  background: #b7e4c7;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .solutionbutton {
-    font-size: 8px;
-    color: #1B4332;
-    text-decoration: none;
-    font-weight: bold;
-    border: none;
-    border-radius: 10px;
-    margin-top: 20%;
-    margin-bottom: 10%;
-    height: 40px;
-    width: 50%; 
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    background:#74C69D;
-    font-family: 'Roboto', sans-serif;
-} 
+  font-size: 8px;
+  color: #1b4332;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20%;
+  margin-bottom: 10%;
+  height: 40px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #74c69d;
+  font-family: "Roboto", sans-serif;
+}
 .imgGlobalwarming {
-    border-radius: 10px;
-    width: 60%;
+  border-radius: 10px;
+  width: 60%;
 }
 
 @media only screen and (min-width: 360px) {
-    .solutionbutton {
-        font-size: 10px;
-        height: 60px;
-}}
+  .solutionbutton {
+    font-size: 10px;
+    height: 60px;
+  }
+}
 
 @media only screen and (min-width: 520px) {
-    .solutionbutton {
-        font-size: 15px;
-}}
+  .solutionbutton {
+    font-size: 15px;
+  }
+}
 
 @media only screen and (min-width: 640px) {
-    .solutionbutton {
-        margin-top: 10%;
-        margin-bottom: 10%;
-        font-size: 18px;
-    }
-    .imgGlobalwarming {
-        border-radius: 10px;
-        width: 50%;
-}}
+  .solutionbutton {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-size: 18px;
+  }
+  .imgGlobalwarming {
+    border-radius: 10px;
+    width: 50%;
+  }
+}
 
 @media only screen and (min-width: 1000px) {
-    .solutionbutton {
-        margin-top: 5%;
-        margin-bottom: 5%;
-        width: 30%;
-}
-.imgGlobalwarming {
+  .solutionbutton {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 30%;
+  }
+  .imgGlobalwarming {
     border-radius: 10px;
     width: 35%;
-}}
+  }
+}
 
 /* fin bouton solution page resultat */
