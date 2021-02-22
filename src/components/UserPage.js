@@ -24,6 +24,7 @@ export default function UserPage () {
     const [dates, setDates] = useState([''])
 
 
+
      const handleChangePassword = (e) => { 
             setNewPassword(e.target.value)
     }
@@ -159,7 +160,3 @@ export default function UserPage () {
             </div>
         )
 }
-
-
-
-

@@ -1,14 +1,14 @@
 import React from "react";
-import { bubble as Menu } from 'react-burger-menu'
+import { bubble as Menu } from "react-burger-menu";
 
-import './BurgerMenu.css';
-import {Link} from "react-router-dom";
+import "./BurgerMenu.css";
+import { Link } from "react-router-dom";
 
 class BurgerMenu extends React.Component {
-  showSettings (event) {
-      event.preventDefault();
-    }
-  render () {
+  showSettings(event) {
+    event.preventDefault();
+  }
+  render() {
     return (
 
       <Menu className="menu-burger" right width={ '200px' } >
@@ -18,7 +18,11 @@ class BurgerMenu extends React.Component {
         <Link className="menu-item2" to="/Calculator" style={{textDecoration:'none'}}>
           Simulator
         </Link>
-        <Link className="menu-item3" to="/Solutions" style={{textDecoration:'none'}}>
+        <Link
+          className="menu-item3"
+          to="/Solutions"
+          style={{ textDecoration: "none" }}
+        >
           Solutions
         </Link>
         <Link className="menu-item4" to="/Aboutus" style={{textDecoration:'none'}}>
@@ -27,9 +31,8 @@ class BurgerMenu extends React.Component {
         <Link className="menu-item4" to="/login" style={{textDecoration:'none'}}>
           Votre espace
         </Link>
-
       </Menu>
     );
   }
 }
-export default BurgerMenu
+export default BurgerMenu;

@@ -64,8 +64,8 @@ const SignUp = ({ history}) => {
                     <button className="ConnectFormBtnValidateInput" type="submit">Sign Up</button>
                 </div>
             </form>
-        </div>
-    )
-}
+    </div>
+  );
+};
 
-export default withRouter(SignUp)
+export default withRouter(SignUp);

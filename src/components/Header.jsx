@@ -1,7 +1,6 @@
-import './Header.css'
-import {Link} from "react-router-dom";
-import BurgerMenu from "./BurgerMenu"
-
+import "./Header.css";
+import { Link } from "react-router-dom";
+import BurgerMenu from "./BurgerMenu";
 
 const Header = (props) => {
     return <div className="header">
@@ -26,6 +25,6 @@ const Header = (props) => {
             </Link>
         </ul>
     </div>
-}
+};
 
-export default Header
+export default Header;

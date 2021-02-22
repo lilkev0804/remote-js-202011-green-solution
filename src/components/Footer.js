@@ -1,24 +1,23 @@
-import './Footer.css'
-import {Link} from "react-router-dom";
+import "./Footer.css";
+import { Link } from "react-router-dom";
 
 const socialLinks = [
-    {
-        link : "facebook.fr",
-        target :"_blanck",
-        icon : <i class="fab fa-facebook ico-social"></i>
-    },
-    {
-        link : "github.fr",
-        target :"_blanck",
-        icon : <i class="fab fa-github ico-social"></i>
-    },
-    {
-        link : "twitter.fr",
-        target :"_blanck",
-        icon : <i class="fab fa-twitter ico-social"></i>
-    },
-
-]
+  {
+    link: "facebook.fr",
+    target: "_blanck",
+    icon: <i class="fab fa-facebook ico-social"></i>,
+  },
+  {
+    link: "github.fr",
+    target: "_blanck",
+    icon: <i class="fab fa-github ico-social"></i>,
+  },
+  {
+    link: "twitter.fr",
+    target: "_blanck",
+    icon: <i class="fab fa-twitter ico-social"></i>,
+  },
+];
 
 const Footer = () => {
     return <div className="footer">
@@ -36,6 +35,6 @@ const Footer = () => {
           </Link>
        </div>
     </div>
-}
+};
 
-export default Footer
+export default Footer;
