@@ -10,19 +10,19 @@ const Header = (props) => {
         <BurgerMenu></BurgerMenu>
         <ul className="header-navbar">
             <Link to="/" style={{textDecoration:'none'}}>
-                <li className="header-nav-link">home</li>
+                <li className="header-nav-link">Accueil</li>
             </Link>
             <Link to="/Calculator" style={{textDecoration:'none'}}> 
-                <li className="header-nav-link">calculator</li>
+                <li className="header-nav-link">Simulateur</li>
             </Link>
             <Link to="/Solutions" style={{textDecoration:'none'}}> 
-                <li className="header-nav-link">solutions</li>
+                <li className="header-nav-link">Solutions</li>
             </Link>
             <Link to="/Aboutus" style={{textDecoration:'none'}}> 
-                <li className="header-nav-link">about us</li>
+                <li className="header-nav-link">A propos</li>
             </Link>
             <Link to="/login" style={{textDecoration:'none'}}> 
-                <li className="header-nav-link">Your Account</li>
+                <li className="header-nav-link">Votre espace</li>
             </Link>
         </ul>
     </div>

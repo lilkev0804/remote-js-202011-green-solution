@@ -13,19 +13,19 @@ class BurgerMenu extends React.Component {
 
       <Menu className="menu-burger" right width={ '200px' } >
         <Link className="menu-item1" to="/" style={{textDecoration:'none'}}>
-          Home
+          Accueil
         </Link>
         <Link className="menu-item2" to="/Calculator" style={{textDecoration:'none'}}>
-          Calculator
+          Simulator
         </Link>
         <Link className="menu-item3" to="/Solutions" style={{textDecoration:'none'}}>
           Solutions
         </Link>
         <Link className="menu-item4" to="/Aboutus" style={{textDecoration:'none'}}>
-          About Us
+          A propos
         </Link>
         <Link className="menu-item4" to="/login" style={{textDecoration:'none'}}>
-          Your Account
+          Votre espace
         </Link>
 
       </Menu>
