@@ -51,5 +51,8 @@
   "bugs": {
     "url": "https://github.com/WildCodeSchool/remote-js-202011-green-solution/issues"
   },
-  "homepage": "./public/index.html"
+  "homepage": "./public/index.html",
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
 }

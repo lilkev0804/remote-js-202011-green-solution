@@ -17,19 +17,19 @@
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
   border-radius: 200px;
-  background:#FDE6A0;
+  background: #fde6a0;
 }
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
-  background: #FDE6A0;
+  background: #fde6a0;
 }
 .menu-item1 {
   display: flex;
   color: black;
   text-decoration: none;
   font-weight: 700;
-  background: #FDE6A0;
+  background: #fde6a0;
   transition: background 0.5s;
   padding: 0.5em;
   text-align: center;
@@ -41,7 +41,7 @@
   color: black;
   text-decoration: none;
   font-weight: 700;
-  background: #FDE6A0;
+  background: #fde6a0;
   transition: background 0.5s;
   padding: 0.5em;
   text-align: center;
@@ -53,7 +53,7 @@
   color: black;
   text-decoration: none;
   font-weight: 700;
-  background: #FDE6A0;
+  background: #fde6a0;
   transition: background 0.5s;
   padding: 0.5em;
   text-align: center;
@@ -65,14 +65,13 @@
   color: black;
   text-decoration: none;
   font-weight: 700;
-  background: #FDE6A0;
+  background: #fde6a0;
   transition: background 0.5s;
   padding: 0.5em;
   text-align: center;
   margin-bottom: 1em;
   border-radius: 50px;
 }
-
 
 /* A partir de ce css il ne faut au possible pas le toucher sous peine d'avoir des bugs*/
 .bm-menu-wrap {
@@ -82,17 +81,14 @@
   height: 100%;
 }
 
-
-
 .bm-menu {
-  position: absolute!important;
-  background: #D8F3DC;
+  position: absolute !important;
+  background: #d8f3dc;
   font-size: 1.8em;
 }
 
-
 .bm-morph-shape {
-  fill:#D8F3DC;
+  fill: #d8f3dc;
 }
 
 .bm-item-list {
@@ -110,27 +106,27 @@
   font-weight: bold;
   line-height: 2;
 }
-.bm-item:focus{
+.bm-item:focus {
   outline: none !important;
 }
 
 @media (min-width: 765px) {
   .bm-burger-bars {
-  display: none !important;
+    display: none !important;
   }
 }
 ::-webkit-scrollbar {
-    display: none;
-  }
-
-.bm-burger-button  {
   display: none;
 }
-@media screen and (max-width : 765px){
-  .bm-burger-button{
+
+.bm-burger-button {
+  display: none;
+}
+@media screen and (max-width: 765px) {
+  .bm-burger-button {
     display: block !important;
   }
-  #react-burger-menu-btn:focus{
+  #react-burger-menu-btn:focus {
     outline: none;
   }
 }
