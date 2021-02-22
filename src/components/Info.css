@@ -1,11 +1,3 @@
-.visible {
-    display: flex; 
-}
-
-.invisible {
-    display: none;
-}
-
 .Info {
     background-color: #B7E4C7;
 }
@@ -17,6 +9,13 @@ h2 {
     font-size: 20px;
 }
 
+.coordonnees-box {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+ 
+}
+
 .Info img {
     margin-left: 10px;
     width: 300px;
@@ -26,7 +25,6 @@ h2 {
 }
 
 .Info-Button3 {
-    
     height: 40px;
     width: 130px;
     border-radius: 50px;
@@ -70,3 +68,38 @@ h2 {
     }
 
 }
+
+.coordonnees {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+
+.coordonneesButton {
+    width: 80px;
+    height: 15px;
+    font-size: 8px;
+    border: 1px solid black;
+}
+
+.coordonneesButton:hover {
+    color: black;
+    background-color: #B7E4C7;
+}
+
+@media screen and (max-width:420px) {
+    .coordonnees {
+        flex-direction: column;
+    }
+
+    
+
+}
+
+@media screen and (min-width: 420px) {
+    .coordonnees {
+        display:inline-flex
+    }
+}
+

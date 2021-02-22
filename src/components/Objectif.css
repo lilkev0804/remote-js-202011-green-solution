@@ -8,8 +8,9 @@
     align-items: center;
     position: relative;
     margin-bottom: 10px;
-    
 }
+
+
 
 .Objectif-Texte {
     padding: 10px;
@@ -25,7 +26,7 @@ p {
     margin-left: 10px;
     padding-right: 10px;
 }
-@media screen and (max-width:420px){
+@media screen and (max-width:520px){
     .Objectif {
         flex-direction: column !important
     }
