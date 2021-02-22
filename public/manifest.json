@@ -1,5 +1,4 @@
 {
-
   "short_name": "React App",
   "name": "Create React App Sample",
   "icons": [
@@ -19,7 +18,7 @@
       "sizes": "512x512"
     }
   ],
-  
+
   "short_name": "GreenSolution",
   "name": "Create React App Sample",
   "start_url": ".",

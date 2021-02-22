@@ -1,8 +1,6 @@
-const UserProfiles =
-    {
-        username: "admin",
-        password: "admin"
-    }
+const UserProfiles = {
+  username: "admin",
+  password: "admin",
+};
 
-
-export default UserProfiles
+export default UserProfiles;

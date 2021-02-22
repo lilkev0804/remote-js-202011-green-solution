@@ -1,109 +1,112 @@
-.UserPageContainer{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    max-width: 1400px;
-    margin: auto;
-    height: 80.5vh;
+.UserPageContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 1400px;
+  margin: auto;
+  height: 80.5vh;
 }
-.UserPageHeader{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding-top: 10px;
+.UserPageHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
 }
-.Disconnect-btn{
-    background-color: #2F3E46;
-    border-radius: 10px;
-    padding: 10px 15px;
-    border: none;
-    color: #B7E4C7;
-    text-transform: uppercase;
-    cursor: pointer;
-    letter-spacing: 2px;
-    border: 1px solid #2F3E46;
-    transition: all .4s cubic-bezier(.64,.2,.91,.63);
+.Disconnect-btn {
+  background-color: #2f3e46;
+  border-radius: 10px;
+  padding: 10px 15px;
+  border: none;
+  color: #b7e4c7;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 2px;
+  border: 1px solid #2f3e46;
+  transition: all 0.4s cubic-bezier(0.64, 0.2, 0.91, 0.63);
 }
-.Disconnect-btn:focus , .Disconnect-btn:active{
-    outline: none;
+.Disconnect-btn:focus,
+.Disconnect-btn:active {
+  outline: none;
 }
-.Disconnect-btn:hover{
-    background-color: white;
-    border-color: #2F3E46;
-    color: #2F3E46;
+.Disconnect-btn:hover {
+  background-color: white;
+  border-color: #2f3e46;
+  color: #2f3e46;
 }
-.UserPageBody{
-    width: 100%;
-    height: 500px;
+.UserPageBody {
+  width: 100%;
+  height: 500px;
 }
 .UserPageImgProfils {
-    margin: 30px auto 0px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  margin: 30px auto 0px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.UserPageImgProfils div{
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    border: 1px solid #D8F4DC;
-    box-shadow: 1px 3px 14px #D8F4DC;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.UserPageImgProfils div {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 1px solid #d8f4dc;
+  box-shadow: 1px 3px 14px #d8f4dc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.UserPageInfo{
-    padding: 10px;
-    width: 100%;
-    margin: 40px 0px;
+.UserPageInfo {
+  padding: 10px;
+  width: 100%;
+  margin: 40px 0px;
 }
-.UserPageButton{
-    display: flex;
-    justify-content: space-between;
+.UserPageButton {
+  display: flex;
+  justify-content: space-between;
 }
-.UserPageButton-btn{
-    padding: 8px 12px;
-    border-radius: 20px;
-    background-color: #2F3E46;
-    color: #B7E4C7;
-    margin-right: 10px;
-    cursor: pointer;
+.UserPageButton-btn {
+  padding: 8px 12px;
+  border-radius: 20px;
+  background-color: #2f3e46;
+  color: #b7e4c7;
+  margin-right: 10px;
+  cursor: pointer;
 }
-.UserPageModifiedInfo, .UserPageCalculator, .UserPageHistorical{
-    margin-top: 18px;
-    max-width: 600px;
-    width: 100%;
-    height: 400px;
-    background-color: #D8F4DC;
-    position: relative;
+.UserPageModifiedInfo,
+.UserPageCalculator,
+.UserPageHistorical {
+  margin-top: 18px;
+  max-width: 600px;
+  width: 100%;
+  height: 400px;
+  background-color: #d8f4dc;
+  position: relative;
 }
-.UserPageToggleTitle{
-    color: black;
-    font-size: 1.3rem;
-    text-align: center;
-    width: 100%;
+.UserPageToggleTitle {
+  color: black;
+  font-size: 1.3rem;
+  text-align: center;
+  width: 100%;
 }
-.UserPageToggleContainerInput{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.UserPageToggleContainerInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.InputUserPageModified{
-    margin: 10px 0px;
+.InputUserPageModified {
+  margin: 10px 0px;
 }
-.UserPageCurrenntUser{
-    color: #2F3E46;
-    font-size: 1rem;
-    font-family: "Roboto";
+.UserPageCurrenntUser {
+  color: #2f3e46;
+  font-size: 1rem;
+  font-family: "Roboto";
 }
-.ConnectContainerErrorLogin{
-    background-color: #D8F4DC;
-    width: 80%;
-    justify-content: center;
-    font-weight: 600;
-    display: none;
+.ConnectContainerErrorLogin {
+  background-color: #d8f4dc;
+  width: 80%;
+  justify-content: center;
+  font-weight: 600;
+  display: none;
 }

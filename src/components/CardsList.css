@@ -1,7 +1,20 @@
-@media (min-width: 800px){
+.solutions-cardsList{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
 
-    .solutions-cardsList{
-        display:flex;
-        flex-direction: row;
-    }    
+.categoriesSolutions{
+  border-radius: 10px;
+  color: #40916c;
+  font-family: "Roboto";
+  padding: 3px;
+}
+
+.selectSolutions{
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 80px;
+  margin-bottom: 20px;
 }
