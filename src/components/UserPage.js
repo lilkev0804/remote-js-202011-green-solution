@@ -10,7 +10,7 @@ import './UserPage.css'
 
 export default function UserPage () {
     const [newPassword, setNewPassword] = useState('')
-    const [visible, setVisible] = useState('invisible')
+    const [visible, setVisible] = useState(false)
     const [element, setElement] = useState([])
     const [distance, setDistance] = useState('')
     const [weight, setWeight] = useState('')
@@ -46,7 +46,7 @@ export default function UserPage () {
             setUsername(fire.auth().currentUser.email)
         } 
         req();
-    },[myResult])
+    },[])
 
 
     const truck = []
@@ -65,57 +65,80 @@ export default function UserPage () {
     const format = () => {
         let options = {year: 'numeric', month: 'long', day: 'numeric'}
         return new Date().toLocaleDateString([], options);
-      } 
+    } 
 
     const catchValue = () => {
         const vehicule = selectEmissionFactorsUser.replace(',' , ".")
         const inputKm = distance.replace(',' , ".")
         const inputWeight = weight.replace(',' , ".")
         const userResult = vehicule * inputKm * inputWeight
-        setMyresult(`Votre résultat ${userResult} kgCo2`)
-        fire
-        .firestore()
-        .collection(userName).add({
-            values : [userResult],
-            date: format()
-        })
-        setDistance("")
-        setWeight("")
-        setSelectEmissionFactorsUser('')
-        setBtnMsg('Try Again')
-        fire
-        .firestore()
-        .collection(userName).onSnapshot(snapshot => {
+        if(userResult === 0 || userResult === " "){
+            setMyresult(`Votre résultat est incorrect`)
+        }else{
+            setMyresult(`Votre résultat ${userResult} kgCo2`)
+            fire
+            .firestore()
+            .collection(userName).add({
+                values : [userResult],
+                date: format()
+            })
+            setDistance("")
+            setWeight("")
+            setSelectEmissionFactorsUser('')
+            setBtnMsg('Nouveau calcul')
+            // fire
+            // .firestore()
+            // .collection(userName).onSnapshot(snapshot => {
+            //     setValues(snapshot.docs.map(doc => doc.data().values))
+            //     setDates(snapshot.docs.map(doc => doc.data().date))
+            // })
+        }
+    } 
+
+    const handleClick = (e) => {
+        e.preventDefault()
+        console.log(e.target.value)
+        if(e.target.value === "historique"){
+            document.getElementById(`${e.target.value}`).classList.toggle('invisible')
+            fire
+            .firestore()
+            .collection(userName).onSnapshot(snapshot => {
             setValues(snapshot.docs.map(doc => doc.data().values))
             setDates(snapshot.docs.map(doc => doc.data().date))
-        })
-    } 
-    
+            })
+        }else if(e.target.value === "compte"){
+            document.getElementById(`${e.target.value}`).classList.toggle('invisible')
+        }else{
+            document.getElementById(`${e.target.value}`).classList.toggle('invisible')
+        }
+        
+    }
+
+
         return (
             <div className="UserPageContainer">
-                <div className="UserPageHeader">
-                     <button className="Disconnect-btn" onClick={() => fire.auth().signOut()}>Disconnect</button>
-                    <p className="UserPageCurrenntUser"> You are connect with : {userName}</p>
+                <div  className={`UserPageHeader`}>
+                     <button className="Disconnect-btn" onClick={() => fire.auth().signOut()}>Déconnection </button>
+                    <p className="UserPageCurrenntUser"> Bienvenue : {userName}</p>
                 </div>
                 <div className="UserPageImgProfils">
                     <div>Avatar</div>
                 </div>
                 <div className="UserPageInfo">
-
                 </div>
                 <div className="UserPageButton">
-                    <span className="UserPageButton-btn" >Calculator</span>
-                    <span className="UserPageButton-btn" >Account Information</span>
-                    <span className="UserPageButton-btn" >My Historical</span>
+                    <button className="UserPageButton-btn"  onClick={handleClick} value="calcul">Calculateur</button>
+                    <button className="UserPageButton-btn" onClick={handleClick} value="compte">Information de votre compte</button>
+                    <button className="UserPageButton-btn" onClick={handleClick} value="historique">Votre historique</button>
                 </div>
-                    <div id="account-info" className={`UserPageModifiedInfo ${visible}`}>
-                        <p className="UserPageToggleTitle">Modified your information</p>
+                    <div  id="compte" className={`UserPageModifiedInfo invisible`}>
+                        <p className="UserPageToggleTitle">Modifier votre mot de passe</p>
                         <div className="UserPageToggleContainerInput">
-                            <input className="InputUserPageModified" type="password" name="new-password" placeholder="New Password" onChange={handleChangePassword}></input>
-                        <button className="Disconnect-btn" onClick={newValueInfo}>Validate modification</button>
+                            <input className="InputUserPageModified" type="text" name="new-password" placeholder="New Password" onChange={handleChangePassword}></input>
+                        <button className="Disconnect-btn" onClick={newValueInfo}>Validez</button>
                         </div>
                     </div>
-                    <div className="calculator">
+                    <div id="calcul" className="calcul invisible">
                         <div className="inputBoxVehicule">
                             <select name="vehicule" id="vehiculeSelect" onChange={checkValue} className="vehiculeList" >
                                 <option className="vehiculeList" value={truck[9]} >Vehicule utilitaire 3,5T</option> 
@@ -140,10 +163,9 @@ export default function UserPage () {
                             <button className="Disconnect-btn" onClick={catchValue}>{btnMsg}</button>
                             <span>{myResult}</span>
                         </div>
-                       
                     </div>
-                    <div id="historical" className={`UserPageHistorical`}>
-                        <p className="UserPageToggleTitle">Your CO2 emission Historical</p>
+                    <div id="historique" className={`UserPageHistorical invisible`}>
+                        <p className="UserPageToggleTitle">Votre émission de CO2</p>
                        <div className="listvalute">
                         <ul className="historyList">
                             {values.map(value => (
@@ -154,7 +176,7 @@ export default function UserPage () {
                             {dates.map(date => (
                                 <li>Jour : {date}</li>
                             ))}
-                            </ul>
+                        </ul>
                        </div>
                     </div>
             </div>
