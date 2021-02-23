@@ -8,8 +8,9 @@
   padding-left: 10px;
   margin-bottom: 10px;
 }
-.equipeName {
-  font-family: "Roboto", sans-serif;
+
+.equipeName{
+    font-family: 'Roboto', sans-serif;
 }
 
 .Equipe img {
@@ -21,11 +22,17 @@
   padding-right: 30px;
 }
 
-@media (max-width: 420px) {
-  .Equipe {
+.Equipe-Texte1 {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    margin-bottom: 10px;
-  }
+    justify-content: center;
+}
+
+@media (max-width: 420px) {
+    .Equipe {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
 }
