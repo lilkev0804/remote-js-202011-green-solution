@@ -19,6 +19,7 @@ const Aboutus = () => {
         Car chez Green Solution, nous sommes des professionnels du dev, mais nous aimons aussi le développement durable."
       />
       <Info />
+  
     </div>
   );
 };
