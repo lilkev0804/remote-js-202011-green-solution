@@ -71,9 +71,9 @@ class Carousel extends Component {
                 <Slider {...settings}>
                 {photos.map((photo) => {
                     return (
-                        <div>
+                        <div className="carouselTest">
                             <img width="100%" height="440px" src={photo.url} alt={photo.alt}/>
-                                <h1 className="carouselText">{photo.text}</h1>
+                                <div><h1 className="carouselText">{photo.text}</h1></div>
                         </div>
                     )
                 })}
