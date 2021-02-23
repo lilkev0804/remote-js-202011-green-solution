@@ -9,27 +9,32 @@ const photos = [
     {
         name: 'Photo 1',
         url: "imgCarousel/photo1.jpg",
-        alt: "parking with truck"
+        alt: "parking with truck",
+        text: "Explorez toutes nos solutions"
     },
     {
         name: 'Photo 2',
         url: "imgCarousel/photo2.jpg",
-        alt: "truck on a moutain road"
+        alt: "truck on a moutain road",
+        text: "Changez la logistique de votre entreprise"
     },
     {
         name: 'Photo 3',
         url: "imgCarousel/photo3.jpg",
-        alt: "truck on a highway"
+        alt: "truck on a highway",
+        text: "Pensez à d'autres moyens de transports"
     },
     {
         name: 'Photo 4',
         url: "imgCarousel/photo4.jpg",
-        alt: "truck by night"
+        alt: "truck by night",
+        text: "Différents programmes écologiques"
     },
     {
         name: 'Photo 5',
         url: "imgCarousel/photo5.jpg",
-        alt: "truck in black and white"
+        alt: "truck in black and white",
+        text: "Tournez vous vers les innovations"
     }
 ]
 
@@ -51,7 +56,7 @@ class Carousel extends Component {
             infinite: true,
             speed: 300,
             slidesToShow: 1,
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 1500,
             pauseOnHover: true,
             accessibility: true,
@@ -68,6 +73,7 @@ class Carousel extends Component {
                     return (
                         <div>
                             <img width="100%" height="440px" src={photo.url} alt={photo.alt}/>
+                                <h1 className="carouselText">{photo.text}</h1>
                         </div>
                     )
                 })}

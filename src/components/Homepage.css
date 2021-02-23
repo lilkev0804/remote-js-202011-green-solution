@@ -144,6 +144,16 @@
 }
 
 /* Carousel */
+.carouselText{
+    color: white; 
+    text-shadow: black 3px 4px 3px;
+    font-size: 80px;
+    position: absolute;
+    top: 20%;
+    z-index: 1;
+    left: 30%;
+    right: 30%;
+}
 .slides .slick-prev,
 .slides .slick-next {
   position: absolute;
