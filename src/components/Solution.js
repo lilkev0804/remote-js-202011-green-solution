@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 function Solution() {
     return (
       <div className="solution">
-        <img className="imgGlobalwarming" src={"image-src/globalwarming.svg"} alt={"globalwarming"} />
+        <img className="image-result" src={"image-src/image result.png"} alt={"image-result"} />
         <Link className="solutionbutton" type="text" to="/Solutions">
               Des solutions adaptées à vos besoins
         </Link>

@@ -3,8 +3,6 @@ import { useHistory } from "react-router-dom";
 import BodyResult from "./BodyResult" 
 import Solution from "./Solution";
 
-import fire from '../firebase/fire'
-
 import "./Result.css";
 
 
@@ -56,7 +54,7 @@ function Result (props) {
         <img className={resultCalc ? "logoResult" : "logoResult2"} src={resultCalc ? logoResult : logoResult2} alt={"coloration button for result is good or bad"} />
         <p className="resultText">{total} KgCO2 </p>
       </div>
-      <p className={`score-text ${visible}`}>{resultCalc ? <p className="score-text">Oups... Vous pouvez faire mieux! Cliquez sur le bouton ci-dessous pour découvrir des solutions pour améliorer votre score</p> : "C'est super! Ne nous arrêtons pas là car on peut toujours faire mieux... Cliquez sur le bouton ci-dessous pour découvrir des solutions pour améliorer votre score"}</p>
+      <p className={`score-text ${visible}`}>{resultCalc ? <p className="score-text">Oups... Vous pouvez faire mieux!<br></br><br></br>Cliquez sur le bouton ci-dessous pour découvrir des solutions pour améliorer votre score</p> : "C'est super! Ne nous arrêtons pas là car on peut toujours faire mieux... Cliquez sur le bouton ci-dessous pour découvrir des solutions pour améliorer votre score"}</p>
         <Solution/>
       </div>
         );

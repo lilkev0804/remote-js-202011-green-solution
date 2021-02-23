@@ -19,8 +19,8 @@ function Homepage() {
                     <img className="imgHomepage" src="imgHomepage/homepageBg.jpg" alt="road landscape"/>
                     <h4 className="textHomepage">Le temps est venu de connaître l'empreinte carbone de votre entreprise de transport.</h4>
                     <div className="homepage-btn">
-                    <SimulatorBtn />
-                    <ConnexionBtn />
+                        <SimulatorBtn />
+                        <ConnexionBtn />
                     </div>
                 </div>
             </Background>
