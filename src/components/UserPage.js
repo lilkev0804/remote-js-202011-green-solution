@@ -22,6 +22,7 @@ export default function UserPage () {
     // const [name, setName] = useState('') catch username in dB
     const [values, setValues] = useState([""])
     const [dates, setDates] = useState([''])
+    const [urlImg, setUrlImg] = useState('')
 
 
 
@@ -71,9 +72,9 @@ export default function UserPage () {
         const vehicule = selectEmissionFactorsUser.replace(',' , ".")
         const inputKm = distance.replace(',' , ".")
         const inputWeight = weight.replace(',' , ".")
-        const userResult = vehicule * inputKm * inputWeight
+        const userResult = Math.floor(vehicule * inputKm * inputWeight)
         if(userResult === 0 || userResult === " "){
-            setMyresult(`Votre résultat est incorrect`)
+            setMyresult(`Votre résultat est égale à zero`)
         }else{
             setMyresult(`Votre résultat ${userResult} kgCo2`)
             fire
@@ -86,12 +87,6 @@ export default function UserPage () {
             setWeight("")
             setSelectEmissionFactorsUser('')
             setBtnMsg('Nouveau calcul')
-            // fire
-            // .firestore()
-            // .collection(userName).onSnapshot(snapshot => {
-            //     setValues(snapshot.docs.map(doc => doc.data().values))
-            //     setDates(snapshot.docs.map(doc => doc.data().date))
-            // })
         }
     } 
 
@@ -110,9 +105,11 @@ export default function UserPage () {
         }else{
             document.getElementById(`${e.target.value}`).classList.toggle('invisible')
         }
-        
     }
 
+    const choiceAvatar =() => {
+        console.log('hello')
+    }
 
         return (
             <div className="UserPageContainer">
@@ -120,8 +117,32 @@ export default function UserPage () {
                      <button className="Disconnect-btn" onClick={() => fire.auth().signOut()}>Déconnection </button>
                     <p className="UserPageCurrenntUser"> Bienvenue : {userName}</p>
                 </div>
+                <div>
+                    <img src={urlImg} alt="logo avatar"/>
+                </div>
                 <div className="UserPageImgProfils">
-                    <div>Avatar</div>
+                    <button onClick={choiceAvatar}>Choisir votre avatar</button>
+                    <form className="formchoiceAvatar" >
+                       <div className="allInputUser">
+                        <div className="groupeRadio">
+                                <input type="radio" id="huey" name="drone" value="huey"checked/>
+                                <label for="huey"><img className="imgchoiceavatar" src="img/delivery-truck.svg" alt='delivery truck'></img></label>
+                            </div>
+                            <div className="groupeRadio">
+                                <input type="radio" id="huey" name="drone" value="huey"checked/>
+                                <label for="huey"><img className="imgchoiceavatar" src="img/truck.svg" alt='truck'></img></label>
+                            </div>
+                            <div className="groupeRadio">
+                                <input type="radio" id="huey" name="drone" value="huey"checked/>
+                                <label for="huey"><img className="imgchoiceavatar" src="img/container-truck.svg" alt='delivery truck'></img></label>
+                            </div>
+                            <div className="groupeRadio">
+                                <input type="radio" id="huey" name="drone" value="huey"checked/>
+                                <label for="huey"><img className="imgchoiceavatar" src="img/green-truck.svg" alt='delivery truck'></img></label>
+                            </div>
+                        </div>
+                        <button>Valider</button>
+                    </form>
                 </div>
                 <div className="UserPageButton">
                     <button className="UserPageButton-btn"  onClick={handleClick} value="calcul">Calculateur</button>
@@ -161,7 +182,7 @@ export default function UserPage () {
                         </div>
                         <div className="afterResult">
                             <button className="Disconnect-btn" onClick={catchValue}>{btnMsg}</button>
-                            <span>{myResult}</span>
+                            <span className="message-result-user">{myResult}</span>
                         </div>
                     </div>
                     <div id="historique" className={`UserPageHistorical invisible`}>
