@@ -12,14 +12,14 @@ class BurgerMenu extends React.Component {
     return (
       <Menu className="menu-burger" right width={"200px"}>
         <Link className="menu-item1" to="/" style={{ textDecoration: "none" }}>
-          Home
+          Accueil
         </Link>
         <Link
           className="menu-item2"
           to="/Calculator"
           style={{ textDecoration: "none" }}
         >
-          Calculator
+          Calculateur
         </Link>
         <Link
           className="menu-item3"
@@ -33,14 +33,14 @@ class BurgerMenu extends React.Component {
           to="/Aboutus"
           style={{ textDecoration: "none" }}
         >
-          About Us
+          À propos
         </Link>
         <Link
           className="menu-item4"
           to="/login"
           style={{ textDecoration: "none" }}
         >
-          Your Account
+          Connexion
         </Link>
       </Menu>
     );
