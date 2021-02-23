@@ -1,0 +1,57 @@
+.presentationProjet {
+  display: flex;
+  width: 100%;
+  font-size: 10px;
+  justify-content: space-between;
+  background-color: #d8f3dc;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+.titlePres{
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  color: #40916c;
+  font-size: 20px;
+}
+.equipeName{
+    font-family: 'Roboto', sans-serif;
+    color: #1b4332;
+    font-size: 14px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.Equipe {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Equipe img {
+  width: 200px;
+  padding: 40px;
+}
+
+.Objectif-Texte {
+  text-align: justify;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  color: #1b4332; 
+  font-size: 14px;
+}
+
+
+.Objectif {
+  width: 50%;
+}
+
+@media (max-width: 420px) {
+    .Equipe {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+}
