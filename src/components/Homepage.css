@@ -5,24 +5,17 @@
 .homepage {
   height: 100%;
   width: 100%;
-  background-color: #b7e4c7;
 }
 
 .homepage-title {
   font-size: 4rem;
-  margin-top: 50px;
-  margin-bottom: 50px;
   color: black;
   font-family: "Dancing Script";
 }
 .buttonsHomepage {
   color: #1b4332;
   border-radius: 30px;
-  border: 6px solid #84a98c;
   background-color: #ffffff;
-  height: 70px;
-  width: 270px;
-  font-size: 40px;
   margin-bottom: 20px;
   font-family: "Didot";
 }
@@ -35,24 +28,24 @@
 }
 
 @media (max-width: 420px) {
+
   .homepage {
     flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: space-around;
   }
+  .imgHomepage {
+    display: none;
+  }
+  .headCarousel {
+      visibility: hidden;
+      display: none;
+  }
   .homepage-title {
     margin: 10vh;
     display: flex;
     align-items: center;
-  }
-  .homepage-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .btn-connexion {
-    margin-bottom: 10vh;
   }
   .textHomepage {
     display: none;
@@ -63,49 +56,118 @@
     width: 250px;
     font-size: 30px;
   }
-  .imgHomepage {
-    display: none;
+  .homepage-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+  .btn-connexion {
+    margin-bottom: 10vh;
+  }
+
 }
 
 @media (min-width: 420px) {
-  .homepage {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-  }
-  .homepage-btn {
-    display: flex;
-    width: 100vw;
-    margin-bottom: 30px;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .simulatorBtn {
-    padding-top: 30px;
-    height: 100px;
-  }
-  .connexionBtn {
-    padding-top: 30px;
-    height: 100px;
-  }
-  .imgHomepage {
-    width: 80vw;
-    height: 30vw;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 5px solid black;
-  }
 
-  .imgHomepage2 {
-    visibility: hidden;
-  }
-  .desktop {
-    visibility: visible;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-  }
+    .desktop {
+        height: 100%;
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;    
+    }
+    .homepage {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+    .imgHomepage {
+        width: 100vw;
+        height: 500px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: 5px solid black;
+    }
+    .imgHomepage2 {
+        visibility: hidden;
+    }
+    .homepage-title {
+        font-size: 50px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    .textBtn {
+        display: flex;
+        justify-content: space-between;
+        max-width: 90%;
+        margin-bottom: 60px;
+        width: 100vw;
+    }
+    .textHomepage {
+        background-color: #d8f3dc;
+        border: 2px solid #1B4332;
+        border-radius: 30px;
+        margin-top: 20px;
+        /* padding-top: 50px; */
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 25px;
+    }
+    .homepage-btn {
+        display: flex;
+        width: 100vw;
+        margin-bottom: 30px;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    
+    }
+    .buttonsHomepage {
+        border: 6px solid #84A98C;
+        height: 70px;
+        width: 200px;
+        font-size: 30px;
+    }
+    .simulatorBtn {
+        padding-top: 30px;
+        /* height: 100px; */
+    
+    }
+    .connexionBtn {
+        padding-top: 30px;
+        /* height: 100px; */
+    }
+
+
+}
+
+/* Carousel */
+.slides .slick-prev,
+.slides .slick-next {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+
+
+.slides {
+  position: relative;
+  width: 100vw;
+}
+
+.slides .slick-prev,
+.slides .slick-next {
+  position: absolute;
+  top: 50%;
+  z-index:1;
+}
+
+.slides .slick-prev {
+  left: 5%;
+}
+
+.slides .slick-next {
+  right: 5%;
 }
