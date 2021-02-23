@@ -1,8 +1,8 @@
 /* bouton solution page resultat */
 
 .solution {
-  padding-top: 10px;
-  margin-bottom: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
   background: #b7e4c7;
   align-items: center;
   display: flex;
@@ -10,16 +10,17 @@
   justify-content: center;
 }
 .solutionbutton {
+    border-style: inset;
+    border:3px solid #fde6a0;
     font-size: 8px;
     color: #1B4332;
     text-decoration: none;
     font-weight: bold;
-    border: none;
     border-radius: 10px;
     margin-top: 20%;
     margin-bottom: 10%;
     height: 40px;
-    width: 50%; 
+    width: 60%; 
     display:flex;
     justify-content:center;
     align-items: center;
@@ -27,43 +28,60 @@
     font-family: 'Roboto', sans-serif;
 } 
 .image-result {
+    height: 100px;
     width: 100%;
 }
 
 @media only screen and (min-width: 360px) {
   .solutionbutton {
-    font-size: 10px;
+    margin-top:10%;
+    font-size: 9px;
     height: 60px;
   }
+  .image-result {
+    height: 150px;
+    width: 100%;
+}
 }
 
 @media only screen and (min-width: 520px) {
   .solutionbutton {
     font-size: 15px;
   }
+  .image-result {
+    height: 200px;
+    width: 100%;
+}
 }
 
 @media only screen and (min-width: 640px) {
     .solutionbutton {
         margin-top: 10%;
         margin-bottom: 10%;
-        font-size: 18px;
+        font-size: 16px;
     }
     .image-result {
-        border-radius: 10px;
-        width: 50%;
-}}
+        height: 250px;
+        width: 100%;
+    }
+}
 
 @media only screen and (min-width: 1000px) {
     .solutionbutton {
-        margin-top: 5%;
-        margin-bottom: 5%;
+        margin-top: 10%;
+        margin-bottom: 10%;
         width: 30%;
 }
 .image-result {
-    border-radius: 10px;
-    width: 35%;
-  }
+    height: 350px;
+    width: 100%;
+}
+}
+@media only screen and (min-width: 1200px) {
+.image-result {
+    height: 450px;
+    width: 100%;
+}
 }
 
 /* fin bouton solution page resultat */

@@ -2,9 +2,6 @@ import React,{useState, useEffect} from "react";
 import { useHistory } from "react-router-dom";
 import BodyResult from "./BodyResult" 
 import Solution from "./Solution";
-
-
-
 import "./Result.css";
 
 
@@ -20,7 +17,7 @@ function Result (props) {
     const inputKm = distance.replace(',' , ".")
     const inputWeight = weight.replace(',' , ".")
     const userResult = vehicule * inputKm * inputWeight
-    setTotal(userResult)
+    setTotal(Math.round(userResult))
   } 
 
   
@@ -56,8 +53,8 @@ function Result (props) {
         <img className={resultCalc ? "logoResult" : "logoResult2"} src={resultCalc ? logoResult : logoResult2} alt={"coloration button for result is good or bad"} />
         <p className="resultText">{total} KgCO2 </p>
       </div>
-      <p className={`score-text ${visible}`}>{resultCalc ? <p className="score-text">Oups... Vous pouvez faire mieux!<br></br><br></br>Cliquez sur le bouton ci-dessous pour découvrir des solutions pour améliorer votre score</p> : "C'est super! Ne nous arrêtons pas là car on peut toujours faire mieux... Cliquez sur le bouton ci-dessous pour découvrir des solutions pour améliorer votre score"}</p>
-        <Solution/>
+      <p className={`score-text ${visible}`}>{resultCalc ? <p className="score-text-oups">Oups... Vous pouvez faire mieux!<br></br><br></br>Dirigez vous vers les solutions pour améliorer votre score</p> : <p className="score-text-super">C'est super! Ne nous arrêtons pas là car on peut toujours faire mieux...<br></br><br></br>Dirigez vous vers les solutions pour améliorer votre score</p>}</p>
+        <Solution image={resultCalc? "image-result.png" : "image-result2.png"}/>
       </div>
         );
     }
