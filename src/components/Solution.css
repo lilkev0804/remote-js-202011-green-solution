@@ -1,14 +1,13 @@
 /* bouton solution page resultat */
 
 .solution {
-    padding-top: 10px;
-    margin-bottom: 10px;
-    background: #B7E4C7;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-
+  padding-top: 10px;
+  margin-bottom: 10px;
+  background: #b7e4c7;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .solutionbutton {
     font-size: 8px;
@@ -32,15 +31,17 @@
 }
 
 @media only screen and (min-width: 360px) {
-    .solutionbutton {
-        font-size: 10px;
-        height: 60px;
-}}
+  .solutionbutton {
+    font-size: 10px;
+    height: 60px;
+  }
+}
 
 @media only screen and (min-width: 520px) {
-    .solutionbutton {
-        font-size: 15px;
-}}
+  .solutionbutton {
+    font-size: 15px;
+  }
+}
 
 @media only screen and (min-width: 640px) {
     .solutionbutton {
@@ -62,6 +63,7 @@
 .image-result {
     border-radius: 10px;
     width: 35%;
-}}
+  }
+}
 
 /* fin bouton solution page resultat */

@@ -8,27 +8,24 @@
     align-items: center;
     position: relative;
     margin-bottom: 10px;
-    
 }
+
+
 
 .Objectif-Texte {
-    padding: 10px;
-    font-family: Roboto, sans-serif;
-   
+  padding: 10px;
+  font-family: Roboto, sans-serif;
 }
-
 
 p {
-    font-family: 'Happy Monkey', cursive;
-    text-align: justify;
-    font-size: 10px;
-    margin-left: 10px;
-    padding-right: 10px;
+  font-family: "Happy Monkey", cursive;
+  text-align: justify;
+  font-size: 10px;
+  margin-left: 10px;
+  padding-right: 10px;
 }
-@media screen and (max-width:420px){
-    .Objectif {
-        flex-direction: column !important
-    }
+@media screen and (max-width: 420px) {
+  .Objectif {
+    flex-direction: column !important;
+  }
 }
-
-

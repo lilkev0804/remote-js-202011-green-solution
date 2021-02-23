@@ -3,6 +3,8 @@ import { useHistory } from "react-router-dom";
 import BodyResult from "./BodyResult" 
 import Solution from "./Solution";
 
+
+
 import "./Result.css";
 
 

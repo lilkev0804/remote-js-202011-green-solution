@@ -6,6 +6,7 @@
     justify-content: space-around;
     max-width: 1400px;
     margin: auto;
+    min-height: 100vh;
 }
 .UserPageHeader{
     width: 100%;
@@ -71,9 +72,8 @@
     margin-right: 10px;
     cursor: pointer;
 }
-.UserPageModifiedInfo, .UserPageCalculator, .UserPageHistorical{
+.UserPageModifiedInfo, .calculator, .UserPageHistorical{
     margin-top: 18px;
-    max-width: 600px;
     width: 100%;
     background-color: #D8F4DC;
     position: relative;
@@ -84,6 +84,7 @@
     font-size: 1.3rem;
     text-align: center;
     width: 100%;
+    margin-bottom: 30px;
 }
 .UserPageToggleContainerInput{
     display: flex;
@@ -105,4 +106,30 @@
     justify-content: center;
     font-weight: 600;
     display: none;
+}
+.afterResult{
+    margin: 20px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.UserPageHistorical{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.historyList{
+    list-style: none;
+    padding: 0px;
+
+}
+.listvalute{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.calculator{
+    width: 100%;
 }

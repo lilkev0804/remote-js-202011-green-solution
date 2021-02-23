@@ -1,6 +1,6 @@
 import React from "react";
 import "./Solution.css";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Solution() {
     return (

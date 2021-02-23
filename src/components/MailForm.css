@@ -1,38 +1,153 @@
+.MailForm-background {
+    background-color:  #74C69D;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.mail-btn {
+  background-color: rgb(43, 42, 42);
+  color: #D8F3DC;
+  width: 100px;
+  border-radius: 10px;
+  height: 30px;
+}
 .MailForm {
+    width: 500px;
+    margin: auto;
+    text-align: left;
+    background-color:rgb(43, 42, 42);
+    color: #D8F3DC;
+  }
+  
+  hr {
+    background-color: rgb(8, 8, 8);
+  }
+
+  .MailForm .form-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+    padding-top: 20px;
+    height: 100px;
+  }
+  
+  .MailForm .form-data label {
+    display: inline-block;
+    width: 100px;
+    margin-right: 10px;
+    text-align: center;
+  }
+  .MailForm .form-textarea {
+      height: 70px;
+      color: #D8F3DC;
+  }
+  
+  .MailForm .form-data input:not([type="submit"]), textarea {
+    flex-grow: 1;
+    border-radius: 5px;
+    background-color: rgb(43, 42, 42);
+    margin-right: 10px;
+    height: 30px;
+    color: #D8F3DC;
+  }
+  
+  span {
+    color: #74C69D;
+  }
+
+  @media only screen and (max-width: 280px) {
+  .MailForm {
+    width: 200px;
+    margin: auto;
+    text-align: left;
+    background-color:rgb(43, 42, 42);
+    color: #D8F3DC;
+  }
+
+  .MailForm .form-data {
   display: flex;
   padding-left: 10px;
-  background-color: #74C69D;
+  background-color: #74c69d;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-#message {
-  width: 300px;
-  height: 70px;
+  .MailForm .form-data input:not([type="submit"]), textarea {
+  flex-grow: 1;
+  border-radius: 5px;
+  background-color: rgb(43, 42, 42);
+  margin-right: 10px;
+  height: 30px;
+  width: 10px;
+}
 }
 
-#form {
-  font-size: 12px;
+@media only screen and (max-width: 320px) {
+  .MailForm {
+    width: 300px;
+    margin: auto;
+    text-align: left;
+    background-color:rgb(43, 42, 42);
+    color: #D8F3DC;
+  }
+
+  .MailForm .form-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0;
+  padding-top: 20px;
+  height: 100px;
 }
 
 .inputAboutUs {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 5px;
+  background-color: rgb(43, 42, 42);
+  margin-right: 10px;
+  height: 30px;
+  width: 10px;
+}
+}
+
+@media only screen and (max-width: 420px) {
+  .MailForm {
+    width: 280px;
+    margin: auto;
+    text-align: left;
+    background-color:rgb(43, 42, 42);
+    color: #D8F3DC;
+  }
+
+  .MailForm .form-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0;
+  padding-top: 20px;
+  height: 100px;
 }
 
 textarea {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 5px;
+  background-color: rgb(43, 42, 42);
+  margin-right: 10px;
+  height: 30px;
+  width: 10px;
+}
 }
 
 .envoyer {
   border-radius: 10px;
   padding: 8px 16px;
-  border:none;
+  border: none;
   margin-top: 10px;
 }
 
 .envoyer:hover {
   color: black;
-  background-color: #B7E4C7;
+  background-color: #b7e4c7;
 }
+
