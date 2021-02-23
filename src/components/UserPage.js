@@ -97,7 +97,6 @@ export default function UserPage () {
 
     const handleClick = (e) => {
         e.preventDefault()
-        console.log(e.target.value)
         if(e.target.value === "historique"){
             document.getElementById(`${e.target.value}`).classList.toggle('invisible')
             fire
@@ -124,8 +123,6 @@ export default function UserPage () {
                 <div className="UserPageImgProfils">
                     <div>Avatar</div>
                 </div>
-                <div className="UserPageInfo">
-                </div>
                 <div className="UserPageButton">
                     <button className="UserPageButton-btn"  onClick={handleClick} value="calcul">Calculateur</button>
                     <button className="UserPageButton-btn" onClick={handleClick} value="compte">Information de votre compte</button>
@@ -134,12 +131,15 @@ export default function UserPage () {
                     <div  id="compte" className={`UserPageModifiedInfo invisible`}>
                         <p className="UserPageToggleTitle">Modifier votre mot de passe</p>
                         <div className="UserPageToggleContainerInput">
-                            <input className="InputUserPageModified" type="text" name="new-password" placeholder="New Password" onChange={handleChangePassword}></input>
+                            <input className="InputUserPageModified" type="text" name="new-password" placeholder="Nouveau mot de passe" onChange={handleChangePassword}></input>
+                            <input className="InputUserPageModified" type="text" name="new-password" placeholder="Confirmer mot de passe" onChange={handleChangePassword}></input>
                         <button className="Disconnect-btn" onClick={newValueInfo}>Validez</button>
                         </div>
                     </div>
                     <div id="calcul" className="calcul invisible">
+                    <p className="UserPageToggleTitle">Calculateur</p>
                         <div className="inputBoxVehicule">
+                        <label for="vehicule" className="calculator-titleBox">Type de véhicule : </label>
                             <select name="vehicule" id="vehiculeSelect" onChange={checkValue} className="vehiculeList" >
                                 <option className="vehiculeList" value={truck[9]} >Vehicule utilitaire 3,5T</option> 
                                 <option className="vehiculeList" value={truck[0]} >Poids lourd 19T</option> 
@@ -165,7 +165,7 @@ export default function UserPage () {
                         </div>
                     </div>
                     <div id="historique" className={`UserPageHistorical invisible`}>
-                        <p className="UserPageToggleTitle">Votre émission de CO2</p>
+                        <p className="UserPageToggleTitle">Vos émissions de CO2</p>
                        <div className="listvalute">
                         <ul className="historyList">
                             {values.map(value => (
