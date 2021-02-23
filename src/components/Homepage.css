@@ -38,10 +38,6 @@
   .imgHomepage {
     display: none;
   }
-  .headCarousel {
-      visibility: hidden;
-      display: none;
-  }
   .homepage-title {
     margin: 10vh;
     display: flex;
@@ -63,6 +59,9 @@
   }
   .btn-connexion {
     margin-bottom: 10vh;
+  }
+  .carouselHead {
+     display: none !important;
   }
 
 }
@@ -144,6 +143,7 @@
 }
 
 /* Carousel */
+
 .carouselText{
     color: white; 
     text-shadow: black 3px 4px 3px;

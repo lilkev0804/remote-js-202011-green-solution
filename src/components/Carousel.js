@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from "react-router-dom";
 import './Homepage.css';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -10,31 +11,36 @@ const photos = [
         name: 'Photo 1',
         url: "imgCarousel/photo1.jpg",
         alt: "parking with truck",
-        text: "Explorez toutes nos solutions"
+        text: "Explorez toutes nos solutions",
+        value: "all"
     },
     {
         name: 'Photo 2',
         url: "imgCarousel/photo2.jpg",
         alt: "truck on a moutain road",
-        text: "Changez la logistique de votre entreprise"
+        text: "Changez la logistique de votre entreprise",
+        value: "logistics"
     },
     {
         name: 'Photo 3',
         url: "imgCarousel/photo3.jpg",
         alt: "truck on a highway",
-        text: "Pensez à d'autres moyens de transports"
+        text: "Pensez à d'autres moyens de transports",
+        value: "types"
     },
     {
         name: 'Photo 4',
         url: "imgCarousel/photo4.jpg",
         alt: "truck by night",
-        text: "Différents programmes écologiques"
+        text: "Différents programmes écologiques",
+        value: "programmes"
     },
     {
         name: 'Photo 5',
         url: "imgCarousel/photo5.jpg",
         alt: "truck in black and white",
-        text: "Tournez vous vers les innovations"
+        text: "Tournez vous vers les innovations",
+        value: "innovations"
     }
 ]
 
@@ -48,7 +54,7 @@ function Arrow(props) {
 }
 
 class Carousel extends Component {
-    
+
     render() {
         const settings = {
             dots: true,
@@ -72,8 +78,10 @@ class Carousel extends Component {
                 {photos.map((photo) => {
                     return (
                         <div className="carouselTest">
+                            <Link className="carouselLink" type="img" to="/Solutions">
                             <img width="100%" height="440px" src={photo.url} alt={photo.alt}/>
-                                <div><h1 className="carouselText">{photo.text}</h1></div>
+                            <h1 className="carouselText">{photo.text}</h1>
+                            </Link>
                         </div>
                     )
                 })}

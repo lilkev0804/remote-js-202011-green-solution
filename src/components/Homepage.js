@@ -3,6 +3,7 @@ import ConnexionBtn from "./ConnexionBtn";
 import SimulatorBtn from "./SimulatorBtn";
 import Carousel from "./Carousel";
 import styled from "styled-components";
+// import useMediaQuery from '@material-ui/core/useMediaQuery';
 import "./Homepage.css";
 
 const Background = styled.section`
@@ -12,11 +13,17 @@ const Background = styled.section`
 `;
 
 function Homepage() {
+  // const matches = useMediaQuery('(min-width: 420px)');
+  // function BreakpointDown(props) {
+  //   const classes = useStyles();
+  //   const { width } = props;
+  // }
   return (
     <div className="homepage">
       <Background className="imgHomepage2">
         <div className="desktop">
-          <Carousel className="headCarousel" />
+          {/* <Carousel theme={{matches}} className="headCarousel" /> */}
+          <Carousel />
           <h1 className="homepage-title">Évaluez votre impact écologique</h1>
           <div className="textBtn">
             <div className="homepageIntro">
