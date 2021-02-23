@@ -20,29 +20,21 @@ const socialLinks = [
 ];
 
 const Footer = () => {
-  return (
-    <div className="footer">
-      <div className="footer-container">
-        <Link to="/LegalNotice" style={{ textDecoration: "none" }}>
-          <span className="footer-navlink"> Legal mentions</span>
+    return <div className="footer">
+       <div className="footer-container">
+       <Link to="/LegalNotice" style={{textDecoration:'none'}}>
+            <span className="footer-navlink"> Mentions légales</span>
         </Link>
-        <div className="footer-container-social-link">
-          {socialLinks.map((socialLink, i) => (
-            <a
-              className="footer-social-link-bg"
-              href={socialLink.link}
-              target={socialLink.target}
-            >
-              {socialLink.icon}
-            </a>
-          ))}
-        </div>
-        <Link to="/Coordonnees" style={{ textDecoration: "none" }}>
-          <span class="footer-navlink"> contact</span>
-        </Link>
-      </div>
+            <div className="footer-container-social-link">
+                {socialLinks.map((socialLink, i) => 
+                    <a className="footer-social-link-bg" href={socialLink.link} target={socialLink.target}>{socialLink.icon}</a>
+                )}
+                </div>
+          <Link to="/Coordonnees" style={{textDecoration:'none'}}>
+                <span class="footer-navlink"> Contact</span>
+          </Link>
+       </div>
     </div>
-  );
 };
 
 export default Footer;

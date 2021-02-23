@@ -10,16 +10,13 @@ class BurgerMenu extends React.Component {
   }
   render() {
     return (
-      <Menu className="menu-burger" right width={"200px"}>
-        <Link className="menu-item1" to="/" style={{ textDecoration: "none" }}>
-          Home
+
+      <Menu className="menu-burger" right width={ '200px' } >
+        <Link className="menu-item1" to="/" style={{textDecoration:'none'}}>
+          Accueil
         </Link>
-        <Link
-          className="menu-item2"
-          to="/Calculator"
-          style={{ textDecoration: "none" }}
-        >
-          Calculator
+        <Link className="menu-item2" to="/Calculator" style={{textDecoration:'none'}}>
+          Simulator
         </Link>
         <Link
           className="menu-item3"
@@ -28,19 +25,11 @@ class BurgerMenu extends React.Component {
         >
           Solutions
         </Link>
-        <Link
-          className="menu-item4"
-          to="/Aboutus"
-          style={{ textDecoration: "none" }}
-        >
-          About Us
+        <Link className="menu-item4" to="/Aboutus" style={{textDecoration:'none'}}>
+          A propos
         </Link>
-        <Link
-          className="menu-item4"
-          to="/login"
-          style={{ textDecoration: "none" }}
-        >
-          Your Account
+        <Link className="menu-item4" to="/login" style={{textDecoration:'none'}}>
+          Votre espace
         </Link>
       </Menu>
     );
