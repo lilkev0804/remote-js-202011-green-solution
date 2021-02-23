@@ -21,7 +21,7 @@ const Header = (props) => {
                 <li className="header-nav-link">A propos</li>
             </Link>
             <Link to="/login" style={{textDecoration:'none'}}> 
-                <li className="header-nav-link">Votre espace</li>
+                <li className="header-nav-link">Connexion</li>
             </Link>
         </ul>
     </div>
