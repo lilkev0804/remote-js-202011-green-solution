@@ -82,6 +82,7 @@ export default function UserPage () {
     fire.firestore().collection(userName).doc(`avatar`).get().then((doc) => {
         if(doc.exists){
             setCatchUrlImg(doc.data().avatar)
+            document.getElementById('button-avatar').style.display ="none"
         }else{
             setCatchUrlImg('truck4')
         }
@@ -148,6 +149,29 @@ export default function UserPage () {
         }
     })
     
+    const ChangeAvatar = () => {
+        return (<>
+        <div className="allInputUser">
+        <div className="groupeRadio">
+                <input type="radio" id="truck1" name="truck1" value="truck1" onClick={myAvatar} checked/>
+                <label for="truck1"><img className="imgchoiceavatar" src="img/truck1.svg"  alt='delivery truck'></img></label>
+            </div>
+            <div className="groupeRadio">
+                <input type="radio" id="truck2" name="truck2" value="truck2" onClick={myAvatar}/>
+                <label for="truck2"><img className="imgchoiceavatar" src="img/truck2.svg" alt='truck'></img></label>
+            </div>
+            <div className="groupeRadio">
+                <input type="radio" id="truck3" name="truck3" value="truck3" onClick={myAvatar}/>
+                <label for="truck3"><img className="imgchoiceavatar" src="img/truck3.svg" alt='delivery truck'></img></label>
+            </div>
+            <div className="groupeRadio">
+                <input type="radio" id="truck4" name="truck4" value="truck4" onClick={myAvatar}/>
+                <label for="truck4"><img className="imgchoiceavatar" src="img/truck4.svg" alt='delivery truck'></img></label>
+            </div>
+        </div>
+        <button className="button-choiceAvatar" onClick={send}>Valider</button>
+        </>)
+    }
         return (
             <div className="UserPageContainer">
                 <div  className={`UserPageHeader`}>
@@ -161,25 +185,8 @@ export default function UserPage () {
                     <button className={`Disconnect-btn ${visible ?  "" : " invisible"}`} id="button-avatar" onClick={choiceAvatar}>Choisir votre avatar</button>
                     <div className={`formchoiceAvatar ${visible ?  "invisible" : " "} `} >
                         <h2>{messageBtnAvatar}</h2>
-                       <div className="allInputUser">
-                        <div className="groupeRadio">
-                                <input type="radio" id="truck1" name="truck1" value="truck1" onClick={myAvatar} checked/>
-                                <label for="truck1"><img className="imgchoiceavatar" src="img/truck1.svg"  alt='delivery truck'></img></label>
-                            </div>
-                            <div className="groupeRadio">
-                                <input type="radio" id="truck2" name="truck2" value="truck2" onClick={myAvatar}/>
-                                <label for="truck2"><img className="imgchoiceavatar" src="img/truck2.svg" alt='truck'></img></label>
-                            </div>
-                            <div className="groupeRadio">
-                                <input type="radio" id="truck3" name="truck3" value="truck3" onClick={myAvatar}/>
-                                <label for="truck3"><img className="imgchoiceavatar" src="img/truck3.svg" alt='delivery truck'></img></label>
-                            </div>
-                            <div className="groupeRadio">
-                                <input type="radio" id="truck4" name="truck4" value="truck4" onClick={myAvatar}/>
-                                <label for="truck4"><img className="imgchoiceavatar" src="img/truck4.svg" alt='delivery truck'></img></label>
-                            </div>
-                        </div>
-                        <button className="button-choiceAvatar" onClick={send}>Valider</button>
+
+                        <ChangeAvatar></ChangeAvatar>
                     </div>
                 </div>
                 <div className="UserPageButton">
@@ -188,11 +195,17 @@ export default function UserPage () {
                     <button className="UserPageButton-btn" onClick={handleClick} value="historique">Votre historique</button>
                 </div>
                     <div  id="compte" className={`UserPageModifiedInfo invisible`}>
-                        <p className="UserPageToggleTitle">Modifier votre mot de passe</p>
-                        <div className="UserPageToggleContainerInput">
-                            <input className="InputUserPageModified" type="text" name="new-password" placeholder="Nouveau mot de passe" onChange={handleChangePassword}></input>
-                            <input className="InputUserPageModified" type="text" name="new-password" placeholder="Confirmer mot de passe" onChange={handleChangePassword}></input>
-                        <button className="Disconnect-btn" onClick={newValueInfo}>Validez</button>
+                        <div>
+                            <p className="UserPageToggleTitle">Modifier votre mot de passe</p>
+                                <div className="UserPageToggleContainerInput">
+                                    <input className="InputUserPageModified" type="text" name="new-password" placeholder="Nouveau mot de passe" onChange={handleChangePassword}></input>
+                                    <input className="InputUserPageModified" type="text" name="new-password" placeholder="Confirmer mot de passe" onChange={handleChangePassword}></input>
+                                    <button className="Disconnect-btn" onClick={newValueInfo}>Validez</button>
+                                </div>
+                        </div>
+                        <div>
+                            <p className="UserPageToggleTitle">Modifier votre avatar</p>
+                            <ChangeAvatar></ChangeAvatar>
                         </div>
                     </div>
                     <div id="calcul" className="calcul invisible">
