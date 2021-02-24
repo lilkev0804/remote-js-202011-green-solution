@@ -48,10 +48,18 @@
 }
 
 @media (max-width: 420px) {
-    .Equipe {
+    .presentationProjet {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-bottom: 10px;
     }
-}
+
+    .Objectif {
+      width: 100%;
+    }
+    
+    .Equipe {
+      width: 100%;
+    }
+  }
