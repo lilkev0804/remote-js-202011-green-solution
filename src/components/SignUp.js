@@ -16,11 +16,21 @@ const SignUp = ({ history}) => {
         if(password.value === confirmpassword.value ){
             fire
             .firestore()
-            .collection(email.value).add( {
+            .collection(email.value).doc('info').set( {
                 usernameValue : username.value,
                 emailValue : email.value,
-                values : [],
                 ddcreate: firebase.firestore.FieldValue.serverTimestamp()
+            })
+            fire
+            .firestore()
+            .collection(email.value).doc(`avatar`).set({
+                avatar : ""
+            })
+            fire
+            .firestore()
+            .collection(email.value).doc(`value`).set( {
+                values : [],
+                date: []
             })
             try{
                 await fire
