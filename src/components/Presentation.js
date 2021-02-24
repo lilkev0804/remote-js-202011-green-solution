@@ -1,6 +1,5 @@
 import React from "react";
 import "./Presentation.css";
-import PropTypes from "prop-types";
 
 function Presentation(props) {
   return (
