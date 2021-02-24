@@ -23,7 +23,8 @@ export default function UserPage () {
     const [values, setValues] = useState([""])
     const [dates, setDates] = useState([''])
     const [urlImg, setUrlImg] = useState('')
-    const [catchUrlImg, setCatchUrlImg] = useState("truck4")
+    const [catchUrlImg, setCatchUrlImg] = useState("")
+    const[messageBtnAvatar, setMessageBtnAvatar]= useState('Choisissez votre avatar')
 
     //Function to catch new password from user
     const handleChangePassword = (e) => { 
@@ -55,6 +56,7 @@ export default function UserPage () {
             avatar : urlImg
         })
         setVisible(!visible)
+        setMessageBtnAvatar(`Changer d'avatar`)
     }
 
     useEffect(() => {
@@ -150,15 +152,15 @@ export default function UserPage () {
             <div className="UserPageContainer">
                 <div  className={`UserPageHeader`}>
                      <button className="Disconnect-btn" onClick={() => fire.auth().signOut()}>Déconnection </button>
-                    <p className="UserPageCurrenntUser"> Bienvenue : {name}</p>
                 </div>
+                <p className="UserPageCurrenntUser"> Bienvenue <span className="userNameSpan">{name}</span> dans votre espace personnel 😀 </p>
                 <div className="AvatarVisible">
                     <img className="imgAvatar" src={`img/${catchUrlImg}.svg`} alt="logo avatar"/>
                 </div>
                 <div className={`UserPageImgProfils `}>
                     <button className={`Disconnect-btn ${visible ?  "" : " invisible"}`} id="button-avatar" onClick={choiceAvatar}>Choisir votre avatar</button>
                     <div className={`formchoiceAvatar ${visible ?  "invisible" : " "} `} >
-                        <h2>Choisissez votre avatar</h2>
+                        <h2>{messageBtnAvatar}</h2>
                        <div className="allInputUser">
                         <div className="groupeRadio">
                                 <input type="radio" id="truck1" name="truck1" value="truck1" onClick={myAvatar} checked/>
