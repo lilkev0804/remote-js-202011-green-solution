@@ -4,6 +4,10 @@
     padding-bottom: 20px;
 }
 
+.contact {
+  text-align: center;
+}
+
 .mail-btn {
   background-color: rgb(43, 42, 42);
   color: #D8F3DC;
