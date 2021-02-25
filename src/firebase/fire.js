@@ -1,5 +1,6 @@
 import firebase from "firebase";
 
+
 var firebaseConfig = {
   apiKey: "AIzaSyCu15em6tL-E0SLKkJ6P_V5BuPVpnKcxmc",
   authDomain: "greensolution-fbaf1.firebaseapp.com",

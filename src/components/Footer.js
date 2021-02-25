@@ -8,7 +8,7 @@ const socialLinks = [
     icon: <i class="fab fa-facebook ico-social"></i>,
   },
   {
-    link: "github.fr",
+    link: "https://github.com/WildCodeSchool/remote-js-202011-green-solution/tree/dev",
     target: "_blanck",
     icon: <i class="fab fa-github ico-social"></i>,
   },

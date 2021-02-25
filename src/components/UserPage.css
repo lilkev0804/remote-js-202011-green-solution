@@ -3,16 +3,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     max-width: 1400px;
     margin: auto;
-    min-height: 80vh;
+    min-height: 81vh;
 }
 .UserPageContainer button:focus{
     outline: none !important;
 }
 .UserPageHeader{
-    width: 100%;
+    max-width: 1400px;
+    margin: 0px auto;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -43,23 +45,13 @@
     height: 500px;
 }
 .UserPageImgProfils {
-    margin: 30px auto 10px auto;
+    margin: 30px auto 30px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
 }
-.UserPageImgProfils div{
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    border: 1px solid #D8F4DC;
-    box-shadow: 1px 3px 14px #D8F4DC;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .UserPageButton{
     display: flex;
     justify-content: space-between;
@@ -73,19 +65,19 @@
     margin-right: 10px;
     cursor: pointer;
 }
-.UserPageModifiedInfo, .calcul, .UserPageHistorical{
+.UserPageModifiedInfo, .UserPageCalcul, .UserPageHistorical{
     margin: 18px 0px;
     width: 100%;
     background-color: #D8F4DC;
-    position: relative;
     padding: 10px 0px;
 }
 .UserPageToggleTitle{
     color: black;
     font-size: 1.3rem;
     text-align: center;
-    width: 100%;
     margin-bottom: 30px;
+    padding:0 !important;
+    text-decoration: underline;
 }
 .UserPageToggleContainerInput{
     display: flex;
@@ -95,6 +87,11 @@
 }
 .InputUserPageModified{
     margin: 10px 0px;
+    height: 20px;
+    border-radius: 10px;
+    padding: 3px;
+    color: #40916c;
+    font-family: "Roboto";
 }
 .UserPageCurrenntUser{
     color: #2F3E46;
@@ -107,6 +104,7 @@
     justify-content: center;
     font-weight: 600;
     display: none;
+    color: red;
 }
 .afterResult{
     margin: 20px 0px;
@@ -158,4 +156,91 @@
     .UserPageButton button{
         margin-top: 7px;
     }
+}
+.message-result-user{
+    color: black;
+    font-weight: 600;
+}
+.formchoiceAvatar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    justify-content: space-evenly;
+}
+.allInputUser{
+    display:flex;
+    justify-content: space-evenly;
+    max-width: 700px;
+    width: 100%;
+}
+.groupeRadio{
+    display: flex;
+    align-items: center;
+}
+.imgchoiceavatar{
+    width: 50px;
+    margin-left: 5px;
+}
+.AvatarVisible{
+    width: 100px;
+    height: 100px;
+}
+.AvatarVisible img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.button-choiceAvatar{
+    padding: 8px 10px;
+    border-radius: 8px;
+    background-color: #D8F4DC;
+    color: #2F3E46;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+}
+.InputUserPageModified:focus, .calculator-input:focus{
+    outline:none;
+}
+.userNameSpan{
+    color: #1B4332;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 1.1px;
+    text-transform: capitalize;
+}
+.modified-avatar-already{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px 0px;
+}
+.modified-avatar-already button{
+    margin-top: 10px;
+}
+#vehiculeSelect:focus{
+    outline: none;
+}
+.line-p{
+    font-size: 1rem;
+    font-family: "Roboto";
+}
+.line-p span{
+    color: #2F3E46;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.inputNewUsername{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.MessagePasswords{
+    color: #2F3E46;
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 5px 0px;
 }
