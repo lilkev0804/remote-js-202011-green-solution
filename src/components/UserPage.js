@@ -11,16 +11,16 @@ import firebase from 'firebase';
 
 export default function UserPage () {
     const [visible, setVisible] = useState(true) // To toggle element
-    const [element, setElement] = useState([])
-    const [distance, setDistance] = useState('')
-    const [weight, setWeight] = useState('')
-    const [myResult, setMyresult] = useState([''])
-    const [selectEmissionFactorsUser,setSelectEmissionFactorsUser] = useState('')
-    const [btnMsg, setBtnMsg] = useState('Calculate')
+    const [element, setElement] = useState([]) // Api request value
+    const [distance, setDistance] = useState('') // Input distance user value
+    const [weight, setWeight] = useState('') // Input weight user value
+    const [myResult, setMyresult] = useState(['']) // Result of calcul
+    const [selectEmissionFactorsUser,setSelectEmissionFactorsUser] = useState('') // Select truck user value
+    const [btnMsg, setBtnMsg] = useState('Calculate') // Dynamic message button when u realise calcul
     const [userName, setUsername] = useState('pseudo') // To catch email with DB
     const [name, setName] = useState('') // To catch username with DB
-    const [values, setValues] = useState([""])
-    const [dates, setDates] = useState([''])
+    const [values, setValues] = useState([""]) // To push calcul result in DB
+    const [dates, setDates] = useState(['']) // To push date in DB
     const [urlImg, setUrlImg] = useState('') // To catch Img from DB
     const [catchUrlImg, setCatchUrlImg] = useState("") // To print Img in dom
     const [newUserName, setNewUserName] = useState('') // To change Username
