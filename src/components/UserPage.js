@@ -40,7 +40,6 @@ export default function UserPage () {
             alert(error)
         });
     }
-
     //Function to check if avatar is load or not
     const checkAvatar = () => {
         if(catchUrlImg === " "){
@@ -49,8 +48,6 @@ export default function UserPage () {
             setVisible(false)
         }
     }
-
-
     // Function toggle avatar div 
     const choiceAvatar =() => {
         setVisible(!visible)
@@ -134,7 +131,7 @@ export default function UserPage () {
     //Function for toggle and refresh historical value
     const handleClick = (e) => {
         e.preventDefault()
-        if(e.target.value === "historique"){
+        if(e.target.value !== "historique"){
             document.getElementById(`${e.target.value}`).classList.toggle('invisible')
             fire.firestore().collection(userName).doc(`value`).get().then((doc) => {
                 if(doc.exists){
@@ -144,8 +141,6 @@ export default function UserPage () {
                     console.log('non document')
                 }
             })
-        }else if(e.target.value === "compte"){
-            document.getElementById(`${e.target.value}`).classList.toggle('invisible')
         }else{
             document.getElementById(`${e.target.value}`).classList.toggle('invisible')
         }
