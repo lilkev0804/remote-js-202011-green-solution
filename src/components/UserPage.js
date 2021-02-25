@@ -183,6 +183,8 @@ export default function UserPage () {
             setMessagePassword("")
             setNewPasswordEnter('')
             setNewPasswordEnterC('')
+            setMessageModified('')
+            setMessageModifiedPseudo('')
         }else{
             historique.classList.toggle('invisible')
             calcul.classList.add('invisible')
