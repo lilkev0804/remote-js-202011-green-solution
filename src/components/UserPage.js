@@ -10,35 +10,77 @@ import firebase from 'firebase';
 
 
 export default function UserPage () {
-    const [newPassword, setNewPassword] = useState('')
-    const [visible, setVisible] = useState(true)
+    const [visible, setVisible] = useState(true) // To toggle element
     const [element, setElement] = useState([])
     const [distance, setDistance] = useState('')
     const [weight, setWeight] = useState('')
     const [myResult, setMyresult] = useState([''])
     const [selectEmissionFactorsUser,setSelectEmissionFactorsUser] = useState('')
     const [btnMsg, setBtnMsg] = useState('Calculate')
-    const [userName, setUsername] = useState('pseudo')
-    const [name, setName] = useState('') 
+    const [userName, setUsername] = useState('pseudo') // To catch email with DB
+    const [name, setName] = useState('') // To catch username with DB
     const [values, setValues] = useState([""])
     const [dates, setDates] = useState([''])
-    const [urlImg, setUrlImg] = useState('')
-    const [catchUrlImg, setCatchUrlImg] = useState("")
-    const[messageBtnAvatar, setMessageBtnAvatar]= useState('Choisissez votre avatar')
+    const [urlImg, setUrlImg] = useState('') // To catch Img from DB
+    const [catchUrlImg, setCatchUrlImg] = useState("truck4") // To print Img in dom
+    const [newUserName, setNewUserName] = useState('') // To change Username
+    const[newPasswordEnter, setNewPasswordEnter] =useState("") // To send Password to DB
+    const[newPasswordEnterC, setNewPasswordEnterC] =useState('') // To catch NewPass user Input
+    const [messagePassword, setMessagePassword] = useState('') // To catch NewPassConfirm user Input
+    const [messageModified, setMessageModified] =useState("") // Message when u change avatar
+    const [messageModifiedPseudo, setMessageModifiedPseudo] =useState('')  // Message when u change username
 
-    //Function to catch new password from user
-    const handleChangePassword = (e) => { 
-            setNewPassword(e.target.value)
-    }
+
     //Function to update password
     const newValueInfo = () => {
         let user = fire.auth().currentUser;
-        let newPasswords = newPassword;
-        user.updatePassword(newPasswords).then(function() {
-            alert(newPasswords)
-        }).catch((error)=> {
-            alert(error)
-        });
+        let newPasswords = newPasswordEnter;
+        const styleMessage = document.querySelector('.MessagePasswords')
+        if(newPasswordEnter !== newPasswordEnterC){
+            styleMessage.style.color ="red"
+            setMessagePassword('Mot de passe non identique')
+        }else{
+            user.updatePassword(newPasswords).then(function() {
+                styleMessage.style.color ="white"
+                setMessagePassword(`Votre nouveau mot de passe est ${newPasswords}`)
+            }).catch(()=> {
+                styleMessage.style.color ="red"
+                setMessagePassword('Une erreur à été rencontré')
+            });
+        }
+
+    }
+     //Function new pseudo
+     const handleNewUsername =() => {
+        if(newUserName === ""){
+            setMessageModifiedPseudo("Entrez un nouveau pseudo !")
+        }else {
+            fire
+            .firestore()
+            .collection(userName).doc(`info`).update({
+                usernameValue : newUserName
+            })
+            setName(newUserName)
+            setMessageModifiedPseudo("Pseudo mise à jour !")
+        }
+    }
+    //Function to catch choice of Avatar by user
+        const myAvatar = (e) => {
+            setUrlImg(e.target.value)
+        }
+    // Function to add / update avatar in DB
+    const send = () => {
+        if(urlImg === ""){
+            setMessageModified("Choisissez un avatar !")
+        }else{
+            fire
+            .firestore()
+            .collection(userName).doc(`avatar`).update({
+                avatar : urlImg
+            })
+            setVisible(!visible)
+            setMessageModified("Avatar mise à jour !")
+        }
     }
     //Function to check if avatar is load or not
     const checkAvatar = () => {
@@ -48,24 +90,16 @@ export default function UserPage () {
             setVisible(false)
         }
     }
-    // Function toggle avatar div 
-    const choiceAvatar =() => {
-        setVisible(!visible)
-    }
-    //Function to catch choice of Avatar by user
-    const myAvatar = (e) => {
-        setUrlImg(e.target.value)
-    }
-    // Function to add avatar in DB
-    const send = () => {
-        fire
-        .firestore()
-        .collection(userName).doc(`avatar`).update({
-            avatar : urlImg
-        })
-        setVisible(!visible)
-        setMessageBtnAvatar(`Changer d'avatar`)
-    }
+
+    //Function for get pseudo
+    fire.firestore().collection(userName).doc('info').get().then((doc) => {
+        if(doc.exists){
+            setName(doc.data().usernameValue)
+        }else{
+            setName('Inconnue')
+        }
+    })
+
 
     useEffect(() => {
         setUsername(fire.auth().currentUser.email)
@@ -91,7 +125,6 @@ export default function UserPage () {
     fire.firestore().collection(userName).doc(`avatar`).get().then((doc) => {
         if(doc.exists){
             setCatchUrlImg(doc.data().avatar)
-            document.getElementById('button-avatar').style.display ="none"
         }else{
             setCatchUrlImg('truck4')
         }
@@ -112,7 +145,11 @@ export default function UserPage () {
         const inputWeight = weight.replace(',' , ".")
         const userResult = Math.floor(vehicule * inputKm * inputWeight)
         if(userResult === 0 || userResult === " "){
-            setMyresult(`Votre résultat est égale à zero`)
+            if(vehicule === ""){
+                setMyresult('Selectionnez un type de véhicule !')
+            }else{
+                setMyresult(`Votre résultat est égale à zero !`)
+            }
         }else{
             setMyresult(`Votre résultat ${userResult} kgCo2`)
             fire
@@ -131,8 +168,25 @@ export default function UserPage () {
     //Function for toggle and refresh historical value
     const handleClick = (e) => {
         e.preventDefault()
-        if(e.target.value !== "historique"){
-            document.getElementById(`${e.target.value}`).classList.toggle('invisible')
+        const value = e.target.value
+        const historique = document.getElementById("historique")
+        const compte = document.getElementById('compte')
+        const calcul = document.getElementById('calcul')
+        if(value === "calcul"){
+            calcul.classList.toggle('invisible')
+            compte.classList.add('invisible')
+            historique.classList.add('invisible')
+        }else if(value === 'compte'){
+            calcul.classList.add('invisible')
+            compte.classList.toggle('invisible')
+            historique.classList.add('invisible')
+            setMessagePassword("")
+            setNewPasswordEnter('')
+            setNewPasswordEnterC('')
+        }else{
+            historique.classList.toggle('invisible')
+            calcul.classList.add('invisible')
+            compte.classList.add('invisible')
             fire.firestore().collection(userName).doc(`value`).get().then((doc) => {
                 if(doc.exists){
                     setValues(doc.data().values)
@@ -141,26 +195,18 @@ export default function UserPage () {
                     console.log('non document')
                 }
             })
-        }else{
-            document.getElementById(`${e.target.value}`).classList.toggle('invisible')
         }
     }
 
 
-    //Function for get pseudo
-    fire.firestore().collection(userName).doc('info').get().then((doc) => {
-        if(doc.exists){
-            setName(doc.data().usernameValue)
-        }else{
-            setName('inconnue')
-        }
-    })
-    
+
+   
+
     const ChangeAvatar = () => {
         return (<>
         <div className="allInputUser">
         <div className="groupeRadio">
-                <input type="radio" id="truck1" name="truck1" value="truck1" onClick={myAvatar} checked/>
+                <input type="radio" id="truck1" name="truck1" value="truck1" onClick={myAvatar} select />
                 <label for="truck1"><img className="imgchoiceavatar" src="img/truck1.svg"  alt='delivery truck'></img></label>
             </div>
             <div className="groupeRadio">
@@ -176,9 +222,11 @@ export default function UserPage () {
                 <label for="truck4"><img className="imgchoiceavatar" src="img/truck4.svg" alt='delivery truck'></img></label>
             </div>
         </div>
+        <p className="MessagePasswords">{messageModified}</p>
         <button className="Disconnect-btn" onClick={send}>Valider</button>
         </>)
     }
+
         return (
             <div className="UserPageContainer">
                 <div  className={`UserPageHeader`}>
@@ -188,24 +236,18 @@ export default function UserPage () {
                 <div className="AvatarVisible">
                     <img className="imgAvatar" src={`img/${catchUrlImg}.svg`} alt="logo avatar"/>
                 </div>
-                <div className={`UserPageImgProfils ${visible ?  "" : " invisible"} `}>
-                    <button className={`Disconnect-btn ${visible ?  "" : " invisible"}`} id="button-avatar" onClick={choiceAvatar}>Choisir votre avatar</button>
-                    <div className={`formchoiceAvatar  `} >
-                        <h2>{messageBtnAvatar}</h2>
-                            <ChangeAvatar></ChangeAvatar>
-                    </div>
-                </div>
                 <div className="UserPageButton">
                     <button className="UserPageButton-btn"  onClick={handleClick} value="calcul">Calculateur</button>
                     <button className="UserPageButton-btn" onClick={handleClick} value="compte">Information de votre compte</button>
                     <button className="UserPageButton-btn" onClick={handleClick} value="historique">Votre historique</button>
                 </div>
-                    <div  id="compte" className={`UserPageModifiedInfo invisible`}>
-                        <div>
+                    <div id="compte" className={`UserPageModifiedInfo invisible `}>
+                        <div className="modified-avatar-already">
                             <p className="UserPageToggleTitle">Modifier votre mot de passe</p>
                                 <div className="UserPageToggleContainerInput">
-                                    <input className="InputUserPageModified" type="text" name="new-password" placeholder="Nouveau mot de passe" onChange={handleChangePassword}></input>
-                                    <input className="InputUserPageModified" type="text" name="new-password" placeholder="Confirmer mot de passe" onChange={handleChangePassword}></input>
+                                    <input className="InputUserPageModified" type="text" name="new-password" placeholder="Nouveau mot de passe" value={newPasswordEnter} onChange={(e) => setNewPasswordEnter(e.target.value)}></input>
+                                    <input className="InputUserPageModified" type="text" name="new-password-verified" placeholder="Confirmer mot de passe" value={newPasswordEnterC} onChange={(e) => setNewPasswordEnterC(e.target.value)}></input>
+                                    <p className="MessagePasswords">{messagePassword}</p>
                                     <button className="Disconnect-btn" onClick={newValueInfo}>Validez</button>
                                 </div>
                         </div>
@@ -213,8 +255,17 @@ export default function UserPage () {
                             <p className="UserPageToggleTitle">Modifier votre avatar</p>
                             <ChangeAvatar></ChangeAvatar>
                         </div>
+                        <div className="modified-avatar-already">
+                            <p className="UserPageToggleTitle">Modifier votre pseudo</p>
+                            <p className="line-p">Votre pseudo actuel est <span className="grassSpan">{name}</span> </p>
+                            <div className="inputNewUsername">
+                                <input className="InputUserPageModified" placeholder="Votre nouveau pseudo" type="text" value={newUserName} onChange={(e) => setNewUserName(e.target.value)}></input>
+                                <p className="MessagePasswords">{messageModifiedPseudo}</p>
+                                <button className="Disconnect-btn" onClick={handleNewUsername}>Valider</button>
+                            </div>
+                        </div>
                     </div>
-                    <div id="calcul" className="calcul invisible">
+                    <div id="calcul" className={`UserPageCalcul invisible`}>
                         <p className="UserPageToggleTitle">Calculateur</p>
                         <div className="inputBoxVehicule">
                         <label for="vehicule" className="calculator-titleBox">Type de véhicule : </label>
@@ -244,19 +295,21 @@ export default function UserPage () {
                     </div>
                     <div id="historique" className={`UserPageHistorical invisible`}>
                         <p className="UserPageToggleTitle">Vos émissions de CO2</p>
-                       <div className="listvalute">
-                        <ul className="historyList">
-                            {values.map(value => (
-                                <li>Emission : {value} KgCO2</li>
-                            ))}
-                            </ul>
+                        <div className="listvalute">
                             <ul className="historyList">
-                            {dates.map(date => (
-                                <li>Jour : {date}</li>
-                            ))}
-                        </ul>
-                       </div>
+                                {values.map(value => (
+                                    <li>Emission : {value} KgCO2</li>
+                                ))}
+                                </ul>
+                                <ul className="historyList">
+                                {dates.map(date => (
+                                    <li>Jour : {date}</li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
             </div>
         )
 }
+
+// Made with love
