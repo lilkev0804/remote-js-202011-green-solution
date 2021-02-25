@@ -1,33 +1,33 @@
 .Coordonnées {
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    height: 160px;
-    padding-left: 10px;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 160px;
+  padding-left: 10px;
+  width: 100%;
 }
 
 .CoordonnéesButton {
-    width: 80px;
-    height: 15px;
-    font-size: 8px;
-    border: 1px solid black;
+  width: 80px;
+  height: 15px;
+  font-size: 8px;
+  border: 1px solid black;
 }
 
 .CoordonnéesButton:hover {
-    color: black;
-    background-color: #B7E4C7;
+  color: black;
+  background-color: #b7e4c7;
 }
 
-@media screen and (max-width:420px) {
-    .Coordonnées {
-        flex-direction: column;
-    }
+@media screen and (max-width: 420px) {
+  .Coordonnées {
+    flex-direction: column;
+  }
 }
 
 @media screen and (min-width: 420px) {
-    .Coordonnées {
-        display:inline-flex
-    }
+  .Coordonnées {
+    display: inline-flex;
+  }
 }

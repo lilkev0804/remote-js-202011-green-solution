@@ -1,11 +1,12 @@
 import React from "react";
 import "./Solution.css";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import Result from "./Result"
 
-function Solution() {
+function Solution(props) {
     return (
       <div className="solution">
-        <img className="imgGlobalwarming" src={"image-src/globalwarming.svg"} alt={"globalwarming"} />
+        <img className="image-result" src={`image-src/${props.image}`} alt={"image-result"} />
         <Link className="solutionbutton" type="text" to="/Solutions">
               Des solutions adaptées à vos besoins
         </Link>

@@ -1,136 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@font-face {
-  font-family: Dancing spirit;
-  src: url("../DancingScript-VariableFont_wght.ttf");
-}
-
-.bm-burger-button {
-  outline: none;
-  border: none;
-  position: fixed;
-  width: 30px;
-  height: 25px;
-  right: 36px;
-  top: 36px;
-}
-
-/* Color/shape of burger icon bars */
-.bm-burger-bars {
-  border-radius: 200px;
-  background:#FDE6A0;
-}
-
-/* Color/shape of burger icon bars on hover*/
-.bm-burger-bars-hover {
-  background: #FDE6A0;
-}
-.menu-item1 {
-  display: flex;
-  color: black;
-  text-decoration: none;
-  font-weight: 700;
-  background: #FDE6A0;
-  transition: background 0.5s;
-  padding: 0.5em;
-  text-align: center;
-  margin-bottom: 1em;
-  border-radius: 50px;
-}
-.menu-item2 {
-  display: block;
-  color: black;
-  text-decoration: none;
-  font-weight: 700;
-  background: #FDE6A0;
-  transition: background 0.5s;
-  padding: 0.5em;
-  text-align: center;
-  margin-bottom: 1em;
-  border-radius: 50px;
-}
-.menu-item3 {
-  display: block;
-  color: black;
-  text-decoration: none;
-  font-weight: 700;
-  background: #FDE6A0;
-  transition: background 0.5s;
-  padding: 0.5em;
-  text-align: center;
-  margin-bottom: 1em;
-  border-radius: 50px;
-}
-.menu-item4 {
-  display: block;
-  color: black;
-  text-decoration: none;
-  font-weight: 700;
-  background: #FDE6A0;
-  transition: background 0.5s;
-  padding: 0.5em;
-  text-align: center;
-  margin-bottom: 1em;
-  border-radius: 50px;
-}
-
-
-/* A partir de ce css il ne faut au possible pas le toucher sous peine d'avoir des bugs*/
-.bm-menu-wrap {
-  position: absolute;
-  top: 86px;
-  right: 0px;
-  height: 100%;
-}
-
-
-
-.bm-menu {
-  position: absolute!important;
-  background: #D8F3DC;
-  font-size: 1.8em;
-}
-
-
-.bm-morph-shape {
-  fill:#D8F3DC;
-}
-
-.bm-item-list {
-  color: #ffffff;
-  padding: 0.8em;
-}
-
-.bm-item {
-  display: inline-block;
-}
-
-.menu-item {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  line-height: 2;
-}
-.bm-item:focus{
-  outline: none !important;
-}
-
-@media (min-width: 765px) {
-  .bm-burger-bars {
+.invisible{
   display: none !important;
-  }
 }
-::-webkit-scrollbar {
-    display: none;
-  }
 
-.bm-burger-button  {
-  display: none;
+.burgerIcon{
+ width: 30px;
+ height: 30px;
+  
 }
-@media screen and (max-width : 765px){
-  .bm-burger-button{
-    display: block !important;
-  }
-  #react-burger-menu-btn:focus{
-    outline: none;
-  }
+
+.open-menu{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 5px 10px;
+}
+
+.container-burger{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 50vh;
+  width: 40vw;
+  position: absolute;
+  background-color: #fde6a0;
+  left: 60%;
+  top:86px;
+  border-radius: 10px 0px 0px 10px;
+}
+.menu-item {
+  color: #1b4332 !important;
+  text-decoration: none;
+  font-weight: 500;
+  background: #fde6a0;
+  padding: 0.5em;
+  text-align: center;
+  margin-bottom: 1em;
+  border-radius: 50px;
+  font-family: "Roboto";
+  text-decoration:'none';
+  font-size: 20px;
+}
+
+@media screen and (min-width: 765px) {
+.Menu-Icon{
+  display:none;
+}
 }

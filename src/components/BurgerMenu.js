@@ -1,35 +1,99 @@
-import React from "react";
-import { bubble as Menu } from 'react-burger-menu'
+// import React from "react";
+// import { bubble as Menu } from "react-burger-menu";
+// import CustomIcon from 'react-burger-menu'
+// import "./BurgerMenu.css";
+// import { Link } from "react-router-dom";
 
-import './BurgerMenu.css';
-import {Link} from "react-router-dom";
+// class BurgerMenu extends React.Component {
+//   constructor (props) {
+//     super(props)
+//     this.state = {
+//       menuOpen: false
+//     }
+//   }
+//   handleStateChange (state) {
+//     this.setState({menuOpen: state.isOpen})  
+//   }
 
-class BurgerMenu extends React.Component {
-  showSettings (event) {
-      event.preventDefault();
-    }
-  render () {
-    return (
+//   closeMenu () {
+//     this.setState({menuOpen: false})
+//   }
 
-      <Menu className="menu-burger" right width={ '200px' } >
-        <Link className="menu-item1" to="/" style={{textDecoration:'none'}}>
-          Home
-        </Link>
-        <Link className="menu-item2" to="/Calculator" style={{textDecoration:'none'}}>
-          Calculator
-        </Link>
-        <Link className="menu-item3" to="/Solutions" style={{textDecoration:'none'}}>
-          Solutions
-        </Link>
-        <Link className="menu-item4" to="/Aboutus" style={{textDecoration:'none'}}>
-          About Us
-        </Link>
-        <Link className="menu-item4" to="/login" style={{textDecoration:'none'}}>
-          Your Account
-        </Link>
+//   // toggleMenu () {
+//   //   this.setState(state => ({menuOpen: !state.menuOpen}))
+//   // }
 
-      </Menu>
-    );
+//   showSettings(event) {
+//     event.preventDefault();
+//   }
+
+//   render() {
+//     return (
+//       <div className="container-burger-menu">
+//       <div className={this.state.menuOpen ? "menu-burger" : "menuInvisible"} right width={ '200px' } style={{position:'absolute'}} isOpen={this.state.menuOpen}
+//       onStateChange={(state) => this.handleStateChange(state)}>
+//         <Link className="menu-item"  to="/" onClick={() => this.closeMenu()}>
+//           Accueil
+//         </Link>
+//         <Link className="menu-item" to="/Calculator" onClick={() => this.closeMenu()}>
+//           Simulateur
+//         </Link>
+//         <Link
+//           className="menu-item"
+//           to="/Solutions"
+//           onClick={() => this.closeMenu()}
+//         >
+//           Solutions
+//         </Link>
+//         <Link className="menu-item" to="/Aboutus" onClick={() => this.closeMenu()}>
+//           A propos
+//         </Link>
+//         <Link className="menu-item" to="/login" onClick={() => this.closeMenu()}>
+//           Connexion
+//         </Link>
+//       </div>
+//       {/* <CustomIcon onClick={() => this.toggleMenu()} /> */}
+//       </div>
+//     );
+//   }
+// }
+// export default BurgerMenu;
+import React, {useState} from 'react'
+import { Link } from "react-router-dom";
+import './BurgerMenu.css'
+
+export default function BurgerMenu() {
+  const [iconBurger, setIconBurger] = useState(false)
+
+  
+  const handleClick =() => {
+    setIconBurger(!iconBurger)
   }
+
+  return (
+    <div className="Menu-Icon">
+      <span onClick={handleClick} className={`open-menu`}>{iconBurger} <img className="burgerIcon" src={`img/${iconBurger ? "close.svg" : "menu.svg"}`} alt='logo menu'></img></span>
+        <div className={`container-burger ${iconBurger ? '' : 'invisible'}` }>
+          <Link className="menu-item"  to="/" onClick={() => setIconBurger(false)}>
+            Accueil
+          </Link>
+          <Link className="menu-item" to="/Calculator" onClick={() => setIconBurger(false)}>
+            Simulateur
+          </Link>
+          <Link
+            className="menu-item"
+            to="/Solutions"
+            onClick={() => setIconBurger(false)}
+          >
+            Solutions
+          </Link>
+          <Link className="menu-item" to="/Aboutus" onClick={() => setIconBurger(false)}>
+            A propos
+          </Link>
+          <Link className="menu-item" to="/login" onClick={() => setIconBurger(false)}>
+            Connexion
+          </Link>
+      </div>
+    </div>
+  )
 }
-export default BurgerMenu

@@ -1,109 +1,116 @@
-.ContainerCalculator input:focus , .ContainerCalculator select:focus  {
-    outline:none;
+.ContainerCalculator input:focus,
+.ContainerCalculator select:focus {
+  outline: none;
 }
-
-.calculatorTitle{
-    display:flex;
-    justify-content: center;
-    color: #40916C;
-    font-family: 'Dancing Script', cursive;
-    font-size: 40px;
+.ContainerCalculator{
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.calculatorTitle {
+  display: flex;
+  justify-content: center;
+  color: #40916c;
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
 }
 
 .calculator-titleBox {
-    display:flex;
-    justify-content: center;
-    color: #1B4332;
-    font-family: 'Roboto';
-    font-size: 20px;
-    margin-bottom:16px;
-    margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  color: #1b4332;
+  font-family: "Roboto";
+  font-size: 20px;
+  margin-bottom: 16px;
+  margin-top: 16px;
 }
 
-.vehiculeList{
-    border-radius: 10px;
-    color: #40916C;
-    font-family: 'Roboto';
-    padding: 3px;
+.vehiculeList {
+  border-radius: 10px;
+  color: #40916c;
+  font-family: "Roboto";
+  padding: 3px;
 }
 
-.inputBoxVehicule{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
+.inputBoxVehicule {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .calculator-input {
-    height: 20px;
-    border-radius: 10px;
-    padding: 3px;
-    text-align:right;
-    color: #40916C;
-    font-family: 'Roboto';
+  height: 20px;
+  border-radius: 10px;
+  padding: 3px;
+  text-align: right;
+  color: #40916c;
+  font-family: "Roboto";
 }
 
-.calculator-input:focus , .calculator-input::placeholder {
-    color: #40916C;
-    font-family: 'Roboto';
+.calculator-input:focus,
+.calculator-input::placeholder {
+  color: #40916c;
+  font-family: "Roboto";
 }
-
 
 .calculator-units {
-    font-family: 'Dancing Script', cursive;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-left: 3px;
-    font-size:1rem;
+  font-family: "Dancing Script", cursive;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 3px;
+  font-size: 1rem;
 }
 
-.validationTitle{
-    font-family: 'Dancing Script', cursive;
-    color: #1B4332;
-    font-size: 26px;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.validationTitle {
+  font-family: "Dancing Script", cursive;
+  color: #1b4332;
+  font-size: 26px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .validationSection {
-    display:flex;
-    flex-direction:column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .calculator-bouton {
-    width: 200px;
-    border-radius: 10px;
-    background-color:  #1B4332;
-    color: white;
-    font-family: 'Roboto';
-    font-size: 18px;
-    padding: 10px;
-    text-align: center;
-    justify-content: center;
-    text-decoration: none;
+  width: 200px;
+  border-radius: 10px;
+  background-color: #1b4332;
+  color: white;
+  font-family: "Roboto";
+  font-size: 18px;
+  padding: 10px;
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
 .calculatorBloc {
-    background-color: #B7E4C7;
-    padding: 20px 0 20px 0; 
-    margin: 0 20px 0 20px;
+  background-color: #b7e4c7;
+  padding: 20px 10px 20px 10px;
+  margin: 0 20px 0 20px;
 }
 
-@media screen and (max-width:420px){
-    .calculatorBloc {
-        margin: 0;
-    }
+@media screen and (max-width: 420px) {
+  .calculatorBloc {
+    margin: 0;
+  }
 }
-.inputUserBlock{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 10px 0px
+.inputUserBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0px;
 }
-.inputUserkm{
-    display:flex;
-    align-items:center;
+.inputUserkm {
+  display: flex;
+  align-items: center;
 }

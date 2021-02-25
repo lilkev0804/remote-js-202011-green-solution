@@ -1,94 +1,149 @@
 /* resultat calculator page resultat*/
-
+.visible {
+    display: flex;
+}
+.invisible {
+    display: none ;
+}
 .result {
     width: 80%;
     border-radius: 10px;
     background:#74C69D;
-    height: 40px;
-    display:flex;
+    height:40px;
     justify-content: center;
     margin-left:auto;
     margin-right: auto;
-    margin-bottom: 10px;
-    margin-top: 10px; 
+    margin-bottom: 10%;
+    margin-top: 10%; 
+}
+.discover-text {
+    margin-bottom: 30px;
+    margin-top: 30px; 
+    font-weight: bold;
+    font-size: 10px;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    color: #40916C;
+}
+.score-text {
+    margin: 20px 20px 20px 20px;
+    font-weight: bold;
+    font-size: 8px;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    color: #40916C;
 }
 @keyframes clignoteRed {
-    0%, 100%{box-shadow:0px 0px 20px #ee0606;}
-    50%{box-shadow:0px 0px 0px #b82828;}
+  0%,
+  100% {
+    box-shadow: 0px 0px 15px #ee0606;
+  }
+  50% {
+    box-shadow: 0px 0px 0px #b82828;
+  }
 }
 @keyframes clignoteGreen {
-    0%, 100%{box-shadow:0px 0px 20px #2dee06;}
-    50%{box-shadow:0px 0px 0px #2dee06;}
+  0%,
+  100% {
+    box-shadow: 0px 0px 15px #2dee06;
+  }
+  50% {
+    box-shadow: 0px 0px 0px #2dee06;
+  }
 }
+
 .logoResult {
-border-radius: 30px;
-height: 30px;
-margin-right: 40px;
-margin-top: auto;
-margin-bottom: auto;
-animation-name: clignoteRed;
-animation-duration: 1s;
-animation-iteration-count:infinite;
+  border-radius: 30px;
+  height: 30px;
+  margin-right: 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+  animation-name: clignoteRed;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 .logoResult2 {
-    border-radius: 30px;
-    height: 30px;
-    margin-right: 40px;
-    margin-top: auto;
-    margin-bottom: auto;
-    animation-name: clignoteGreen;
-    animation-duration: 1s;
-    animation-iteration-count:infinite;
-    }
+  border-radius: 30px;
+  height: 30px;
+  margin-right: 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+  animation-name: clignoteGreen;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
 .resultText {
-    margin-top: auto;
-    margin-bottom: auto;
-    display: flex;
-    justify-content: center;
-    width: 100px;
-    color: #1B4332;
-    border: none;
-    font-size: 14px;
-    font-weight: bold;
-    background:#74C69D;
-    font-family: 'Roboto', sans-serif;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  color: #1b4332;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  background: #74c69d;
+  font-family: "Roboto", sans-serif;
 }
 @media only screen and (min-width: 360px) {
-    .resultText {
-        width: 180px;
-        font-size: 25px;
-}}
+  .resultText {
+    width: 180px;
+    font-size: 20px;
+  }
+  /* .score-text-super {
+    font-size: 11px;
+  }
+  .score-text-oups {
+    font-size: 11px;
+  } */
+}
 
 @media only screen and (min-width: 420px) {
-    .resultText {
-        width: 180px;
-        font-size: 25px;
-}}
+  .score-text-super {
+    font-size: 15px;
+  }
+  .score-text-oups {
+    font-size: 15px;
+  }
+  .discover-text {
+    font-size: 15px;
+  }
+} 
 
 @media only screen and (min-width: 640px) {
-    .result {
-        width: 60%;
-        margin-bottom: 10%;
-        margin-top: 10%;
-    }
-    .logoResult{
-        height: 45px;
-    }
-    .logoResult2{
-        height: 45px;
-    }
-    .resultText {
-        width: 260px;
-        font-size: 35px;
-    }}
+  .result {
+    height: 50px;
+    width: 60%;
+    margin-bottom: 10%;
+    margin-top: 10%;
+  }
+  .logoResult {
+    height: 45px;
+  }
+  .logoResult2 {
+    height: 45px;
+  }
+  .resultText {
+    width: 260px;
+    font-size: 35px;
+  }
+}
 
 @media only screen and (min-width: 1000px) {
-    .result {
-        width: 40%;
-        margin-bottom: 5%;
-        margin-top: 5%;
-    }}
-
+  .result {
+    width: 40%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+  }
+  .score-text-super {
+    font-size: 20px;
+  }
+  .score-text-oups {
+    font-size: 20px;
+  }
+  .discover-text {
+    font-size: 20px;
+  }
+}
 
 /* fin resultat calculator */
-

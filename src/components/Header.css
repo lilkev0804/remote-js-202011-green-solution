@@ -7,16 +7,17 @@
 .header {
   width: 100%;
   padding: 10px 10px;
-  background-color: #D8F3DC;
+  background-color: #d8f3dc;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
 }
 
 .header-title-navbar {
@@ -34,13 +35,13 @@
 @media screen and (min-width: 765px) {
   .header {
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     position: relative;
   }
   .header-title-navbar {
     -ms-grid-column-align: start;
-        justify-self: start;
+    justify-self: start;
     margin-left: 2vw;
     text-align: center;
   }
