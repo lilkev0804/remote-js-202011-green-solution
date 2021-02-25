@@ -3,7 +3,10 @@ import "./Solutions.css";
 import CardsList from "./CardsList";
 
 class Solutions extends React.Component {
+  
   render() {
+    const params = this.props.match.params
+    console.log(params.test)
     return (
       <div>
         <div className="solutions-title">

@@ -1,6 +1,6 @@
 import "./App.css";
 import Aboutus from "./components/Aboutus";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route ,Switch} from "react-router-dom";
 import BurgerMenu from "./components/BurgerMenu";
 import Calculator from "./components/Calculator";
 import Coordonnées from "./components/Coordonnées";
@@ -18,7 +18,7 @@ import UserPage from "./components/UserPage";
 import { AuthProvider } from "./Auth";
 import PrivateRoute from "./PrivateRoute";
 
-function App() {
+function App(props) {
   return (
     <AuthProvider>
       <div className="App">
@@ -28,6 +28,14 @@ function App() {
           <Route path="/Calculator" component={Calculator} />
           <Route path="/Result" component={Result} />
           <Route path="/Solutions" component={Solutions} />
+          {/* <Route 
+          path="/Solutions/:index"  
+          render={routeProps => <Solutions {...props} {...routeProps}/>} /> */}
+
+          <Route 
+          path="/Solutions/:test" 
+          component={Solutions} />
+
           <Route path="/Aboutus" component={Aboutus} />
           <Route path="/Form" component={MailForm} />
           <Route path="/Coordonnees" component={Coordonnées} />
