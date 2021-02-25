@@ -56,8 +56,8 @@ class Carousel extends Component {
             infinite: true,
             speed: 300,
             slidesToShow: 1,
-            autoplay: false,
-            autoplaySpeed: 1500,
+            autoplay: true,
+            autoplaySpeed: 3000,
             pauseOnHover: true,
             accessibility: true,
             arrows: true,
@@ -72,8 +72,10 @@ class Carousel extends Component {
                 {photos.map((photo) => {
                     return (
                         <div>
+                            <Link className="carouselLink" type="img" to="/Solutions">
                             <img width="100%" height="440px" src={photo.url} alt={photo.alt}/>
                                 <h1 className="carouselText">{photo.text}</h1>
+                            </Link>
                         </div>
                     )
                 })}
