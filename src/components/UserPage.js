@@ -85,7 +85,7 @@ export default function UserPage () {
     //Function to check if avatar is load or not
     const checkAvatar = () => {
         if(catchUrlImg === " "){
-            setVisible(true)
+            setCatchUrlImg('truck4')
         }else{
             setVisible(false)
         }
