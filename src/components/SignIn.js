@@ -53,9 +53,9 @@ const SignIn = ({ history }) => {
     <div className="ConnectContainer">
       <form className="ConnectFormContainer" onSubmit={handleLogin}>
         <div className="ConnectFormContainer-Top">
-          <p className="ConnectFormBtn-top underlineSign">Sign In</p>
+          <p className="ConnectFormBtn-top underlineSign">Se connecter</p>
           <Link className="ConnectFormBtn-top" to="/signup">
-            Sign Up
+            S'enregistrer
           </Link>
         </div>
         <div className="ConnectFormContainer-Middle">
@@ -69,7 +69,7 @@ const SignIn = ({ history }) => {
             ></input>
           </div>
           <div className="ConnectFormInput">
-            <label for="password"> Password</label>
+            <label for="password"> Mot de passe</label>
             <input
               name="password"
               type="password"
@@ -79,11 +79,11 @@ const SignIn = ({ history }) => {
           </div>
         </div>
         <span className={`ConnectContainerErrorLogin ${visible}`}>
-          Email or password error, retry .
+          Email ou mot de passe incorrect
         </span>
         <div className="ConnectFormContainer-Bottom">
           <button className="ConnectFormBtnValidateInput" type="submit">
-            Sign In
+            Ce connecter
           </button>
         </div>
       </form>

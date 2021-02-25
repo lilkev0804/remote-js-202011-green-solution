@@ -40,6 +40,17 @@ export default function UserPage () {
             alert(error)
         });
     }
+
+    //Function to check if avatar is load or not
+    const checkAvatar = () => {
+        if(catchUrlImg === " "){
+            setVisible(true)
+        }else{
+            setVisible(false)
+        }
+    }
+
+
     // Function toggle avatar div 
     const choiceAvatar =() => {
         setVisible(!visible)
@@ -66,6 +77,7 @@ export default function UserPage () {
             await setElement(request.data.aggs) 
         } 
         req()
+        checkAvatar()
     },[])
 
     //Function to catch CO2 in APi
@@ -169,7 +181,7 @@ export default function UserPage () {
                 <label for="truck4"><img className="imgchoiceavatar" src="img/truck4.svg" alt='delivery truck'></img></label>
             </div>
         </div>
-        <button className="button-choiceAvatar" onClick={send}>Valider</button>
+        <button className="Disconnect-btn" onClick={send}>Valider</button>
         </>)
     }
         return (
@@ -181,12 +193,11 @@ export default function UserPage () {
                 <div className="AvatarVisible">
                     <img className="imgAvatar" src={`img/${catchUrlImg}.svg`} alt="logo avatar"/>
                 </div>
-                <div className={`UserPageImgProfils `}>
+                <div className={`UserPageImgProfils ${visible ?  "" : " invisible"} `}>
                     <button className={`Disconnect-btn ${visible ?  "" : " invisible"}`} id="button-avatar" onClick={choiceAvatar}>Choisir votre avatar</button>
-                    <div className={`formchoiceAvatar ${visible ?  "invisible" : " "} `} >
+                    <div className={`formchoiceAvatar  `} >
                         <h2>{messageBtnAvatar}</h2>
-
-                        <ChangeAvatar></ChangeAvatar>
+                            <ChangeAvatar></ChangeAvatar>
                     </div>
                 </div>
                 <div className="UserPageButton">
@@ -203,7 +214,7 @@ export default function UserPage () {
                                     <button className="Disconnect-btn" onClick={newValueInfo}>Validez</button>
                                 </div>
                         </div>
-                        <div>
+                        <div className="modified-avatar-already">
                             <p className="UserPageToggleTitle">Modifier votre avatar</p>
                             <ChangeAvatar></ChangeAvatar>
                         </div>
