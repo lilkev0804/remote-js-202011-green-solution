@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import axios from 'axios';
 import './calculator.css';
+import MapLeaflet from './MapLeaflet'
 
 class Calculator extends React.Component {
 
@@ -84,6 +85,7 @@ class Calculator extends React.Component {
                         </div>
                     </div>
                 </div>
+                <MapLeaflet />
             </div>  
         )
     }   

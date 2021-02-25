@@ -26,7 +26,6 @@ function App() {
     <div className="App">
       <Router>
         <Header />
-        <Route path="/Map" component={MapLeaflet} />
         <Route path="/" exact component={Homepage}/>
         <Route path="/Calculator" component={Calculator}/>
         <Route path="/Result" component={Result}/>

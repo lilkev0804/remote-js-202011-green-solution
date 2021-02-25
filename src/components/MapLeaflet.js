@@ -38,50 +38,37 @@ export default function MapLeaflet () {
         test();
     }
 
-    // test de marc
-
-const addRoute = () => {
-     L.Routing.control  ({
-        waypoints: [
-            L.latLng(57.74, 11.94),
-            L.latLng(57.6792, 11.949)
-        ],
-        routeWhileDragging: true
-    }).addTo(MapContainer);
-}
-
-
     
-
     return (
-        <div>
+        <div className="containerMap">
             <MapContainer id="mapid" center={[48.866667,2.333333]} zoom={4} scrollWheelZoom={true}>
                 <TileLayer
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                 <Marker position={[info[1],info[0]]}></Marker>
                 <Marker position={[info2[1],info2[0]]}></Marker>
-                {addRoute}
             </MapContainer>
-            <h1>Enter an adress</h1>
-            <div >
-                <label htmlFor="address">Addresse depart: </label>
-                <input className="inputCity" 
-                    type="text" 
-                    value={cityA}
-                    onChange={(e) => setCityA(e.target.value)}>
-                </input>
-                <p>{error}</p>
-                <label htmlFor="address">Addresse destination: </label>
-                <input className="inputCity" 
-                    type="text" 
-                    value={cityB}
-                    onChange={(e) => setCityB(e.target.value)}>
-                </input>
-                <p>{error}</p>
-                <button  onClick={printValues}>Envoyer</button>
+            <div className="containerAdress">
+                <h1 className="titleMap">Chercher une distance</h1>
+                <div className="infosDistance" >
+                    <label htmlFor="address">Addresse depart: </label>
+                    <input className="inputCity" 
+                        type="text" 
+                        value={cityA}
+                        onChange={(e) => setCityA(e.target.value)}>
+                    </input>
+                    <p>{error}</p>
+                    <label htmlFor="address">Addresse destination: </label>
+                    <input className="inputCity" 
+                        type="text" 
+                        value={cityB}
+                        onChange={(e) => setCityB(e.target.value)}>
+                    </input>
+                    <p>{error}</p>
+                    <button  className="validationCity" onClick={printValues}>Evaluer</button>
+                    <div>Distance : {dist/1000} km</div>
+                </div>
             </div>
-            
         
         </div>
     )

@@ -1,4 +1,45 @@
 .leaflet-container {
-  width: 300px;
-  height: 200px;
+  width: 50vw;
+  height: auto;
+}
+.containerMap {
+  display: flex;
+  justify-content:space-around;
+  margin: 30px;
+}
+.containerAdress{
+  margin-left: 20px;
+
+}
+.infosDistance{
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  color: #1B4332;
+  font-family: 'Roboto';
+  margin-top: 30px;
+  align-items: center;
+}
+
+.inputCity{
+  margin: 5px;
+}
+.validationCity{
+  width: 120px;
+  border-radius: 10px;
+  background-color:  #1B4332;
+  color: white;
+  font-family: 'Roboto';
+  font-size: 14px;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  margin: 20px;
+}
+
+@media only screen and (max-width:420px){
+  .containerMap {
+    flex-wrap: wrap;
+  }
 }
