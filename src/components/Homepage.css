@@ -38,10 +38,6 @@
   .imgHomepage {
     display: none;
   }
-  .headCarousel {
-      visibility: hidden;
-      display: none;
-  }
   .homepage-title {
     margin: 10vh;
     display: flex;
@@ -63,6 +59,9 @@
   }
   .btn-connexion {
     margin-bottom: 10vh;
+  }
+  .carouselHead {
+    display: none !important;
   }
 
 }
@@ -110,7 +109,6 @@
         border: 2px solid #1B4332;
         border-radius: 30px;
         margin-top: 20px;
-        /* padding-top: 50px; */
         padding-left: 30px;
         padding-right: 30px;
         font-size: 25px;
@@ -132,12 +130,9 @@
     }
     .simulatorBtn {
         padding-top: 30px;
-        /* height: 100px; */
-    
     }
     .connexionBtn {
         padding-top: 30px;
-        /* height: 100px; */
     }
 
 
@@ -147,12 +142,12 @@
 .carouselText{
     color: white; 
     text-shadow: black 3px 4px 3px;
-    font-size: 80px;
+    font-size: 70px;
     position: absolute;
-    top: 20%;
+    top: 25%;
     z-index: 1;
-    left: 30%;
-    right: 30%;
+    left: 25%;
+    right: 25%;
 }
 .slides .slick-prev,
 .slides .slick-next {
