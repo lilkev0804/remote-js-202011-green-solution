@@ -22,7 +22,7 @@ const photos = [
         alt: "parking with truck",
         text: "Explorez toutes nos solutions",
         value: "all",
-        id : "photo1"
+        id : "1"
     },
     {
         name: 'Photo 2',
@@ -30,7 +30,7 @@ const photos = [
         alt: "truck on a moutain road",
         text: "Changez la logistique de votre entreprise",
         value: "logistics",
-        id : "photo2"
+        id : "2"
     },
     {
         name: 'Photo 3',
@@ -38,7 +38,7 @@ const photos = [
         alt: "truck on a highway",
         text: "Pensez à d'autres moyens de transports",
         value: "types",
-        id : "photo3"
+        id : "3"
     },
     {
         name: 'Photo 4',
@@ -46,7 +46,7 @@ const photos = [
         alt: "truck by night",
         text: "Différents programmes écologiques",
         value: "programmes",
-        id : "photo4"
+        id : "4"
     },
     {
         name: 'Photo 5',
@@ -54,7 +54,7 @@ const photos = [
         alt: "truck in black and white",
         text: "Tournez vous vers les innovations",
         value: "innovations",
-        id : "photo5"
+        id : "5"
     }
 ] 
 
@@ -86,20 +86,24 @@ class Carousel extends Component {
                 
                 {photos.map((photo, index) => (
                     <div key={photo.id} className="carouselTest" >
+                        <img width="100%" height="440px" src={photo.url} alt={photo.alt}/>
                             <Link 
                             
                             className="carouselLink" 
                             type="img" 
-                            to={`/Solutions/${photo.id}`}
+                            to={{
+                                pathname: `/Solutions`,
+                                data: {
+                                  valueOfIndex : photo.id
+                                },
+                              }}
                             >
                             
-                            <img width="100%" height="440px" src={photo.url} alt={photo.alt}/>
                             <h1 className="carouselText">{photo.text}</h1>
                             </Link>
                        
                     </div>
                 ))}
-                
                 </Slider>
             </div>
         )

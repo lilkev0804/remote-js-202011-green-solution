@@ -101,7 +101,7 @@ const solutions = [
 function CardsList (props) {
   const [value, setValue] = useState("all")
 
-  let history = useHistory();
+ 
   const handleClick = (e) => {
     setValue(e.target.value);
   }

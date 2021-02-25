@@ -181,3 +181,7 @@
 .slides .slick-next {
   right: 5%;
 }
+
+.carouselText{
+  cursor: pointer;
+}

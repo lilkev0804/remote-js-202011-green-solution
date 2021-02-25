@@ -21,9 +21,11 @@ import PrivateRoute from "./PrivateRoute";
 function App(props) {
   return (
     <AuthProvider>
-      <div className="App">
+      
         <Router>
+        <div className="App">
           <Header />
+          <Switch>
           <Route path="/" exact component={Homepage} />
           <Route path="/Calculator" component={Calculator} />
           <Route path="/Result" component={Result} />
@@ -44,9 +46,11 @@ function App(props) {
           <Route path="/login" component={SignIn} />
           <Route path="/signup" component={SignUp} />
           <PrivateRoute path="/userpage" component={UserPage} />
+          </Switch>
           <Footer />
+          </div>
         </Router>
-      </div>
+
     </AuthProvider>
   );
 }
