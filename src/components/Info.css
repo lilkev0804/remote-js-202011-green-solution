@@ -1,12 +1,29 @@
 .Info {
   background-color: #b7e4c7;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  /* width: 70%; */
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
-h2 {
+.coordonnees {
+  display: flex;
+  flex-direction: column;
+}
+
+.infosTexte{
+  display:flex;
+  margin-left: 10px;
+  justify-content: space-between
+}
+
+.titleContact {
   font-family: "Roboto", sans-serif;
   text-align: center;
   color: #40916c;
   font-size: 20px;
+  padding: 10px;
 }
 
 .coordonnees-box {
@@ -16,28 +33,29 @@ h2 {
  
 }
 
-.Info img {
-  margin-left: 10px;
-  width: 300px;
-  height: 100px;
-  margin-bottom: 10px;
-  padding-left: 60px;
+.textInfos{
+  font-family: 'Roboto', sans-serif;
+  color: #1b4332;
+  font-size: 16px;
+  padding-left: 10px;
 }
 
 .Info-Button3 {
     height: 40px;
-    width: 130px;
+    width: 150px;
     border-radius: 50px;
     font-family: 'Happy Monkey', cursive;
     margin-top: auto;
     margin-bottom: auto;
     justify-content: center;
-    color: black;
+    color:white;
+    font-size: 15px;
+    background-color: #1b4332;
 }
 
 .Info-Button3:hover {
-  color: black;
-  background-color: #74c69d;
+  color: #74c69d;
+  background-color: white;
 }
 
 .Info-container-button {
@@ -46,60 +64,35 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
+  padding: 20px;
 }
 
-.Info-Image3 {
-  display: flex;
-  align-items: center;
-  padding-top: 10px;
+.Image-info {
+  max-width: 150px;
+  width: 50%;
+  margin-right: 50px;
 }
 
-.Info-Button3 {
-  width: 80px;
-  height: 20px;
-  font-size: 8px;
-}
-
-@media screen and (max-width:420px){
-    .Info {
-        margin-top: 10px;
-        display: flex;
-        flex-direction: column;
-    }
-
-}
-
-.coordonnees {
+@media only screen and (max-width: 510px) {
+  .infosTexte {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  .Info{
     width: 100%;
-    
-}
-
-.coordonneesButton {
-    width: 80px;
-    height: 15px;
-    font-size: 8px;
-    border: 1px solid black;
-}
-
-.coordonneesButton:hover {
-    color: black;
-    background-color: #B7E4C7;
-}
-
-@media screen and (max-width:420px) {
-    .coordonnees {
-        flex-direction: column;
+    margin: 0;
     }
 
-    
-
-}
-
-@media screen and (min-width: 420px) {
-    .coordonnees {
-        display:inline-flex
-    }
+  .Image-info {
+    margin: 0;
+    padding: 20px;
+    min-width: 100px;
+  }
+  .Info-Button3{
+    width: 100px;
+    font-size: 10px;
+  }
 }
 

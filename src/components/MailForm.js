@@ -31,7 +31,7 @@ class MailForm extends React.Component {
           <form onSubmit={this.submitForm}>
             <fieldset>
               <div>
-                <h1>Contactez nous</h1>
+                <h1 className="contact">Contactez nous</h1>
               </div>
               <div className="form-data">
                 <label htmlFor="name">

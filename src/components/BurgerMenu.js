@@ -90,7 +90,7 @@ export default function BurgerMenu() {
           <Link className="menu-item" to="/Aboutus" onClick={() => setIconBurger(false)}>
             A propos
           </Link>
-          <Link className="menu-item" to="/login" onClick={() => this.closeMenu()}>
+          <Link className="menu-item" to="/login" onClick={() => setIconBurger(false)}>
             Connexion
           </Link>
       </div>

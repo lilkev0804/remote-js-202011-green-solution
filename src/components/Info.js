@@ -5,37 +5,39 @@ import { Link } from "react-router-dom";
           function Info(props) {
             return (
               <div className="Info">
-                <div className="Info-Image3">
-                  <img className="Image3-info"
-                  src="https://tse1.mm.bing.net/th?id=OIP.4lSAsD0OmO--1glXTyF-lgHaDt&pid=Api&P=0&w=333&h=167"
-                   alt="?"
-                  />
-                <div className="Info-container-button">
-                    <Link to="/Form" style={{textDecoration:'none'}}>
-                      <button className="Info-Button3">Envoyer un mail</button> 
-                    </Link>
-                  </div>
-              </div>   
+              <h2 className="titleContact">Contact</h2>
+              <div className="infosTexte">
 
                 <div className="coordonnees">
-                  <div  className="coordonnees-box">
-                  <i className="fas fa-address-card fa-50x"></i>
-                   <p>Siège social
+                  <div className="coordonnees-box">
+                    <i className="fas fa-address-card fa"></i>
+                    <p className="textInfos">
                       GREEN SOLUTION
                       55 Rue du Faubourg St Honoré
                       75008 PARIS</p>
                   </div>
                   <div className="coordonnees-box">
                     <i className="fas fa-phone-square"></i>
-                      <p>01.42.92.81.00</p>
+                    <p  className="textInfos">01.42.92.81.00</p>
                   </div>
                   <div className="coordonnees-box">
                     <i className="fab fa-internet-explorer"></i>
-                      <p>https://www.greensolution.fr</p>
+                      <p  className="textInfos">https://www.greensolution.fr</p>
                   </div>
-                    
-                  
-      </div>
+                </div>
+                
+                <img className="Image-info"
+                src="https://cdn.pixabay.com/photo/2017/09/16/11/00/icon-2755160_1280.png"
+                alt="contact"
+                />
+              </div>
+
+                <div className="Info-container-button">
+                    <Link to="/Form" style={{textDecoration:'none'}}>
+                      <button className="Info-Button3">Envoyer un mail</button> 
+                    </Link>
+                </div>  
+        
               </div>           
     );
 }
