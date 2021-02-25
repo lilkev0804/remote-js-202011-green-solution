@@ -41,8 +41,10 @@ export default function UserPage () {
             setMessagePassword('Mot de passe non identique')
         }else{
             user.updatePassword(newPasswords).then(function() {
-                styleMessage.style.color ="white"
+                styleMessage.style.color ="black"
                 setMessagePassword(`Votre nouveau mot de passe est ${newPasswords}`)
+                setNewPasswordEnter('')
+                setNewPasswordEnterC('')
             }).catch(()=> {
                 styleMessage.style.color ="red"
                 setMessagePassword('Une erreur à été rencontré')
@@ -62,6 +64,7 @@ export default function UserPage () {
             })
             setName(newUserName)
             setMessageModifiedPseudo("Pseudo mise à jour !")
+            setNewUserName('')
         }
     }
     //Function to catch choice of Avatar by user
@@ -84,10 +87,8 @@ export default function UserPage () {
     }
     //Function to check if avatar is load or not
     const checkAvatar = () => {
-        if(catchUrlImg === " "){
+        if(catchUrlImg === ""){
             setCatchUrlImg('truck4')
-        }else{
-            setVisible(false)
         }
     }
 
