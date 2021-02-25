@@ -2,8 +2,9 @@ import React from "react";
 import "./Solutions.css";
 import CardsList from "./CardsList";
 
-class Solutions extends React.Component {
-  render() {
+const Solutions = (props) => {
+  const params = props.match.params
+  console.log(params.index)
     return (
       <div>
         <div className="solutions-title">
@@ -12,7 +13,7 @@ class Solutions extends React.Component {
         <CardsList />
       </div>
     );
-  }
+
 }
 
 export default Solutions;

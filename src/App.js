@@ -27,7 +27,7 @@ function App() {
           <Route path="/" exact component={Homepage} />
           <Route path="/Calculator" component={Calculator} />
           <Route path="/Result" component={Result} />
-          <Route path="/Solutions" component={Solutions} />
+          <Route path="/Solutions/:index" component={Solutions} />
           <Route path="/Aboutus" component={Aboutus} />
           <Route path="/Form" component={MailForm} />
           <Route path="/Coordonnees" component={Coordonnées} />

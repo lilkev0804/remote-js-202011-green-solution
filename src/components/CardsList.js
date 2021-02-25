@@ -100,7 +100,7 @@ class CardsList extends React.Component {
   }
 
   render(){
-    console.log(this.state.value)
+
   return (
     <div>
       <div  className="selectSolutions">
