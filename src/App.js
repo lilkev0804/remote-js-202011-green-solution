@@ -17,7 +17,7 @@ import Solutions from './components/Solutions';
 import UserPage from './components/UserPage'
 import {AuthProvider} from "./Auth";
 import PrivateRoute from './PrivateRoute';
-
+import MapLeaflet from './components/MapLeaflet';
 
 function App() {
   return (
@@ -26,6 +26,7 @@ function App() {
     <div className="App">
       <Router>
         <Header />
+        <Route path="/Map" component={MapLeaflet} />
         <Route path="/" exact component={Homepage}/>
         <Route path="/Calculator" component={Calculator}/>
         <Route path="/Result" component={Result}/>
