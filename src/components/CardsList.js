@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useEffect, useState,useRouteMatch} from "react";
+import {useHistory} from "react-router-dom";
 import Cards from "./Cards";
 import "./CardsList.css";
 
@@ -11,6 +12,7 @@ const solutions = [
     image: "images/greenTruck.png",
     imageName: "green-truck",
     value: "innovations",
+    index:"4",
   },
   {
     title: "Formation à l'éco-conduite :",
@@ -19,6 +21,7 @@ const solutions = [
     image: "images/sterringWheel.png",
     imageName: "sterring-Wheel",
     value: "programmes",
+    index:"3",
   },
   {
     title: "Eviter les transports à vide :",
@@ -27,6 +30,7 @@ const solutions = [
     image: "images/mutualisation.jpg",
     imageName: "Mutualisation",
     value: "logistics",
+    index:"1",
   },
   {
     title: "L'utilisation du biogaz :",
@@ -35,6 +39,7 @@ const solutions = [
     image: "images/petrol-station.png",
     imageName: "gazNaturel",
     value: "innovations",
+    index:"4",
   },
   {
     title: "Le deploiement de l'électrique :",
@@ -43,6 +48,7 @@ const solutions = [
     image: "images/electric-station.png",
     imageName: "electrique",
     value: "innovations",
+    index:"4",
   },
   {
     title: "Le programme OBJECTIF CO2 :",
@@ -51,6 +57,7 @@ const solutions = [
     image: "images/entreprises-transport-label-co2.jpg",
     imageName: "logo-Objectif-CO2",
     value: "programmes",
+    index:"3",
   },
   {
     title: "Le transport ferroviaire :",
@@ -59,6 +66,7 @@ const solutions = [
     image: "images/train.png",
     imageName: "train",
     value: "types",
+    index:"2",
   },
   {
     title: "Le transport fluvial :",
@@ -67,6 +75,7 @@ const solutions = [
     image: "images/ship.png",
     imageName: "boat",
     value: "types",
+    index:"2",
   },
   {
     title: "La logistique mutualisée :",
@@ -75,6 +84,7 @@ const solutions = [
     image: "images/logistic.png",
     imageName: "logistique",
     value: "logistics",
+    index:"1",
   },
   {
     title: "Créer des hubs urbains :",
@@ -83,40 +93,46 @@ const solutions = [
     image: "images/warehouse.png",
     imageName: "warehouse",
     value: "logistics",
+    index:"1",
   },
 ];
 
 // fonction qui appelle Cards
-class CardsList extends React.Component {
-  constructor (){
-    super();
-  this.state = {
-    value: "all",
-  }
-  this.handleClick = this.handleClick.bind(this)
-  }
-  handleClick(event) {
-    this.setState({value: event.target.value});
+function CardsList (props) {
+  const [value, setValue] = useState("all")
+
+  let history = useHistory();
+  const handleClick = (e) => {
+    setValue(e.target.value);
   }
 
-  render(){
-    console.log(this.state.value)
+  
+  const filteredSoluce = solutions.filter(
+  soluce => soluce.index === this..
+  );
+
   return (
     <div>
       <div  className="selectSolutions">
-        <select className="categoriesSolutions" value={this.state.value} onChange={this.handleClick}>
-              <option value="logistics">Logistique</option>
-              <option value="types">Autres transports</option>
-              <option value="programmes">Programmes écologiques</option>
-              <option value="innovations">Innovations</option>
-              <option value="all">Toutes</option>
+        <select className="categoriesSolutions" value={value} onChange={handleClick}>
+              {/* <option value="logistics" >Logistique</option>
+              <option value="types" >Autres transports</option>
+              <option value="programmes" >Programmes écologiques</option>
+              <option value="innovations" >Innovations</option>
+              <option value="all" >Toutes</option> */}
+              <option value="logistics" onChange={history.push("1")}>Logistique</option>
+              <option value="types" onChange={history.push("2")}>Autres transports</option>
+              <option value="programmes" onChange={history.push("3")}>Programmes écologiques</option>
+              <option value="innovations"onChange={history.push("4")} >Innovations</option>
+              <option value="all" onChange={history.push("0")}>Toutes</option>
         </select>
       </div>
       <div className="solutions-cardsList">
-        {solutions.filter((solution) => this.state.value === "all" || this.state.value === solution.value).map((item, index) => (
+        {solutions.filter((solution) => value === "all" || value === solution.value).map((item, index) => (
       <Cards
         key={index}
         id={index}
+        dindex={item.index}
         title={item.title}
         text={item.text}
         image={item.image}
@@ -124,9 +140,10 @@ class CardsList extends React.Component {
         imageName={item.imageName}
       />
     ))}
-  </div>
-  </div>
-  )};
+      </div>
+    </div>
+  )
 }
+
 
 export default CardsList;

@@ -12,11 +12,12 @@ const Background = styled.section`
 `;
 
 function Homepage() {
+
   return (
     <div className="homepage">
       <Background className="imgHomepage2">
         <div className="desktop">
-          <Carousel className="headCarousel" />
+          <Carousel />
           <h1 className="homepage-title">Évaluez votre impact écologique</h1>
           <div className="textBtn">
             <div className="homepageIntro">
