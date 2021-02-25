@@ -22,7 +22,7 @@ export default function UserPage () {
     const [values, setValues] = useState([""])
     const [dates, setDates] = useState([''])
     const [urlImg, setUrlImg] = useState('') // To catch Img from DB
-    const [catchUrlImg, setCatchUrlImg] = useState("truck4") // To print Img in dom
+    const [catchUrlImg, setCatchUrlImg] = useState("") // To print Img in dom
     const [newUserName, setNewUserName] = useState('') // To change Username
     const[newPasswordEnter, setNewPasswordEnter] =useState("") // To send Password to DB
     const[newPasswordEnterC, setNewPasswordEnterC] =useState('') // To catch NewPass user Input
@@ -87,8 +87,10 @@ export default function UserPage () {
     }
     //Function to check if avatar is load or not
     const checkAvatar = () => {
-        if(catchUrlImg === ""){
+        if(catchUrlImg === undefined){
             setCatchUrlImg('truck4')
+        }else{
+            setCatchUrlImg('')
         }
     }
 
@@ -237,7 +239,7 @@ export default function UserPage () {
                 </div>
                 <p className="UserPageCurrenntUser"> Bienvenue <span className="userNameSpan">{name}</span> dans votre espace personnel 😀 </p>
                 <div className="AvatarVisible">
-                    <img className="imgAvatar" src={`img/${catchUrlImg}.svg`} alt="logo avatar"/>
+                    <img className="imgAvatar" src={`img/${catchUrlImg === "" ? "truck4" : catchUrlImg}.svg`} alt="logo avatar"/>
                 </div>
                 <div className="UserPageButton">
                     <button className="UserPageButton-btn"  onClick={handleClick} value="calcul">Calculateur</button>
