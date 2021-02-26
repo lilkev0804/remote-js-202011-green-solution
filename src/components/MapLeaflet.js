@@ -1,10 +1,10 @@
 import React, {useState } from 'react';
-import  {MapContainer, Marker, Popup, TileLayer} from 'react-leaflet';
-import {Icon} from "leaflet";
+import  {MapContainer, Marker, TileLayer} from 'react-leaflet';
+
 import axios from 'axios'
-import L from "leaflet";
+
 import "leaflet-routing-machine";
-import { withLeaflet } from "react-leaflet";
+
 import {getDistance} from 'geolib'
 
 import "./MapLeaflet.css"
@@ -14,7 +14,7 @@ export default function MapLeaflet () {
     const [cityB, setCityB] = useState('');
     const [info, setInfo] = useState([48.866667,2.333333]);
     const [info2, setInfo2] = useState([48.866667,2.333333]);
-    const [error, setError] = useState(''); 
+    const [error] = useState(''); 
     
     
     const dist = getDistance(

@@ -34,7 +34,7 @@ function Result (props) {
     }catch{
       history.goBack()
     }
-  },[])
+  },[history, props.location.data])
  
 
   

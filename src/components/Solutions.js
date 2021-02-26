@@ -1,6 +1,5 @@
 import React,{useState, useEffect} from "react";
 import "./Solutions.css";
-import CardsList from "./CardsList";
 import Cards from "./Cards";
 import "./CardsList.css";
 
@@ -103,7 +102,6 @@ const solutions = [
 const Solutions = (props) => {
   const [value, setValue] = useState("all")
   const [value2, setValue2] = useState("0")
-  const [visible, setVisible] = useState('visible')
  
   const handleClick = (e) => {
     setValue(e.target.value);
@@ -118,7 +116,7 @@ const Solutions = (props) => {
     }catch(error){
       console.log(error)
     }
-  },[])
+  },[props.location.data])
 
 
     return (

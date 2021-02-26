@@ -3,11 +3,10 @@ import { Link } from "react-router-dom";
 import './Homepage.css';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import Solutions from "./Solutions";
 import Slider from "react-slick";
 
 function Arrow(props) {
-    const {className,to, onClick, style} = props;
+    const {className, onClick, style} = props;
     return (
         <div className={className}
         style={{...style, display: "block", fontSize: "40px"}}
