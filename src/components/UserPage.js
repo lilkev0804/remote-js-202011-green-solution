@@ -194,7 +194,8 @@ export default function UserPage () {
                 if(doc.exists){
                     setValues(doc.data().values)
                     setDates(doc.data().date)
-                    setTotalEmission(doc.data().values[1])
+                    const reducer = (accumulator, currentValue) => accumulator + currentValue
+                    setTotalEmission(doc.data().values.reduce(reducer))
                 }else{
                     console.log('non document')
                 }
@@ -312,7 +313,7 @@ export default function UserPage () {
                                 ))}
                             </ul>
                         </div>
-                        <p>Votre total d'émission est de : {totalEmission}</p>
+                        <p className="messageTotalVal">Votre total d'émission est de :<span className="total-co"> {totalEmission} KgCO2</span></p>
                     </div>
             </div>
         )
