@@ -7,8 +7,6 @@ import './UserPage.css'
 import firebase from 'firebase';
 
 
-
-
 export default function UserPage () {
     const [visible, setVisible] = useState(true) // To toggle element
     const [element, setElement] = useState([]) // Api request value
@@ -29,7 +27,8 @@ export default function UserPage () {
     const [messagePassword, setMessagePassword] = useState('') // To catch NewPassConfirm user Input
     const [messageModified, setMessageModified] =useState("") // Message when u change avatar
     const [messageModifiedPseudo, setMessageModifiedPseudo] =useState('')  // Message when u change username
-
+    const [totalEmission, setTotalEmission]= useState('') // Result of total emmission
+ 
 
     //Function to update password
     const newValueInfo = () => {
@@ -93,7 +92,6 @@ export default function UserPage () {
             setCatchUrlImg('')
         }
     }
-
     //Function for get pseudo
     fire.firestore().collection(userName).doc('info').get().then((doc) => {
         if(doc.exists){
@@ -196,10 +194,12 @@ export default function UserPage () {
                 if(doc.exists){
                     setValues(doc.data().values)
                     setDates(doc.data().date)
+                    setTotalEmission(doc.data().values[1])
                 }else{
                     console.log('non document')
                 }
             })
+
         }
     }
 
@@ -312,6 +312,7 @@ export default function UserPage () {
                                 ))}
                             </ul>
                         </div>
+                        <p>Votre total d'émission est de : {totalEmission}</p>
                     </div>
             </div>
         )
