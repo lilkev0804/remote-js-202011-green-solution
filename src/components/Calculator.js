@@ -1,7 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import axios from "axios";
-import "./calculator.css";
+import React from 'react';
+import {Link} from "react-router-dom";
+import MapLeaflet from './MapLeaflet'
+import axios from 'axios';
+
+import './calculator.css';
+
 
 class Calculator extends React.Component {
   state = {
@@ -137,6 +140,7 @@ class Calculator extends React.Component {
                   Valider
                 </Link>
               </div>
+              <MapLeaflet />
             </div>
           </div>
         </div>
