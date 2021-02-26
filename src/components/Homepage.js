@@ -9,6 +9,7 @@ const Background = styled.section`
   background-image: url("./imgHomepage/homepageBg.jpg");
   background-size: cover;
   background-position: center;
+  width:100%;
 `;
 
 function Homepage() {

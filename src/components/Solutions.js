@@ -102,7 +102,7 @@ const solutions = [
 
 const Solutions = (props) => {
   const [value, setValue] = useState("all")
-  const [value2, setValue2] = useState("b")
+  const [value2, setValue2] = useState("0")
   const [visible, setVisible] = useState('visible')
  
   const handleClick = (e) => {
@@ -120,10 +120,9 @@ const Solutions = (props) => {
     }
   },[])
 
-console.log(value2)
 
     return (
-      <div>
+      <div className="SolutionsContainer">
         <div className={`solutions-title`}>
           <h1>Comment réduire mon impact carbone ?</h1>
         </div>
@@ -147,7 +146,7 @@ console.log(value2)
               image={item.image}
               background={index % 2 === 0 ? "solutions-vertClair" : "solutions-blanc"}
               imageName={item.imageName}
-              invisible = {value2 === "b" ? "" : value2 === item.index ? " " : "invisible"}
+              invisible = {value2 === "0" ? "" : value2 === item.index ? " " : "invisible"}
             />
           ))}
         </div>

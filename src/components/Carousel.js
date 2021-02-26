@@ -22,7 +22,7 @@ const photos = [
         alt: "parking with truck",
         text: "Explorez toutes nos solutions",
         value: "all",
-        id : "1"
+        id : "0"
     },
     {
         name: 'Photo 2',
@@ -30,7 +30,7 @@ const photos = [
         alt: "truck on a moutain road",
         text: "Changez la logistique de votre entreprise",
         value: "logistics",
-        id : "2"
+        id : "1"
     },
     {
         name: 'Photo 3',
@@ -38,7 +38,7 @@ const photos = [
         alt: "truck on a highway",
         text: "Pensez à d'autres moyens de transports",
         value: "types",
-        id : "3"
+        id : "2"
     },
     {
         name: 'Photo 4',
@@ -46,7 +46,7 @@ const photos = [
         alt: "truck by night",
         text: "Différents programmes écologiques",
         value: "programmes",
-        id : "4"
+        id : "3"
     },
     {
         name: 'Photo 5',
@@ -54,7 +54,7 @@ const photos = [
         alt: "truck in black and white",
         text: "Tournez vous vers les innovations",
         value: "innovations",
-        id : "5"
+        id : "4"
     }
 ] 
 
