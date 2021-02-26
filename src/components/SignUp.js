@@ -50,7 +50,7 @@ const SignUp = ({ history}) => {
         <div className="ConnectContainer">
             <form className="ConnectFormContainer" onSubmit={handleSignUp}>
                 <div className="ConnectFormContainer-Top">
-                    <Link className="ConnectFormBtn-top" to='/login'>Ce connnecter</Link>
+                    <Link className="ConnectFormBtn-top" to='/login'>Se connecter</Link>
                     <p className="ConnectFormBtn-top underlineSign" >S'enregistrer</p>
                 </div>
                 <div className="ConnectFormContainer-Middle">
@@ -74,7 +74,7 @@ const SignUp = ({ history}) => {
                  <span className={`ConnectContainerErrorLogin ${visible}`}>Mot de passe non identique.</span>
                  <span className={`ConnectContainerErrorLogin ${visibleE}`}>E-mail deja utilisé</span>
                  <div className="ConnectFormContainer-Bottom">
-                    <button className="ConnectFormBtnValidateInput" type="submit">Ce connecter</button>
+                    <button className="ConnectFormBtnValidateInput" type="submit">Se connecter</button>
                 </div>
             </form>
     </div>

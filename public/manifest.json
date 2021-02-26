@@ -18,9 +18,6 @@
       "sizes": "512x512"
     }
   ],
-
-  "short_name": "GreenSolution",
-  "name": "Green solution est votre allié dans le calcul des émissions de CO2 pour votre flotte de véhicules",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
