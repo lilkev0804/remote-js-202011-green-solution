@@ -109,7 +109,7 @@ export default function UserPage () {
             await setElement(request.data.aggs) 
         } 
         req()
-        checkAvatar()
+        
     },[])
 
     //Function to catch CO2 in APi
