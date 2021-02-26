@@ -9,14 +9,16 @@ const Background = styled.section`
   background-image: url("./imgHomepage/homepageBg.jpg");
   background-size: cover;
   background-position: center;
+  width:100%;
 `;
 
 function Homepage() {
+
   return (
     <div className="homepage">
       <Background className="imgHomepage2">
         <div className="desktop">
-          <Carousel className="headCarousel" />
+          <Carousel />
           <h1 className="homepage-title">Évaluez votre impact écologique</h1>
           <div className="textBtn">
             <div className="homepageIntro">
