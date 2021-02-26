@@ -84,14 +84,7 @@ export default function UserPage () {
             setMessageModified("Avatar mise à jour !")
         }
     }
-    //Function to check if avatar is load or not
-    const checkAvatar = () => {
-        if(catchUrlImg === undefined){
-            setCatchUrlImg('truck4')
-        }else{
-            setCatchUrlImg('')
-        }
-    }
+
     //Function for get pseudo
     fire.firestore().collection(userName).doc('info').get().then((doc) => {
         if(doc.exists){
@@ -109,7 +102,6 @@ export default function UserPage () {
             await setElement(request.data.aggs) 
         } 
         req()
-        
     },[])
 
     //Function to catch CO2 in APi
