@@ -50,7 +50,7 @@ const SignUp = ({ history}) => {
         <div className="ConnectContainer">
             <form className="ConnectFormContainer" onSubmit={handleSignUp}>
                 <div className="ConnectFormContainer-Top">
-                    <Link className="ConnectFormBtn-top" to='/login'>Se connnecter</Link>
+                    <Link className="ConnectFormBtn-top" to='/login'>Ce connnecter</Link>
                     <p className="ConnectFormBtn-top underlineSign" >S'enregistrer</p>
                 </div>
                 <div className="ConnectFormContainer-Middle">

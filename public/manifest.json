@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "GreenSolution",
+  "name": "Green solution est votre allié dans le calcul des émissions de CO2 pour votre flotte de véhicules",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,7 +20,7 @@
   ],
 
   "short_name": "GreenSolution",
-  "name": "Create React App Sample",
+  "name": "Green solution est votre allié dans le calcul des émissions de CO2 pour votre flotte de véhicules",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",

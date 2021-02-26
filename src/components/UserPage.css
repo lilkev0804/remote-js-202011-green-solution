@@ -244,3 +244,10 @@
     font-size: 1rem;
     margin: 5px 0px;
 }
+.messageTotalVal{
+    margin: 20px auto;
+}
+.total-co{
+    color: #2F3E46;
+    font-weight: 800;
+}

@@ -30,7 +30,7 @@ function Result (props) {
       setTimeout(() => {
         setVisible('visible')
         setInvisible('invisible')
-      }, 4000)
+      }, 2500)
     }catch{
       history.goBack()
     }

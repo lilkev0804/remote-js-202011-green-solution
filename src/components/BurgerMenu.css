@@ -28,6 +28,33 @@
   left: 60%;
   top:86px;
   border-radius: 10px 0px 0px 10px;
+  z-index: 100000;
+  overflow: hidden;
+  /* animation: all 3s ease; */
+}
+.container-burger-animation{
+  animation: burger .3s cubic-bezier(.17,.67,.83,.67)forwards;
+}
+.invisible-burger{
+  animation: fadeoutburger .3s cubic-bezier(.17,.67,.83,.67) forwards;
+  
+}
+
+@keyframes burger{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+@keyframes fadeoutburger{
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
 }
 .menu-item {
   color: #1b4332 !important;
@@ -41,6 +68,7 @@
   font-family: "Roboto";
   text-decoration:'none';
   font-size: 20px;
+
 }
 
 @media screen and (min-width: 765px) {
