@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const socialLinks = [
   {
-    link: "facebook.fr",
+    link: "https://www.facebook.com/",
     target: "_blanck",
     icon: <i class="fab fa-facebook ico-social"></i>,
   },
@@ -13,7 +13,7 @@ const socialLinks = [
     icon: <i class="fab fa-github ico-social"></i>,
   },
   {
-    link: "twitter.fr",
+    link: "https://twitter.com/",
     target: "_blanck",
     icon: <i class="fab fa-twitter ico-social"></i>,
   },
