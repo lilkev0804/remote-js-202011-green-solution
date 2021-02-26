@@ -27,7 +27,7 @@ export default function UserPage () {
     const [messagePassword, setMessagePassword] = useState('') // To catch NewPassConfirm user Input
     const [messageModified, setMessageModified] =useState("") // Message when u change avatar
     const [messageModifiedPseudo, setMessageModifiedPseudo] =useState('')  // Message when u change username
-    const [totalEmission, setTotalEmission]= useState('') // Result of total emmission
+    const [totalEmission, setTotalEmission]= useState("0") // Result of total emmission
  
 
     //Function to update password
