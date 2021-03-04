@@ -15,7 +15,7 @@ export default function BurgerMenu() {
   return (
     <div className="Menu-Icon">
       <span onClick={handleClick} className={`open-menu`}>{iconBurger} <img className="burgerIcon" src={`img/${iconBurger ? "close.svg" : "menu.svg"}`} alt='logo menu'></img></span>
-        <div className={`container-burger ${iconBurger ? 'container-burger-animation' : 'invisible-burger '}` }>
+        <div className={`container-burger ${iconBurger ? '' : 'invisible '}` }>
           <Link className="menu-item"   to="/" onClick={() => setIconBurger(false)}>
             Accueil
           </Link>
